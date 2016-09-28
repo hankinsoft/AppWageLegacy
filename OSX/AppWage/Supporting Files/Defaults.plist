@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>General-IsFirstLaunch</key>
+	<true/>
+	<key>General-AutoStartApp</key>
+	<false/>
+	<key>CollectReviewsEveryXHours</key>
+	<integer>6</integer>
+	<key>CurrencyCode</key>
+	<string>USD</string>
+	<key>ShowHiddenApplications</key>
+	<false/>
+	<key>ReviewRatingFilter</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+		<integer>3</integer>
+		<integer>4</integer>
+		<integer>5</integer>
+	</array>
+	<key>Email-SendDailyEmail</key>
+	<false/>
+	<key>Email-MarkSentReviewsAsRead</key>
+	<true/>
+	<key>Email-LastDailyEmail</key>
+	<date>2000-01-01T04:00:00Z</date>
+	<key>Email-WaitForReports</key>
+	<true/>
+	<key>EnableNotifications</key>
+	<true/>
+	<key>CollectReportsMode</key>
+	<integer>1</integer>
+	<key>CollectRunCollectionsAtStartup</key>
+	<true/>
+	<key>CollectReportsRetry</key>
+	<true/>
+	<key>CollectRanksEveryXHours</key>
+	<integer>1</integer>
+	<key>DashboardSalesChartStyle</key>
+	<integer>5</integer>
+	<key>GraphAnimationsEnabled</key>
+	<false/>
+	<key>DashboardDateRangeType</key>
+	<integer>2</integer>
+	<key>ApplicationListTreeView-ExpandedItems</key>
+	<array>
+		<string>iTunes Connect</string>
+		<string>Uncategorized</string>
+	</array>
+	<key>RankGraphDateRangeType</key>
+	<integer>0</integer>
+	<key>RankGraphCountryCodes</key>
+	<array>
+		<string>ca</string>
+		<string>us</string>
+	</array>
+	<key>RankGraphMax</key>
+	<integer>300</integer>
+	<key>RankGraphInvertChart</key>
+	<true/>
+	<key>RankGraphChartEntries</key>
+	<integer>20</integer>
+	<key>RankGraphChartLineStyle</key>
+	<integer>0</integer>
+	<key>ReviewTranslantions</key>
+	<string>en</string>
+	<key>HTTPServer-IsEnabled</key>
+	<false/>
+	<key>HTTPServer-Port</key>
+	<integer>5484</integer>
+</dict>
+</plist>

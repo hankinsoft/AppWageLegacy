@@ -1,0 +1,36 @@
+//
+//  AWiTunesConnectHelper.h
+//  AppWage
+//
+//  Created by Kyle Hankinson on 1/27/2014.
+//  Copyright (c) 2014 Hankinsoft. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@class AWApplicationFinderEntry;
+
+typedef enum {
+    SalesReportDaily            = 0,
+    SalesReportWeekly           = 1,
+    SalesReportMonthly          = 2,
+    SalesReportYearly           = 3,
+    SalesReportMAX              = 4
+} SalesReportType;
+
+@interface AWiTunesConnectHelper : NSObject
+
+- (NSNumber*) vendorIdWithUser: (NSString*) user
+                      password: (NSString*) password
+                    vendorName: (NSString**) vendorName
+                  loginSuccess: (BOOL*) loginSuccess
+                         error: (NSError**) outError;
+
+- (NSArray*) applicationsForVendorName: (NSString*) vendorName
+                                 error: (NSError**) error;
+
+- (AWApplicationFinderEntry*) detailsForApplicationId: (NSNumber*) applicationId
+                                          countryCode: (NSString*) countryCode
+                                                error: (NSError**) error;
+
+@end

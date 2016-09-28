@@ -1,0 +1,47 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+    #import "Common.h"
+    #import "AWErrors.h"
+
+    #import <Cocoa/Cocoa.h>
+    #import <SystemConfiguration/SystemConfiguration.h>
+
+    // CocoaLumberjack
+    #import <Cocoa/Cocoa.h>
+    #import <CocoaLumberjack/CocoaLumberjack.h>
+    #import <CocoaLumberjack/DDLogMacros.h>
+    static const DDLogLevel ddLogLevel = DDLogFlagError | DDLogFlagInfo;
+    #define NSLog                   DDLogInfo
+
+    #import "AWSQLiteHelper.h"
+    #import "AWRequired.h"
+
+    // AFNetworking
+    #import <AFNetworking/AFNetworking.h>
+
+    // Debouncing
+    #import <LVDebounce/LVDebounce.h>
+
+    // Chilkat Email
+    #include "CkoEmail.h"
+    #include "CkoMailMan.h"
+
+    // Gzip compression & decompression
+    #import <GZIP/GZIP.h>
+
+    #import "AWApplicationImageHelper.h"
+    #import "AWGenreHelper.h"
+    #import "AWSystemSettings.h"
+    #import "AWDateHelper.h"
+    #import "MachTimer.h"
+
+    #import "NSImage+CGImage.h"
+    #import "NSArray+Reverse.h"
+
+    #import "AWSalesReportHelper.h"
+#endif

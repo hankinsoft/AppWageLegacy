@@ -1,0 +1,73 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - CHCSVParser (2.1.0)
+  - CocoaAsyncSocket (7.5.0):
+    - CocoaAsyncSocket/GCD (= 7.5.0)
+  - CocoaAsyncSocket/GCD (7.5.0)
+  - CocoaHTTPServer (2.3):
+    - CocoaAsyncSocket
+    - CocoaLumberjack
+  - CocoaLumberjack (3.0.0):
+    - CocoaLumberjack/Default (= 3.0.0)
+    - CocoaLumberjack/Extensions (= 3.0.0)
+  - CocoaLumberjack/Core (3.0.0)
+  - CocoaLumberjack/Default (3.0.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (3.0.0):
+    - CocoaLumberjack/Default
+  - CorePlot (2.2)
+  - Crashlytics (3.8.2):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.9)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - FXKeychain (1.5.3)
+  - GDataXML-HTML (1.3.0)
+  - GZIP (1.1.1)
+  - LVDebounce (0.0.4)
+
+DEPENDENCIES:
+  - AFNetworking
+  - CHCSVParser
+  - CocoaHTTPServer
+  - CocoaLumberjack
+  - CorePlot
+  - Crashlytics
+  - Fabric
+  - FMDB
+  - FXKeychain
+  - GDataXML-HTML
+  - GZIP
+  - LVDebounce
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CHCSVParser: 3bcc7bdb72111a31222e95d57eacceefe4e537e8
+  CocoaAsyncSocket: 3baeb1ddd969f81cf9fca81053ae49ef2d1cbbfa
+  CocoaHTTPServer: 5624681fc3473d43b18202f635f9b3abb013b530
+  CocoaLumberjack: c823149bccc5519a9447aeb433be7b1212a7d6a5
+  CorePlot: cbe0c6e14220705e32e06a89c7d6a5a908b7d7d8
+  Crashlytics: 27acca95a01b042a8294291dd6dff27f8f6af6d7
+  Fabric: bc5bec42cef4bcf1ee3ce0e218fc518e4b44dfbb
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  FXKeychain: 2fe54573946ffef634f4e2a2851e6c8f4ea15e76
+  GDataXML-HTML: 7adc03668cab35c288f1dbb8929a179f0fece898
+  GZIP: f8beb59597f651e6970a45b816508a9c6d700b77
+  LVDebounce: 166cf3e2215e74a1aae42902df15701f9c31d34f
+
+PODFILE CHECKSUM: 13152798116e11c74f22960ae2ea88a8f4969218
+
+COCOAPODS: 1.1.0.beta.2

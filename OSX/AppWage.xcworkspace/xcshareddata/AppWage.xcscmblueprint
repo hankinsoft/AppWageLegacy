@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1BF0907AC8FC8AAEEB73720170A035439C4F376F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B89D09FAEF52037FEA04C7B079DA625BA93C66D1" : 1,
+    "1BF0907AC8FC8AAEEB73720170A035439C4F376F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4BD92F07-107B-4DC4-A626-BB4C5D916AE2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B89D09FAEF52037FEA04C7B079DA625BA93C66D1" : "AppWageOSX\/My%20App%20Sales\/3rd%20Party%20Components\/HSSharedOSX",
+    "1BF0907AC8FC8AAEEB73720170A035439C4F376F" : "AppWage\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AppWage",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "OSX\/AppWage.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/hankinsoft.visualstudio.com\/DefaultCollection\/_git\/App%2520Store%2520Sales%2520-%2520OSX",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1BF0907AC8FC8AAEEB73720170A035439C4F376F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/hankinsoft.visualstudio.com\/DefaultCollection\/_git\/HSSharedOSX",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B89D09FAEF52037FEA04C7B079DA625BA93C66D1"
+    }
+  ]
+}

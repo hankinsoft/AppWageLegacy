@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="101000" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AWDateRangeSelectorViewController">
+            <connections>
+                <outlet property="datePickerFrom" destination="gp7-jU-ZCU" id="D6W-mb-bOh"/>
+                <outlet property="datePickerTo" destination="3pK-pZ-ud7" id="3jz-oL-Ebf"/>
+                <outlet property="previousTwoDaysMenuItem" destination="K8a-Ob-7gz" id="Xqf-Zd-gJb"/>
+                <outlet property="previousYearMenuItem" destination="kSg-Wh-UAN" id="uiJ-vy-MT4"/>
+                <outlet property="rangeDatePicker1" destination="a6Y-EU-dcU" id="j0B-x1-tS6"/>
+                <outlet property="rangePopupButton" destination="0oE-2a-2MX" id="fTb-xW-hRa"/>
+                <outlet property="todayMenuItem" destination="ZFA-YE-qea" id="SKJ-uJ-Erm"/>
+                <outlet property="view" destination="1" id="2"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="1">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="188"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <popUpButton verticalHuggingPriority="750" id="0oE-2a-2MX">
+                    <rect key="frame" x="165" y="124" width="187" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" title="Previous quarter" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="3Ak-TQ-dEK" id="OJb-pE-Tgp">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" title="OtherViews" id="bwa-O0-tPO">
+                            <items>
+                                <menuItem title="Today" id="ZFA-YE-qea"/>
+                                <menuItem title="Previous two days" id="K8a-Ob-7gz"/>
+                                <menuItem title="Current week" id="c0K-am-3iF"/>
+                                <menuItem title="Previous two weeks" id="Of5-PP-L7B">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
+                                <menuItem title="Previous month" id="r9E-kJ-hBd">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
+                                <menuItem title="Previous quarter" state="on" id="3Ak-TQ-dEK">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
+                                <menuItem title="Previous year" id="kSg-Wh-UAN">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
+                                <menuItem title="Custom Range" id="hhg-Jb-bpC">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="onDateRangeButton:" target="-2" id="yeo-vw-Wva"/>
+                    </connections>
+                </popUpButton>
+                <datePicker verticalHuggingPriority="750" id="a6Y-EU-dcU">
+                    <rect key="frame" x="20" y="20" width="139" height="148"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <datePickerCell key="cell" alignment="left" datePickerStyle="clockAndCalendar" id="hFf-Jq-Uvd">
+                        <font key="font" metaFont="system"/>
+                        <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                            <!--1982-02-12 08:00:00 -0800-->
+                            <timeZone key="timeZone" name="US/Pacific"/>
+                        </calendarDate>
+                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                    </datePickerCell>
+                    <connections>
+                        <action selector="onDateRangeChanged:" target="-2" id="CX1-R3-heM"/>
+                    </connections>
+                </datePicker>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="qBs-96-Z4a">
+                    <rect key="frame" x="165" y="151" width="131" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Date range:" id="KBN-4o-LYd">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <datePicker verticalHuggingPriority="750" id="gp7-jU-ZCU">
+                    <rect key="frame" x="167" y="73" width="185" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="u01-Jm-PwO">
+                        <font key="font" metaFont="system"/>
+                        <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                            <!--1982-02-12 08:00:00 -0800-->
+                            <timeZone key="timeZone" name="US/Pacific"/>
+                        </calendarDate>
+                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                    </datePickerCell>
+                    <connections>
+                        <action selector="onDateRangeFromChanged:" target="-2" id="Kht-hy-dG3"/>
+                    </connections>
+                </datePicker>
+                <datePicker verticalHuggingPriority="750" id="3pK-pZ-ud7">
+                    <rect key="frame" x="167" y="20" width="185" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="PeE-sT-vwI">
+                        <font key="font" metaFont="system"/>
+                        <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                            <!--1982-02-12 08:00:00 -0800-->
+                            <timeZone key="timeZone" name="US/Pacific"/>
+                        </calendarDate>
+                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                    </datePickerCell>
+                    <connections>
+                        <action selector="onDateRangeToChanged:" target="-2" id="T2b-DA-gps"/>
+                    </connections>
+                </datePicker>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="BXE-fZ-fuN">
+                    <rect key="frame" x="165" y="98" width="134" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="From:" id="tdp-3y-CCc">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="U16-nc-pIk">
+                    <rect key="frame" x="165" y="46" width="134" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="To:" id="sG9-cr-neg">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+        </customView>
+    </objects>
+</document>

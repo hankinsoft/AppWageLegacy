@@ -1,0 +1,15 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+
+    #import "Common.h"
+    #import "AWErrors.h"
+
+    // Gzip compression & decompression
+    #import <GZIP/GZIP.h>
+
+#endif

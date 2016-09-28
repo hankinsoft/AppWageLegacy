@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2E533178-CDC1-42A1-AA75-A57C245D52EE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AdaptiveSpacerExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>93DBE333-141E-491E-A1C7-EF922DFC82E8</key>
+		<string>https://hankinsoft.visualstudio.com/DefaultCollection/_git/App%20Store%20Sales%20-%20OSX</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OSX/My App Sales/3rd Party Components/JWToolbarAdaptiveSpaceItem/AdaptiveSpacerExample/AdaptiveSpacerExample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>93DBE333-141E-491E-A1C7-EF922DFC82E8</key>
+		<string>../../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://hankinsoft.visualstudio.com/DefaultCollection/_git/App%20Store%20Sales%20-%20OSX</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>93DBE333-141E-491E-A1C7-EF922DFC82E8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>93DBE333-141E-491E-A1C7-EF922DFC82E8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>App Store Sales - OSX</string>
+		</dict>
+	</array>
+</dict>
+</plist>

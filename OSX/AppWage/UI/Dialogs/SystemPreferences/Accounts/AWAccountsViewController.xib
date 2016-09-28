@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="101000" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AWAccountsViewController">
+            <connections>
+                <outlet property="accountIDTextField" destination="ewM-pr-VHe" id="V72-Zb-6lX"/>
+                <outlet property="accountPasswordTextField" destination="TYx-jc-0Zs" id="L1s-Dm-0Mf"/>
+                <outlet property="accountVendorIdTextField" destination="qIK-5i-A45" id="waD-RB-893"/>
+                <outlet property="accountVendorNameTextField" destination="CHW-l2-vrS" id="5Y3-sr-me5"/>
+                <outlet property="accountsTableView" destination="FHx-l0-xCH" id="NPu-IN-Ysf"/>
+                <outlet property="addRemoveAccountSegmenetedControl" destination="xew-wD-DXS" id="4Lx-57-ada"/>
+                <outlet property="loadVendorIdButton" destination="61c-IA-hGI" id="yKI-5P-kfP"/>
+                <outlet property="loadVendorIdProgressIndicator" destination="jOn-mu-Fmj" id="SAB-3t-Xmp"/>
+                <outlet property="view" destination="1" id="2"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="1">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="YIu-sR-cAy">
+                    <rect key="frame" x="20" y="49" width="175" height="203"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <clipView key="contentView" id="fsX-x3-TXu">
+                        <rect key="frame" x="1" y="1" width="173" height="201"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" multipleSelection="NO" autosaveColumns="NO" id="FHx-l0-xCH">
+                                <rect key="frame" x="0.0" y="0.0" width="173" height="201"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <size key="intercellSpacing" width="3" height="2"/>
+                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
+                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <tableColumns>
+                                    <tableColumn identifier="AccountType" width="32" minWidth="32" maxWidth="32" id="bbQ-21-OXj">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableHeaderCell>
+                                        <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="E8R-ba-snd"/>
+                                    </tableColumn>
+                                    <tableColumn identifier="AccountDisplayName" editable="NO" width="135" minWidth="40" maxWidth="1000" id="17i-j1-hSg">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="UTt-Gb-tb7">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                    </tableColumn>
+                                </tableColumns>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="nBm-YK-tHH"/>
+                                    <outlet property="delegate" destination="-2" id="SWv-FO-Zcw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="sqr-0N-Sj8">
+                        <rect key="frame" x="1" y="208" width="161" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="72V-ZG-ahC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+                <segmentedControl verticalHuggingPriority="750" id="xew-wD-DXS">
+                    <rect key="frame" x="18" y="18" width="71" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="Mfb-mV-hBC">
+                        <font key="font" metaFont="system"/>
+                        <segments>
+                            <segment image="NSAddTemplate" width="32"/>
+                            <segment image="NSRemoveTemplate" width="32" tag="1"/>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="onAddRemoveAccountSegmenetedControl:" target="-2" id="wc8-7C-YKM"/>
+                    </connections>
+                </segmentedControl>
+                <textField verticalHuggingPriority="750" id="ewM-pr-VHe">
+                    <rect key="frame" x="203" y="230" width="257" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="iTunes Connect Account" drawsBackground="YES" id="Cg9-Gb-afn">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="onAppleIdChanged:" target="-2" id="ms5-y8-TC2"/>
+                        <outlet property="delegate" destination="-2" id="T4z-0i-udC"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" id="qIK-5i-A45">
+                    <rect key="frame" x="203" y="90" width="257" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Vendor ID" drawsBackground="YES" id="FRB-Qz-h18">
+                        <numberFormatter key="formatter" formatterBehavior="10_0" positiveFormat="###0" negativeFormat="-###0" hasThousandSeparators="NO" id="f2o-iL-via">
+                            <real key="minimum" value="0.0"/>
+                            <decimal key="maximum" value="NaN"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="onAppleIdChanged:" target="-2" id="ae2-6u-4Df"/>
+                        <outlet property="delegate" destination="-2" id="GHO-s2-lJF"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" id="CHW-l2-vrS">
+                    <rect key="frame" x="203" y="122" width="257" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Vendor Name" drawsBackground="YES" id="0vv-Gd-bWe">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="onVendorNameChanged:" target="-2" id="ost-al-Asb"/>
+                        <outlet property="delegate" destination="-2" id="Tkc-1G-BFC"/>
+                    </connections>
+                </textField>
+                <secureTextField verticalHuggingPriority="750" id="TYx-jc-0Zs">
+                    <rect key="frame" x="203" y="198" width="257" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="ASl-fE-Gim">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <allowedInputSourceLocales>
+                            <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                        </allowedInputSourceLocales>
+                    </secureTextFieldCell>
+                    <connections>
+                        <action selector="onPasswordChanged:" target="-2" id="g7I-hC-L4u"/>
+                        <outlet property="delegate" destination="-2" id="AVv-dZ-up7"/>
+                    </connections>
+                </secureTextField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="r3C-QD-Tmt">
+                    <rect key="frame" x="201" y="152" width="261" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" placeholderString="Passwords are stored securely in the applications keychain." id="AJU-kr-nLg">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" id="61c-IA-hGI">
+                    <rect key="frame" x="300" y="45" width="166" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Load Vendor Details" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gHe-rG-gQl">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onLoadVendorId:" target="-2" id="SsD-Dq-dQn"/>
+                    </connections>
+                </button>
+                <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="jOn-mu-Fmj">
+                    <rect key="frame" x="282" y="54" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </progressIndicator>
+            </subviews>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+    </resources>
+</document>

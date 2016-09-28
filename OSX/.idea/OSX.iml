@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CIDR_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libicucore.dylib">
+      <sourceFolder url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libicucore.dylib" isTestSource="false" />
+    </content>
+    <content url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libsqlite3.dylib">
+      <sourceFolder url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libsqlite3.dylib" isTestSource="false" />
+    </content>
+    <content url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libxml2.dylib">
+      <sourceFolder url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libxml2.dylib" isTestSource="false" />
+    </content>
+    <content url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libz.dylib">
+      <sourceFolder url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libz.dylib" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/My App Sales/3rd Party Components/Chilkat-9.4.1-Cocoa-10.6/lib/libchilkatCocoa.a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/AppDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Defaults.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Data/Currency.js" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Data/Countries.js" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Data/Genre-iOS.js" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Data/Genre-OSX.js" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/main.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/AWErrors.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Localization/Base.lproj/Localizable.strings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Localization/en.lproj/Localizable.strings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/AppWage-Prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/sidebar-bottom.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/sidebar-bottom@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bf.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cg.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/it.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/fj.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/no.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sb.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tc.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ph.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ve.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/az.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/rs.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/nr.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/pt.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/lc.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/va.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cy.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ao.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ng.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/es.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gu.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sl.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/lb.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ad.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/be.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cf.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mv.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/fi.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/fam.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sa.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/il.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/jm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/kn.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bz.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ps.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ru.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sv.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ws.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bo.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/an.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/me.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ht.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/er.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gt.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/hu.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tl.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/um.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/vn.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bd.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mz.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/nz.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/eg.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gi.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ly.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/km.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ax.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/by.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cz.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ir.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/pr.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tg.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/nf.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tv.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/am.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/md.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/co.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/pg.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/fr.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gs.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/qa.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tk.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/wf.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/kw.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/nl.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/de.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sk.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gh.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mq.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ua.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/eh.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/aw.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mn.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ye.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/dz.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/uy.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/st.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ro.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/al.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cn.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/do.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/pf.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gr.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/si.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tj.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sy.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bb.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mx.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ee.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sj.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mp.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/scotland.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sh.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/is.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bw.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cx.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mh.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tt.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/la.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/pe.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/hn.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gq.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/hr.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/kz.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/lr.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ba.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mw.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gf.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/europeanunion.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ml.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ck.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/lk.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bv.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/wales.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sr.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ar.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/vu.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ma.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mo.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/br.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/fo.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gp.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sg.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/th.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ne.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/lu.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ca.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/hk.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ec.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/py.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ge.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ki.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/at.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mk.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cv.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/om.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/pn.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tw.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tr.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/us.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ai.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bj.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/na.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/au.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cl.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/nc.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/re.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/np.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/iq.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/vi.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/lt.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mu.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/zm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/lv.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gd.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/kh.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/li.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bt.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cu.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bn.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/pm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sz.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gy.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/catalonia.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/as.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ky.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bi.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/dk.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/zw.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/fm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gn.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/se.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tf.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ug.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/kr.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ls.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mt.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/nu.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/pw.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ie.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/kg.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/td.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bs.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/za.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/pl.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/so.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ag.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bh.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ci.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/dj.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/pa.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sd.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/io.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/jp.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/vg.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mc.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ms.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/england.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gb.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/id.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tz.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cd.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cs.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/pk.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gw.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sn.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/to.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/af.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/bg.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ch.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/yt.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cc.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/fk.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/gl.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/hm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/in.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/jo.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/kp.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mr.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/uz.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sc.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ga.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/rw.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ke.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ni.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/cr.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/vc.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/et.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/mg.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/my.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/sm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/tn.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/dm.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/Flags/ae.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/Images/ios-linen.jpg" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/SQL/SalesDatabase.sql" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/SQL/RankingDatabase.sql" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/SQL/AppWageDatabase.sql" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/SQL/SQL Queries" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/SQL/ReviewDatabase.sql" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/en.lproj/InfoPlist.strings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/en.lproj/Credits.rtf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Supporting Files/AppWage-Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWApplicationCollection.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWApplication.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWAccount.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWGenre.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWAccount.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWCountry.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWGenre.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWProduct.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWApplicationCollection.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWApplication.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWCountry.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/SQL/AWProduct.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/AWApplicationRank.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/AWApplicationListTreeEntry.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/AWApplicationListTreeEntry.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/Importing/AWRankBulkImporterEntry.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/Importing/AWReviewBulkImporterEntry.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/Importing/AWReviewBulkImporterEntry.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/Importing/AWRankBulkImporterEntry.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Models/AWApplicationRank.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/MouseOverButton.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/ProgressIndicatorWithLabel.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/NSWindowAllowDrop.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/Graph/TrackedGraphHostingView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/Graph/TrackedGraphHostingView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/MouseOverButton.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/ProgressIndicatorWithLabel.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/BackgroundView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/BackgroundView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/NSTextViewWithInset.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/LVColorWellCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/NSTextViewWithInset.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/SpinningProgressOverlay.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/LVColorWellCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/SplitViewWithoutDivider.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/SpinningProgressOverlay.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/SplitViewWithoutDivider.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Components/NSWindowAllowDrop.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Cells/RankTableCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Cells/ApplicationTableCellView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Cells/FilterTableHeaderView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Cells/ApplicationTableCellView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Cells/ImageAndTextCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Cells/FilterTableHeaderView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Cells/FilterTableHeaderCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Cells/RankTableCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Cells/ImageAndTextCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Cells/FilterTableHeaderCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/ApplicationRankViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/MainTabViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/MainTabViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/ApplicationReviewsViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/ApplicationReviewsViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/ApplicationRankViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/CountryChart.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/SalesChart.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/ApplicationDashboardViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/ChartPopoverDetails.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/SalesChart.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/CountryChart.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/ApplicationDashboardViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/ChartPopoverDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/DashboardSummaryTileViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/ApplicationDashboardViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/DashboardSummaryTileViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/Dashboard/DashboardSummaryTileViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/ApplicationRankViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/ApplicationReviewsViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Tabs/MainTabViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/DateRangeRankPopover/DateRangeSelectorViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/DateRangeRankPopover/DateRangeSelectorViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/DateRangeRankPopover/DateRangeSelectorViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/CategoryFilterViewController/CategoryFilterViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/CategoryFilterViewController/CategoryFilterViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/CategoryFilterViewController/CategoryFilterViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/RatingFilterViewController/RatingFilterViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/RatingFilterViewController/RatingFilterViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/RatingFilterViewController/RatingFilterViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/CountryFilterViewController/RankCountryFilterPopoverViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/CountryFilterViewController/RankCountryFilterPopoverViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/CountryFilterViewController/RankCountryFilterPopoverViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/VersionFilterViewController/VersionFilterViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/VersionFilterViewController/VersionFilterViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/VersionFilterViewController/VersionFilterViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/GenreFilterViewController/GenreFilterViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/GenreFilterViewController/GenreFilterViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Popovers/GenreFilterViewController/GenreFilterViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/AWApplicationListTreeViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/AWApplicationListTreeViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/AddAccountWindowController/AddAccountWindowController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/AddAccountWindowController/AddAccountWindowController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/AddAccountWindowController/AddAccountWindowController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/ApplicationSelectionWindowController/ApplicationSelectionWindowController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/ApplicationSelectionWindowController/ApplicationSelectionWindowController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/ApplicationSelectionWindowController/ApplicationSelectionWindowController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/SystemPreferences/PreferencesWindowController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/SystemPreferences/Accounts/AccountsViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/SystemPreferences/Accounts/AccountsViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/SystemPreferences/Accounts/AccountsViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/SystemPreferences/PreferencesWindowController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/SystemPreferences/PreferencesWindowController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/InitialSetupWizard/InitialSetupWizard.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/InitialSetupWizard/InitialSetupWizard.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/InitialSetupWizard/InitialSetupWizard.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/ApplicationPreferences/ApplicationPreferencesWindowController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/ApplicationPreferences/ApplicationPreferencesWindowController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/Dialogs/ApplicationPreferences/ApplicationPreferencesWindowController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/UI/AWApplicationListTreeViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Categories/NSImage+CGImage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Categories/NSString+Extend.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Categories/NSFileManager+Support.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Categories/NSFileManager+Support.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Categories/NSString+EmailValidation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Categories/NSString+Extend.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Categories/NSArray+Reverse.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Categories/NSImage+CGImage.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Categories/NSString+EmailValidation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Categories/NSArray+Reverse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Images.xcassets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSFtpFile.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoCrypt2.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoHttpRequest.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoDtObj.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSFtpDir.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoImapProgress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoZipProgress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoProgress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoTarProgress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSpider.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoGzip.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSshKey.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoDateTime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoOmaDrm.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoXmp.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSocksProxy.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSFtpProgress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSocketProgress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoHtmlToXml.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSocket.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoMime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoCgi.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoUnixCompress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoDkim.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoCache.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoBounce.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoCharset.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoHttp.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoImap.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoAtom.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoNtlm.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoZipEntry.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoCsv.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoFtp2Progress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoDirTree.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoDsa.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoCertStore.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoRss.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoHtmlToText.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoUpload.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSFtp.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSsh.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSshProgress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoHttpProgress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoSshTunnel.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoRsa.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoStringArray.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoPublicKey.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoTar.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoMessageSet.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoDh.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoZip.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoCert.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoBz2.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoMailMan.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoXml.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoZipCrc.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoCompression.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoMailboxes.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoHttpResponse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoEmail.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoMailManProgress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoFileAccess.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoEmailBundle.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoFtp2.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoPrivateKey.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/include/CkoMht.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/ChilkatRequired.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/Chilkat/ChilkatRequired.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/MSTranslateVendor/MSTranslateVendor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/MSTranslateVendor/NSMutableURLRequest+WebServiceExtend.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/MSTranslateVendor/NSXMLParser+Taged.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/MSTranslateVendor/TranslateNotification.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/MSTranslateVendor/NSXMLParser+Taged.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/MSTranslateVendor/MSTranslateAccessTokenRequester.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/MSTranslateVendor/MSTranslateVendor.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/MSTranslateVendor/NSObject+Subscripts.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/MSTranslateVendor/NSMutableURLRequest+WebServiceExtend.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/MSTranslateVendor/TranslateNotification.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/MSTranslateVendor/MSTranslateAccessTokenRequester.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/JWToolbarAdaptiveSpaceItem/JWClickThroughView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/JWToolbarAdaptiveSpaceItem/JWToolbarAdaptiveSpaceItem.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/JWToolbarAdaptiveSpaceItem/JWClickThroughView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Library/JWToolbarAdaptiveSpaceItem/JWToolbarAdaptiveSpaceItem.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWSQLiteHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWSystemSettings.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWSystemSettings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/IconCollector/IconCollectorOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/IconCollector/IconCollectorOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/NetworkHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/GenreHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWAccountHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/NetworkHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/GenreHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWAccountHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Caching/AWCacheHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Caching/AWCacheHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Email/AWEmailHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Email/Resources/EmailTemplate.html" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Email/Resources/EmailTemplate_Body.html" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Email/Resources/EmailTemplate_AppEntry _Review.html" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Email/Resources/EmailTemplate_AppEntry.html" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Email/AWEmailHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/iTunesConnect/iTunesConnectHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/iTunesConnect/iTunesConnectHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWDateHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWApplicationImageHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWDateHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWApplicationImageHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWChartColorHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/SalesReportHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Formatters/InvertedNumberFormatter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Formatters/InvertedNumberFormatter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWCurrencyHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/SalesReportHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWCurrencyHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/SheetController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/ProgressWindowController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/MachTimer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/SheetController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/ProgressWindowController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/OutlineViewWithMenu.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/OutlineViewWithMenu.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/MachTimer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/HSOutlineView/HSOutlineViewSelectionDark@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/HSOutlineView/HSOutlineViewTriangleRight.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/HSOutlineView/HSOutlineView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/HSOutlineView/HSTableRowView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/HSOutlineView/HSOutlineViewSelectionDark.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/HSOutlineView/HSOutlineViewTriangleRight@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/HSOutlineView/HSOutlineViewTriangleDown@2x.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/HSOutlineView/HSOutlineView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/HSOutlineView/HSOutlineViewTriangleDown.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/HSOutlineView/HSTableRowView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/HSShared/ProgressWindowController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Collections/CollectionOperationQueue.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Collections/CollectionOperationQueue.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Collections/iTunes/ReportCollectionOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Collections/iTunes/RankCollectionOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Collections/iTunes/RankCollectionOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Collections/iTunes/ReviewCollectorOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Collections/iTunes/ReportCollectionOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Collections/iTunes/ReviewCollectorOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWChartColorHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWApplicationFinder.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWApplicationFinder.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Importers/ReportImportHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Importers/RankBulkImporter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Importers/ReportImportHelper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Importers/ReviewBulkImporter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Importers/RankBulkImporter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/Importers/ReviewBulkImporter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/WebServer/HTTPJsonReponse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/WebServer/AWHTTPConnection.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/WebServer/AWHTTPConnection.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/WebServer/HTTPJsonReponse.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/WebServer/AWWebServer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/WebServer/AWWebServer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Business/AWSQLiteHelper.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/AppDelegate.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage/Base.lproj/MainMenu.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/iTunesCollectionService/com.hankinsoft.osx.appwage.iTunesCollectionService.entitlements" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/iTunesCollectionService/main.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/iTunesCollectionService/Services/CollectionListener.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/iTunesCollectionService/Services/CollectionListener.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/iTunesCollectionService/Supporting Files/iTunesCollectionService-Prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/iTunesCollectionService/Supporting Files/iTunesCollectionService-Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/iTunesCollectionService/Supporting Files/en.lproj/InfoPlist.strings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Common.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AppWage.entitlements" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GDataXML-HTML/Pod/Classes/GDataXMLNode.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GDataXML-HTML/Pod/Classes/GDataXMLNode.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworking.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/LVDebounce/LVDebounce.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/LVDebounce/LVDebounce.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CorePlot/CorePlot-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CorePlot/CorePlot.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CorePlot/CorePlot-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GDataXML-HTML/GDataXML-HTML.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GDataXML-HTML/GDataXML-HTML-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GDataXML-HTML/GDataXML-HTML-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-AppWage/Pods-AppWage.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-AppWage/Pods-AppWage-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-AppWage/Pods-AppWage-resources.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-AppWage/Pods-AppWage-acknowledgements.markdown" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-AppWage/Pods-AppWage-frameworks.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-AppWage/Pods-AppWage-acknowledgements.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-AppWage/Pods-AppWage.release.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CocoaHTTPServer/CocoaHTTPServer-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CocoaHTTPServer/CocoaHTTPServer.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CocoaHTTPServer/CocoaHTTPServer-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-iTunesCollectionService/Pods-iTunesCollectionService-acknowledgements.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-iTunesCollectionService/Pods-iTunesCollectionService.release.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-iTunesCollectionService/Pods-iTunesCollectionService-frameworks.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-iTunesCollectionService/Pods-iTunesCollectionService-acknowledgements.markdown" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-iTunesCollectionService/Pods-iTunesCollectionService-resources.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-iTunesCollectionService/Pods-iTunesCollectionService-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-iTunesCollectionService/Pods-iTunesCollectionService.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CocoaLumberjack/CocoaLumberjack-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CocoaLumberjack/CocoaLumberjack.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/FMDB/FMDB-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/FMDB/FMDB-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/FMDB/FMDB.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CHCSVParser/CHCSVParser-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CHCSVParser/CHCSVParser.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CHCSVParser/CHCSVParser-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/LVDebounce/LVDebounce.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/LVDebounce/LVDebounce-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/LVDebounce/LVDebounce-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/FXKeychain/FXKeychain-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/FXKeychain/FXKeychain.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/FXKeychain/FXKeychain-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GZIP/GZIP-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GZIP/GZIP.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GZIP/GZIP-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FXKeychain/FXKeychain/FXKeychain.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FXKeychain/FXKeychain/FXKeychain.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/TestResources/CorePlotProbes.d" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTPlatformSpecificFunctions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTPlatformSpecificCategories.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTPlatformSpecificDefines.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTGraphHostingView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTPlatformSpecificCategories.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTDecimalNumberValueTransformer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTPlatformSpecificFunctions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTDecimalNumberValueTransformer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTPlatformSpecificDefines.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTImagePlatformSpecific.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTTextStylePlatformSpecific.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTTextStylePlatformSpecific.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/MacOnly/CPTGraphHostingView.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/CocoaPods/CorePlot.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLineStyle.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutableNumericData.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAnimation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAxis.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutableNumericData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTGradient.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLegendEntry.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAxis.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTDefinitions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTDerivedXYGraph.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTNumericData.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationCGPointPeriod.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTBorderedLayer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTDefinitions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTGridLines.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationPlotRangePeriod.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTGridLines.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTPlainWhiteTheme.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationPlotRangePeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAnnotation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTXYAxis.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTPlainWhiteTheme.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTNumericData+TypeConversion.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAnnotation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTFillColor.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTTextLayer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTNumericData+TypeConversion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTGridLineGroup.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTFillColor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTTextLayer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTNumericData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTXYPlotSpace.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTUtilities.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTGradient.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTUtilities.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTShadow.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTXYAxisSet.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTShadow.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutableNumericData+TypeConversion.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTBarPlot.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTGraph.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutableNumericData+TypeConversion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutableTextStyle.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTGraph.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlot.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutableTextStyle.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/NSCoderExtensions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlot.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTXYPlotSpace.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPieChart.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotAreaFrame.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotAreaFrame.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTRangePlot.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationCGRectPeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLegendEntry.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTConstraintsFixed.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationNSNumberPeriod.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTConstraintsFixed.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationNSNumberPeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLineStyle.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTTradingRangePlot.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLayer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLineCap.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotSpaceAnnotation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/NSNumberExtensions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTXYTheme.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAnimationPeriod.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotSpaceAnnotation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/NSNumberExtensions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTXYTheme.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAnimationPeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTMaskLayer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTFunctionDataSource.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTMaskLayer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPathExtensions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTFunctionDataSource.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutableShadow.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutablePlotRange.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTConstraints.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTBarPlot.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutablePlotRange.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAxisLabel.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAnnotationHostLayer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotRange.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAxisLabel.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTImage.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAnnotationHostLayer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotGroup.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotRange.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTGridLineGroup.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTImage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTNumericDataType.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotGroup.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLayer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTNumericDataType.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotArea.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTTimeFormatter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotArea.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTStocksTheme.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTRangePlot.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTDebugQuickLook.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTStocksTheme.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutableLineStyle.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTFillGradient.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutableLineStyle.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTBorderedLayer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTTheme.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLayerAnnotation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTConstraintsRelative.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotSymbol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLayerAnnotation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTExceptions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTConstraintsRelative.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/NSCoderExtensions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAxisLabelGroup.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTBorderLayer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationCGPointPeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLimitBand.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAxisLabelGroup.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLineCap.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotSymbol.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/NSDecimalNumberExtensions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTXYAxisSet.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/NSDecimalNumberExtensions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTXYGraph.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTTradingRangePlot.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTXYGraph.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTTextStyle.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTColor.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTDerivedXYGraph.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTTextStyle.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationCGRectPeriod.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTFillImage.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTMutableShadow.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTFillImage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTFillGradient.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotSpace.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTPlainBlackTheme.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTPlainBlackTheme.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationCGFloatPeriod.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTFill.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationTimingFunctions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationCGFloatPeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTSlateTheme.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTFill.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationTimingFunctions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTExceptions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTSlateTheme.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTResponder.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPieChart.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAxisTitle.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationCGSizePeriod.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationNSDecimalPeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAxisTitle.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTXYAxis.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationCGSizePeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTScatterPlot.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLimitBand.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTCalendarFormatter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAxisSet.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTScatterPlot.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTColor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTCalendarFormatter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAxisSet.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTTheme.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTAnimationNSDecimalPeriod.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTDarkGradientTheme.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTColorSpace.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAnimationOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTDarkGradientTheme.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTTimeFormatter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTColorSpace.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAnimationOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLegend.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/_CPTBorderLayer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTLegend.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPathExtensions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTConstraints.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTPlotSpace.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CorePlot/framework/Source/CPTAnimation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/build/Debug/libPods.a" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CHCSVParser/CHCSVParser/CHCSVParser/CHCSVParser.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CHCSVParser/CHCSVParser/CHCSVParser/CHCSVParser.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GZIP/GZIP/GZIP.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GZIP/GZIP/GZIP.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabaseAdditions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabase.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMResultSet.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDB.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabaseAdditions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabaseQueue.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMResultSet.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabasePool.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabase.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabasePool.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FMDB/src/fmdb/FMDatabaseQueue.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaAsyncSocket/Source/GCD/GCDAsyncUdpSocket.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaAsyncSocket/Source/GCD/GCDAsyncSocket.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaAsyncSocket/Source/GCD/GCDAsyncSocket.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaAsyncSocket/Source/GCD/GCDAsyncUdpSocket.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDASLLogCapture.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDAssertMacros.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDLegacyMacros.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDFileLogger.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDAbstractDatabaseLogger.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDASLLogCapture.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDLog.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDFileLogger.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDTTYLogger.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDLog.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDLogMacros.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDTTYLogger.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDASLLogger.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/Extensions/DDMultiFormatter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/Extensions/DDContextFilterLogFormatter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/Extensions/DDDispatchQueueLogFormatter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/Extensions/DDMultiFormatter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/Extensions/DDContextFilterLogFormatter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/Extensions/DDDispatchQueueLogFormatter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDASLLogger.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDLog+LOGV.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/CocoaLumberjack.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaLumberjack/Classes/DDAbstractDatabaseLogger.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/HTTPMessage.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Mime/MultipartFormDataParser.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Mime/MultipartMessageHeaderField.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Mime/MultipartMessageHeader.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Mime/MultipartMessageHeaderField.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Mime/MultipartMessageHeader.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Mime/MultipartFormDataParser.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/HTTPAuthenticationRequest.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/HTTPResponse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/HTTPConnection.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/WebSocket.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/HTTPLogging.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/HTTPConnection.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/WebSocket.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/HTTPMessage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Responses/HTTPAsyncFileResponse.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Responses/HTTPRedirectResponse.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Responses/HTTPDynamicFileResponse.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Responses/HTTPAsyncFileResponse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Responses/HTTPRedirectResponse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Responses/HTTPDynamicFileResponse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Responses/HTTPDataResponse.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Responses/HTTPDataResponse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Responses/HTTPFileResponse.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Responses/HTTPFileResponse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/HTTPServer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Categories/DDNumber.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Categories/DDRange.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Categories/DDNumber.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Categories/DDData.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Categories/DDRange.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/Categories/DDData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/HTTPServer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Core/HTTPAuthenticationRequest.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Extensions/WebDAV/DELETEResponse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Extensions/WebDAV/DAVConnection.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Extensions/WebDAV/PUTResponse.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Extensions/WebDAV/DAVResponse.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Extensions/WebDAV/PUTResponse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Extensions/WebDAV/DAVResponse.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Extensions/WebDAV/DELETEResponse.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/CocoaHTTPServer/Extensions/WebDAV/DAVConnection.m" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES>
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/HIToolbox.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/SecurityHI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/CarbonSound.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/CommonPanels.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/NavigationServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/Help.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/OpenScripting.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/Print.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/Ink.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/SpeechRecognition.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/ImageCapture.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Intents.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreImage.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/InstantMessage.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MapKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/DirectoryService.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ScriptingBridge.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/InstallerPlugins.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ForceFeedback.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreMediaIO.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreWLAN.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/JavaVM.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaNativeFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MetalKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kerberos.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/QuartzCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MediaAccessibility.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AddressBook.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/FWAUserLib.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/EventKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/PrintCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreGraphics.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/QD.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ImageIO.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ColorSync.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/SpeechSynthesis.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreText.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/LangAnalysis.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/vmnet.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreMedia.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Tcl.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreAudioKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Cocoa.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenCL.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Python.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/PubSub.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreVideo.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GameKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Contacts.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CalendarStore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AVKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/FinderSync.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/WebKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/StoreKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accounts.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SyncServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AVFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AppKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/InputMethodKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SecurityInterface.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/LatentSemanticMapping.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenDirectory.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenDirectory.framework/Frameworks/CFOpenDirectory.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOBluetooth.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreAudio.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/VideoDecodeAcceleration.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Photos.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/DVDPlayback.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioVideoBridging.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AppKitScripting.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/QTKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GameController.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ModelIO.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MediaLibrary.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OSAKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ExceptionHandling.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOBluetoothUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SafariServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/NetFS.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/PreferencePanes.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ScreenSaver.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ImageCaptureCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SpriteKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Automator.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreData.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Social.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SceneKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SecurityFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/PhotosUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/QuickLook.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Tk.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IMServicePlugIn.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GSS.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/TWAIN.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOSurface.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Hypervisor.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Frameworks/QuickLookUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Frameworks/QuartzFilters.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Frameworks/ImageKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Frameworks/QuartzComposer.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Frameworks/PDFKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GameplayKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ImageIO.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AppleScriptObjC.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CFNetwork.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CryptoTokenKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/DiscRecordingUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Collaboration.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AGL.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ContactsUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/VideoToolbox.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/NotificationCenter.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreLocation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/DiscRecording.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/PCSC.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CloudKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AppleScriptKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MultipeerConnectivity.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/LDAP.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/JavaFrameEmbedding.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/OSServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/SearchKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/SharedFileList.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/AE.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/FSEvents.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/DictionaryServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ServiceManagement.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ICADevices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/DiskArbitration.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Scripting.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Library/Frameworks/XcodeKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Library/Frameworks/DTPerformanceSession.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/include" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/HIToolbox.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/SecurityHI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/CarbonSound.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/CommonPanels.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/NavigationServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/Help.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/OpenScripting.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/Print.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/Ink.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/SpeechRecognition.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework/Frameworks/ImageCapture.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Intents.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreImage.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/InstantMessage.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MapKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/DirectoryService.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ScriptingBridge.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/InstallerPlugins.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ForceFeedback.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreMediaIO.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreWLAN.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/JavaVM.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaNativeFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MetalKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kerberos.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/QuartzCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MediaAccessibility.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AddressBook.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/FWAUserLib.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/EventKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/PrintCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreGraphics.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/QD.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ImageIO.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ColorSync.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/SpeechSynthesis.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreText.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/LangAnalysis.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/vmnet.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreMedia.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Tcl.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreAudioKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Cocoa.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenCL.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Python.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/PubSub.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreVideo.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GameKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Contacts.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenAL.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CalendarStore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AVKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/FinderSync.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/WebKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/StoreKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accounts.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SyncServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AVFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Kernel.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AppKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/InputMethodKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SecurityInterface.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/LatentSemanticMapping.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenDirectory.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenDirectory.framework/Frameworks/CFOpenDirectory.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOBluetooth.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreAudio.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/VideoDecodeAcceleration.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Photos.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/DVDPlayback.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioVideoBridging.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AppKitScripting.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/QTKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GameController.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ModelIO.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MediaLibrary.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OSAKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ExceptionHandling.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOBluetoothUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SafariServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/NetFS.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/PreferencePanes.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ScreenSaver.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ImageCaptureCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SpriteKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Automator.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreData.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Social.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SceneKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/SecurityFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/PhotosUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/QuickLook.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Tk.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IMServicePlugIn.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GSS.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/TWAIN.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOSurface.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Hypervisor.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Frameworks/QuickLookUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Frameworks/QuartzFilters.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Frameworks/ImageKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Frameworks/QuartzComposer.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Quartz.framework/Frameworks/PDFKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GameplayKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ImageIO.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AppleScriptObjC.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CFNetwork.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CryptoTokenKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/DiscRecordingUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Collaboration.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AGL.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ContactsUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/VideoToolbox.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/NotificationCenter.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreLocation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/DiscRecording.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/PCSC.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CloudKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AppleScriptKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/MultipeerConnectivity.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/LDAP.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/JavaFrameEmbedding.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/OSServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/SearchKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/SharedFileList.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/AE.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/FSEvents.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/DictionaryServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ServiceManagement.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/ICADevices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/DiskArbitration.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Scripting.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Library/Frameworks/XcodeKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Library/Frameworks/DTPerformanceSession.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/include" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

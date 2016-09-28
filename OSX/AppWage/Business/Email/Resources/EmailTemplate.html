@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>AppWage - Daily Updates</title>
+        <style type="text/css">
+            
+            /***********
+             Originally based on The MailChimp Reset from Fabio Carneiro, MailChimp User Experience Design
+             More info and templates on Github: https://github.com/mailchimp/Email-Blueprints
+             http://www.mailchimp.com &amp; http://www.fabio-carneiro.com
+             
+             INLINE: Yes.
+             ***********/
+		/* Client-specific Styles */
+		#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+		body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
+		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+		#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+		/* End reset */
+        
+		/* Some sensible defaults for images
+         1. "-ms-interpolation-mode: bicubic" works to help ie properly resize images in IE. (if you are resizing them using the width and height attributes)
+         2. "border:none" removes border when linking images.
+         3. Updated the common Gmail/Hotmail image display fix: Gmail and Hotmail unwantedly adds in an extra space below images when using non IE browsers. You may not always want all of your images to be block elements. Apply the "image_fix" class to any image you need to fix.
+         
+         Bring inline: Yes.
+         */
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+		a img {border:none;}
+		.image_fix {display:block;}
+        
+		/** Yahoo paragraph fix: removes the proper spacing or the paragraph (p) tag. To correct we set the top/bottom margin to 1em in the head of the document. Simple fix with little effect on other styling. NOTE: It is also common to use two breaks instead of the paragraph tag but I think this way is cleaner and more semantic. NOTE: This example recommends 1em. More info on setting web defaults: http://www.w3.org/TR/CSS21/sample.html or http://meiert.com/en/blog/20070922/user-agent-style-sheets/
+         
+         Bring inline: Yes.
+         **/
+		p {margin: 1em 0;}
+        
+		/** Hotmail header color reset: Hotmail replaces your header color styles with a green color on H2, H3, H4, H5, and H6 tags. In this example, the color is reset to black for a non-linked header, blue for a linked header, red for an active header (limited support), and purple for a visited header (limited support).  Replace with your choice of color. The !important is really what is overriding Hotmail's styling. Hotmail also sets the H1 and H2 tags to the same size.
+         
+         Bring inline: Yes.
+         **/
+		h1, h2, h3, h4, h5, h6 {color: black !important;}
+        
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue !important;}
+        
+		h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+			color: red !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+        }
+        
+		h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+			color: purple !important; /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		}
+		
+		.summaryHeader {
+			color:#333333;
+			text-decoration:none;
+			font-weight:bold;
+			font-size:13px;
+		}
+
+		.summaryEntry {
+			color:#333333;
+			text-decoration:none;
+			font-weight:normal;
+			font-size:13px;
+		}
+
+		/** Outlook 07, 10 Padding issue: These "newer" versions of Outlook add some padding around table cells potentially throwing off your perfectly pixeled table.  The issue can cause added space and also throw off borders completely.  Use this fix in your header or inline to safely fix your table woes.
+         
+         More info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells/
+         http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07/
+         
+         H/T @edmelly
+         
+         Bring inline: No.
+         **/
+		table td {border-collapse: collapse;}
+        
+		/** Remove spacing around Outlook 07, 10 tables
+         
+         More info : http://www.campaignmonitor.com/blog/post/3694/removing-spacing-from-around-tables-in-outlook-2007-and-2010/
+         
+         Bring inline: Yes
+         **/
+		table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+        
+		/* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email, bring your styles inline.  Your link colors will be uniform across clients when brought inline.
+         
+         Bring inline: Yes. */
+		a {color: orange;}
+        
+		/* Or to go the gold star route...
+         a:link { color: orange; }
+         a:visited { color: blue; }
+         a:hover { color: green; }
+         */
+        
+		/***************************************************
+         ****************************************************
+         MOBILE TARGETING
+         
+         Use @media queries with care.  You should not bring these styles inline -- so it's recommended to apply them AFTER you bring the other stlying inline.
+         
+         Note: test carefully with Yahoo.
+         Note 2: Don't bring anything below this line inline.
+         ****************************************************
+         ***************************************************/
+        
+		/* NOTE: To properly use @media queries and play nice with yahoo mail, use attribute selectors in place of class, id declarations.
+         table[class=classname]
+         Read more: http://www.campaignmonitor.com/blog/post/3457/media-query-issues-in-yahoo-mail-mobile-email/
+         */
+		@media only screen and (max-device-width: 480px) {
+            
+			/* A nice and clean way to target phone numbers you want clickable and avoid a mobile phone from linking other numbers that look like, but are not phone numbers.  Use these two blocks of code to "unstyle" any numbers that may be linked.  The second block gives you a class to apply with a span tag to the numbers you would like linked and styled.
+             
+             Inspired by Campaign Monitor's article on using phone numbers in email: http://www.campaignmonitor.com/blog/post/3571/using-phone-numbers-in-html-email/.
+             
+             Step 1 (Step 2: line 224)
+             */
+			a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: black; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+            
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important; /* or whatever your want */
+                pointer-events: auto;
+                cursor: default;
+            }
+		}
+        
+		/* More Specific Targeting */
+        
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+			/* You guessed it, ipad (tablets, smaller screens, etc) */
+            
+			/* Step 1a: Repeating for the iPad */
+			a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: blue; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+            
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+		}
+        
+		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+			/* Put your iPhone 4g styles in here */
+		}
+        
+		/* Following Android targeting from:
+         http://developer.android.com/guide/webapps/targeting.html
+         http://pugetworks.com/2011/04/css-media-queries-for-targeting-different-mobile-devices/  */
+		@media only screen and (-webkit-device-pixel-ratio:.75){
+			/* Put CSS for low density (ldpi) Android layouts in here */
+		}
+		@media only screen and (-webkit-device-pixel-ratio:1){
+			/* Put CSS for medium density (mdpi) Android layouts in here */
+		}
+		@media only screen and (-webkit-device-pixel-ratio:1.5){
+			/* Put CSS for high density (hdpi) Android layouts in here */
+		}
+		/* end Android targeting */
+            </style>
+        
+        <!-- Targeting Windows Mobile -->
+        <!--[if IEMobile 7]>
+         <style type="text/css">
+         
+         </style>
+         <![endif]-->
+        
+        <!-- ***********************************************
+         ****************************************************
+         END MOBILE TARGETING
+         ****************************************************
+         ************************************************ -->
+        
+        <!--[if gte mso 9]>
+         <style>
+         /* Target Outlook 2007 and 2010 */
+         </style>
+         <![endif]-->
+    </head>
+    <body>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td colspan="2">
+                    <table width="100%" cellpadding="12" cellspacing="0" border="0">
+                        <tr>
+                            <td>
+                                <div style="overflow: hidden;">
+                                    <div style="background-color:#fff; font-family:tahoma,arial,verdana,sans-serif" align="center">
+                                        <div align="center">
+                                            <div align="center" style="padding-bottom:15px;width:695px">
+                                                
+                                                <!-- Small gap from top of page -->
+                                                <div>
+                                                    <font size="-1">                                                            <br style="visibility:hidden" /></font>
+                                                </div>
+                                                
+                                                <div align="left" style="width:665px;background-color:#fff">
+                                                    <div style="padding:15px;padding-top:10px;padding-bottom:0px">
+                                                        
+                                                        <!-- Header -->
+                                                        <div style="padding-bottom:12px">
+                                                            <table cellspacing="0" cellpadding="0" width="635" height="16">
+                                                                <tr>
+                                                                    <td width="634" valign="bottom" align="center"><span>AppWage - {APPWAGE_DATE}</span></td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+
+                                                        <!-- Summary -->
+                                                        <table cellspacing="0" cellpadding="0" style="width:635px">
+                                                            <tr>
+                                                                <th background=
+                                                                    "https://ci4.googleusercontent.com/proxy/VRmGxT2lJqoX-kkMQlKvRsKaWizg9sF8A_CQInbAevUlW28bYTWcRRJvJnjamQa8Qxahhif6q6vihVFJqPwQIGKViTIU8AJ8eGTl5Ky0wagFrDT_KAJeGDcBR1A2ryCvo-Qujz9VQ5k=s0-d-e1-ft#http://appannie.com/media/pictures/annie_email/annie_daily_app_table_header_bg.png"
+                                                                    style=
+                                                                    "text-align:left;font-weight:normal;padding-top:6px;padding-bottom:6px;border-top:1px solid #f1f1f1;border-bottom:1px solid #ececec"
+                                                                    valign="center">
+                                                                    <table cellspacing="0" cellpadding="0" style="width: 100%;">
+                                                                        <tr>
+                                                                            <td style="padding-left:11px;">
+                                                                                <span class="summaryHeader">Summary</span>
+                                                                            </td>
+                                                                            <td width="100" style="text-align: right;">
+                                                                                <span class="summaryHeader">Downloads</span>
+                                                                            </td>
+                                                                            <td width="100" style="text-align: right;padding-right:10px;">
+                                                                                <span class="summaryHeader">Revenue</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </th>
+                                                            </tr>
+                                                            <tr>
+	                                                            <td style=
+                                                                    "text-align:left;font-weight:normal;padding-top:6px;padding-bottom:6px;border-top:1px solid #f1f1f1;border-bottom:1px solid #ececec;"
+                                                                    valign="center">
+																	<table cellspacing="0" cellpadding="0" style="width: 100%;">
+                                                                        <tr>
+                                                                        	<td style="padding-left:11px;text-transform:uppercase;">
+	                                                                        	<span class="summaryEntry" style="font-weight:bold;">Total</span>
+                                                                        	</td>
+                                                                        	<td width="100" style="text-align: right;">
+                                                                        		<span class="summaryEntry">100</span>
+                                                                        	</td>
+                                                                        	<td width="100" style="text-align: right;padding-right:10px;">
+                                                                        		<span class="summaryEntry">$100</span>
+                                                                        	</td>
+                                                                        </tr>
+																	</table>
+	                                                            </td>
+                                                            </tr>
+
+
+                                                            <tr>
+	                                                            <td style=
+                                                                    "text-align:left;font-weight:normal;padding-top:6px;padding-bottom:6px;border-top:1px solid #f1f1f1;border-bottom:1px solid #ececec;"
+                                                                    valign="center">
+																	<table cellspacing="0" cellpadding="0" style="width: 100%;">
+                                                                        <tr>
+                                                                        	<td style="padding-left:11px;text-transform:uppercase;">
+	                                                                        	<span class="summaryEntry" style="font-weight:bold;">Total</span>
+                                                                        	</td>
+                                                                        	<td width="100" style="text-align: right;">
+                                                                        		<span class="summaryEntry">100</span>
+                                                                        	</td>
+                                                                        	<td width="100" style="text-align: right;padding-right:10px;">
+                                                                        		<span class="summaryEntry">$100</span>
+                                                                        	</td>
+                                                                        </tr>
+																	</table>
+	                                                            </td>
+                                                            </tr>
+                                                        </table>
+
+														<div style=\"min-height:20px;line-height:1px;font-size:1px\"><br style=\"visibility:hidden\" /></div>
+
+
+
+
+
+
+
+
+                                                        <!-- Individual Entry -->
+                                                        <table cellspacing="0" cellpadding="0" style="width:635px">
+                                                            <tr>
+                                                                <th background=
+                                                                    "https://ci4.googleusercontent.com/proxy/VRmGxT2lJqoX-kkMQlKvRsKaWizg9sF8A_CQInbAevUlW28bYTWcRRJvJnjamQa8Qxahhif6q6vihVFJqPwQIGKViTIU8AJ8eGTl5Ky0wagFrDT_KAJeGDcBR1A2ryCvo-Qujz9VQ5k=s0-d-e1-ft#http://appannie.com/media/pictures/annie_email/annie_daily_app_table_header_bg.png"
+                                                                    style=
+                                                                    "text-align:left;font-weight:normal;padding-top:6px;padding-bottom:6px;border-top:1px solid #f1f1f1;border-bottom:1px solid #ececec"
+                                                                    valign="center">
+                                                                    <table cellspacing="0" cellpadding="0" style="width:100%;">
+                                                                        <tr>
+                                                                            <td width="33" style="width:33px;text-align:right"
+                                                                                valign="center"><img width="24px" height="24px" src=
+                                                                                    "https://ci4.googleusercontent.com/proxy/Id7jMjVvV60KJ8CE44TzoYNsNfoC5UEeFGKwoDXxKOCEDfP-GOksRgePzarOrdJslQ_nY6UHiuL496_N3DGz17x8yz1enZGAXybzrDrAL2Ui_V4eOA7mvEO0ON90gK2t6X7DGp3USr8fzDyK4oX6aT-7C7oOtjHEjWJZT-_w2y0ESmTrjJTnQmKOLg=s0-d-e1-ft#http://a3.mzstatic.com/us/r1000/062/Purple/v4/59/a0/18/59a018f3-681d-0c1c-4682-4480418763e7/mzl.xupwxirb.75x75-65.jpg"
+                                                                                    style="border:0px"></td>
+                                                                            
+                                                                            <td style="font-weight:normal;font-size:14px;padding-left:8px;padding-top:2px">
+                                                                                <span style="color:#333333;text-decoration:none">Christmas Countdown</span></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </th>
+                                                            </tr>
+                                                            
+                                                            <tr>
+                                                                <td colspan="2" align="center" style=
+                                                                    "background-color:#f8f8f8;border-bottom:1px solid #f1f1f1;padding-bottom:10px">
+                                                                    <div style="min-height:10px;line-height:1px;font-size:1px">
+                                                            <br style="visibility:hidden" />
+                                                                    </div>
+                                                                    
+                                                                    <!-- Rankings table
+                                                                     <table cellspacing="0" cellpadding="0" style="width:615px"
+                                                                     width="615">
+                                                                     <tr>
+                                                                     <th style=
+                                                                     "padding:5px;padding-left:0px;color:#666666;font-size:10px;text-transform:uppercase;font-weight:normal;text-align:left;border-bottom:1px solid #eeeeee">
+                                                                     <a title="United States" style=
+                                                                     "text-decoration:none"><img alt="United States" src=
+                                                                     "https://ci5.googleusercontent.com/proxy/2wLFZx9RGf8ndGMMv8XVg9F14u2a5WuQ7XSvImzGTxRuCCAgcEAPiz0e6BY-bzbmeBLUL_BgkFDXNcrL_2Omj6vkh7eGGEHEYwrrzoY=s0-d-e1-ft#http://www.appannie.com/media/pictures/flags/gif/us.gif"
+                                                                     style=
+                                                                     "width:16px;min-height:11px;border:0px;margin-right:1px"></a>
+                                                                     <span
+                                                                     style="color:#333333;text-decoration:none">Rankings</span></th>
+                                                                     
+                                                                     <th style=
+                                                                     "text-align:left;padding:5px;color:#666666;font-size:10px;text-transform:uppercase;font-weight:normal;text-align:center;border-bottom:1px solid #eeeeee"
+                                                                     colspan="2">Lifestyle</th>
+                                                                     </tr>
+                                                                     
+                                                                     <tr>
+                                                                     <td style=
+                                                                     "font-size:13px;text-align:left;color:#333333;background-color:#ffffff;border-left:1px solid #eeeeee;padding:5px;border-bottom:1px solid #f1f1f1">
+                                                                     iPhone Paid</td>
+                                                                     
+                                                                     <td valign="center" style=
+                                                                     "font-size:13px;color:#333333;background-color:#ffffff;padding:5px;padding-left:20px;text-align:right;border-bottom:1px solid #f1f1f1">
+                                                                     953</td>
+                                                                     
+                                                                     <td valign="bottom" style=
+                                                                     "font-size:13px;background-color:#ffffff;border-right:1px solid #eeeeee;padding:5px;padding-right:15px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                     <a title="Compared to yesterday" style=
+                                                                     "color:#5db446;text-decoration:none;font-size:11px"><span style="font-size:9px;padding-right:2px">
+                                                                     &#9650;</span>482</a></td>
+                                                                     </tr>
+                                                                     
+                                                                     <tr>
+                                                                     <td style=
+                                                                     "font-size:13px;text-align:left;color:#333333;background-color:#ffffff;border-left:1px solid #eeeeee;padding:5px;border-bottom:1px solid #eee">
+                                                                     iPad Paid</td>
+                                                                     
+                                                                     <td valign="center" style=
+                                                                     "font-size:13px;color:#333333;background-color:#ffffff;padding:5px;padding-left:20px;text-align:right;border-bottom:1px solid #eee">
+                                                                     346</td>
+                                                                     
+                                                                     <td valign="bottom" style=
+                                                                     "font-size:13px;background-color:#ffffff;border-right:1px solid #eeeeee;padding:5px;padding-right:15px;text-align:left;border-bottom:1px solid #eee">
+                                                                     <a title="Compared to yesterday" style=
+                                                                     "color:#5db446;text-decoration:none;font-size:11px"><span style="font-size:9px;padding-right:2px">
+                                                                     &#9650;</span>29</a></td>
+                                                                     </tr>
+                                                                     </table>
+                                                                     
+                                                                     <div style="min-height:10px;line-height:1px;font-size:1px">
+                                                            <br style="visibility:hidden" />
+                                                                     </div>
+                                                                     -->
+                                                                    <table cellspacing="0" cellpadding="0" style="width:615px"
+                                                                        width="615">
+                                                                        <tr>
+                                                                            <th colspan="3" style=
+                                                                                "font-size:13px;color:#333333;padding:5px;font-size:10px;text-transform:uppercase;font-weight:normal;text-align:left;border-bottom:1px solid #eeeeee">
+                                                                                <span style="color:#333333;text-decoration:none">7 New Reviews<span style="padding-left:0px">,
+                                                                                    Avg. 4.7 Rating</span></span></th>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                            <td width="23" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-left:1px solid #eeeeee;background-color:#ffffff;padding-left:8px;padding-top:8px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <a title="United Kingdom" style="text-decoration:none"><img src="https://ci3.googleusercontent.com/proxy/LMGSG8utivJTQclsyXSqNIR8cRH7qEixC__HknWl_k4XEs1VTXyUDaKenSWeqFH5ZrvDDOvhP0Mg6r4_yWAHaOBxB0baSD9I6ANu6o4=s0-d-e1-ft#http://www.appannie.com/media/pictures/flags/gif/gb.gif"></a>
+                                                                            </td>
+                                                                            
+                                                                            <td width="90" valign="top" style="font-size:13px;color:#333333;background-color:#ffffff;border-left:0px;padding:5px;padding-left:0px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <img src="https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                    alt="*"><img src="https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                        alt="*"><img src="https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                            alt="*"><img src="https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                alt="*"><img src="https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                    alt="*">
+                                                                                                    </td>
+                                                                            
+                                                                            <td width="502" valign="top" style="font-size:13px;color:#333333;border-right:1px solid #eeeeee;background-color:#ffffff;padding:5px;padding-left:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <strong>Love it!</strong> - Great app &#128512;</td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                            <td width="23" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-left:1px solid #eeeeee;background-color:#ffffff;padding-left:8px;padding-top:8px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <a title="United States" style=
+                                                                                    "text-decoration:none"><img src=
+                                                                                        "https://ci5.googleusercontent.com/proxy/2wLFZx9RGf8ndGMMv8XVg9F14u2a5WuQ7XSvImzGTxRuCCAgcEAPiz0e6BY-bzbmeBLUL_BgkFDXNcrL_2Omj6vkh7eGGEHEYwrrzoY=s0-d-e1-ft#http://www.appannie.com/media/pictures/flags/gif/us.gif"></a></td>
+                                                                            
+                                                                            <td width="90" valign="top" style=
+                                                                                "font-size:13px;color:#333333;background-color:#ffffff;border-left:0px;padding:5px;padding-left:0px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <img src=
+                                                                                    "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                    alt="*"><img src=
+                                                                                        "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                        alt="*"><img src=
+                                                                                            "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                            alt="*"><img src=
+                                                                                                "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                alt="*"><img src=
+                                                                                                    "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                    alt="*"></td>
+                                                                            
+                                                                            <td width="502" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-right:1px solid #eeeeee;background-color:#ffffff;padding:5px;padding-left:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <strong>Awesome app!</strong> - Love Christmas and I
+                                                                                love everything about this app!! Hey, there's only 358
+                                                                                days until Christmas!</td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                            <td width="23" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-left:1px solid #eeeeee;background-color:#ffffff;padding-left:8px;padding-top:8px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <a title="United States" style=
+                                                                                    "text-decoration:none"><img src=
+                                                                                        "https://ci5.googleusercontent.com/proxy/2wLFZx9RGf8ndGMMv8XVg9F14u2a5WuQ7XSvImzGTxRuCCAgcEAPiz0e6BY-bzbmeBLUL_BgkFDXNcrL_2Omj6vkh7eGGEHEYwrrzoY=s0-d-e1-ft#http://www.appannie.com/media/pictures/flags/gif/us.gif"></a></td>
+                                                                            
+                                                                            <td width="90" valign="top" style=
+                                                                                "font-size:13px;color:#333333;background-color:#ffffff;border-left:0px;padding:5px;padding-left:0px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <img src=
+                                                                                    "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                    alt="*"><img src=
+                                                                                        "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                        alt="*"><img src=
+                                                                                            "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                            alt="*"><img src=
+                                                                                                "https://ci6.googleusercontent.com/proxy/0sIUX7Wz9uxHVuocHufzAyReRqBFT-ZbAR8OFcPuNAPR2QmFlnuVbD8jaBOo39KwXX6t56ri_TUzAGtAC3l5d0eVEEw2tDOBUm0k=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-blank.png"
+                                                                                                alt="*"><img src=
+                                                                                                    "https://ci6.googleusercontent.com/proxy/0sIUX7Wz9uxHVuocHufzAyReRqBFT-ZbAR8OFcPuNAPR2QmFlnuVbD8jaBOo39KwXX6t56ri_TUzAGtAC3l5d0eVEEw2tDOBUm0k=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-blank.png"
+                                                                                                    alt="*"></td>
+                                                                            
+                                                                            <td width="502" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-right:1px solid #eeeeee;background-color:#ffffff;padding:5px;padding-left:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <strong>Might it work now</strong> - Love it</td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                            <td width="23" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-left:1px solid #eeeeee;background-color:#ffffff;padding-left:8px;padding-top:8px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <a title="United States" style=
+                                                                                    "text-decoration:none"><img src=
+                                                                                        "https://ci5.googleusercontent.com/proxy/2wLFZx9RGf8ndGMMv8XVg9F14u2a5WuQ7XSvImzGTxRuCCAgcEAPiz0e6BY-bzbmeBLUL_BgkFDXNcrL_2Omj6vkh7eGGEHEYwrrzoY=s0-d-e1-ft#http://www.appannie.com/media/pictures/flags/gif/us.gif"></a></td>
+                                                                            
+                                                                            <td width="90" valign="top" style=
+                                                                                "font-size:13px;color:#333333;background-color:#ffffff;border-left:0px;padding:5px;padding-left:0px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <img src=
+                                                                                    "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                    alt="*"><img src=
+                                                                                        "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                        alt="*"><img src=
+                                                                                            "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                            alt="*"><img src=
+                                                                                                "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                alt="*"><img src=
+                                                                                                    "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                    alt="*"></td>
+                                                                            
+                                                                            <td width="502" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-right:1px solid #eeeeee;background-color:#ffffff;padding:5px;padding-left:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <strong>Awesome! Use it all year</strong> - Great!</td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                            <td width="23" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-left:1px solid #eeeeee;background-color:#ffffff;padding-left:8px;padding-top:8px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <a title="United States" style=
+                                                                                    "text-decoration:none"><img src=
+                                                                                        "https://ci5.googleusercontent.com/proxy/2wLFZx9RGf8ndGMMv8XVg9F14u2a5WuQ7XSvImzGTxRuCCAgcEAPiz0e6BY-bzbmeBLUL_BgkFDXNcrL_2Omj6vkh7eGGEHEYwrrzoY=s0-d-e1-ft#http://www.appannie.com/media/pictures/flags/gif/us.gif"></a></td>
+                                                                            
+                                                                            <td width="90" valign="top" style=
+                                                                                "font-size:13px;color:#333333;background-color:#ffffff;border-left:0px;padding:5px;padding-left:0px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <img src=
+                                                                                    "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                    alt="*"><img src=
+                                                                                        "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                        alt="*"><img src=
+                                                                                            "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                            alt="*"><img src=
+                                                                                                "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                alt="*"><img src=
+                                                                                                    "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                    alt="*"></td>
+                                                                            
+                                                                            <td width="502" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-right:1px solid #eeeeee;background-color:#ffffff;padding:5px;padding-left:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <strong>Love it!</strong> - It's my favorite Christmas
+                                                                                Countdown app. LOVE the custom picture feature!!!
+                                                                                Highly recommend it!!!</td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                            <td width="23" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-left:1px solid #eeeeee;background-color:#ffffff;padding-left:8px;padding-top:8px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <a title="United States" style=
+                                                                                    "text-decoration:none"><img src=
+                                                                                        "https://ci5.googleusercontent.com/proxy/2wLFZx9RGf8ndGMMv8XVg9F14u2a5WuQ7XSvImzGTxRuCCAgcEAPiz0e6BY-bzbmeBLUL_BgkFDXNcrL_2Omj6vkh7eGGEHEYwrrzoY=s0-d-e1-ft#http://www.appannie.com/media/pictures/flags/gif/us.gif"></a></td>
+                                                                            
+                                                                            <td width="90" valign="top" style=
+                                                                                "font-size:13px;color:#333333;background-color:#ffffff;border-left:0px;padding:5px;padding-left:0px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <img src=
+                                                                                    "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                    alt="*"><img src=
+                                                                                        "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                        alt="*"><img src=
+                                                                                            "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                            alt="*"><img src=
+                                                                                                "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                alt="*"><img src=
+                                                                                                    "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                    alt="*"></td>
+                                                                            
+                                                                            <td width="502" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-right:1px solid #eeeeee;background-color:#ffffff;padding:5px;padding-left:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <strong>Fun :)</strong> - Fun way to keep up with
+                                                                                Christmas. :)</td>
+                                                                        </tr>
+                                                                        
+                                                                        <tr>
+                                                                            <td width="23" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-left:1px solid #eeeeee;background-color:#ffffff;padding-left:8px;padding-top:8px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <a title="United States" style=
+                                                                                    "text-decoration:none"><img src=
+                                                                                        "https://ci5.googleusercontent.com/proxy/2wLFZx9RGf8ndGMMv8XVg9F14u2a5WuQ7XSvImzGTxRuCCAgcEAPiz0e6BY-bzbmeBLUL_BgkFDXNcrL_2Omj6vkh7eGGEHEYwrrzoY=s0-d-e1-ft#http://www.appannie.com/media/pictures/flags/gif/us.gif"></a></td>
+                                                                            
+                                                                            <td width="90" valign="top" style=
+                                                                                "font-size:13px;color:#333333;background-color:#ffffff;border-left:0px;padding:5px;padding-left:0px;padding-right:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <img src=
+                                                                                    "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                    alt="*"><img src=
+                                                                                        "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                        alt="*"><img src=
+                                                                                            "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                            alt="*"><img src=
+                                                                                                "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                alt="*"><img src=
+                                                                                                    "https://ci3.googleusercontent.com/proxy/QqOIAkIA9VtvVWuzr_fw7bbTYDZ8w13wxkdEGinXkTyMZ0E8NeVO5mHoLcdr7IVzgiTO8gLnO4XrcvLJ2ZChcP1j86lHiCLwhPYB=s0-d-e1-ft#http://www.appannie.com/media/pictures/star-whole.png"
+                                                                                                    alt="*"></td>
+                                                                            
+                                                                            <td width="502" valign="top" style=
+                                                                                "font-size:13px;color:#333333;border-right:1px solid #eeeeee;background-color:#ffffff;padding:5px;padding-left:0px;text-align:left;border-bottom:1px solid #f1f1f1">
+                                                                                <strong>Christmas Count Down</strong> - Love this app.
+                                                                                Wish it could used as screen savor. A birthday,
+                                                                                anniversary, retirement countdown would be super great.
+                                                                                Thanks.</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        
+                                                        <div style="min-height:20px;line-height:1px;font-size:1px">
+                                                            <br style="visibility:hidden" />
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

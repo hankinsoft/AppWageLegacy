@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B32DEDE817939E6800866FD2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32DEDE717939E6800866FD2 /* Cocoa.framework */; };
+		B32DEDF217939E6800866FD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B32DEDF017939E6800866FD2 /* InfoPlist.strings */; };
+		B32DEDF417939E6800866FD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B32DEDF317939E6800866FD2 /* main.m */; };
+		B32DEDF817939E6800866FD2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B32DEDF617939E6800866FD2 /* Credits.rtf */; };
+		B32DEDFB17939E6800866FD2 /* JWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B32DEDFA17939E6800866FD2 /* JWAppDelegate.m */; };
+		B32DEDFE17939E6800866FD2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B32DEDFC17939E6800866FD2 /* MainMenu.xib */; };
+		B32DEE0617939E9F00866FD2 /* JWToolbarAdaptiveSpaceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B32DEE0517939E9F00866FD2 /* JWToolbarAdaptiveSpaceItem.m */; };
+		B32DEE091793A1D000866FD2 /* JWClickThroughView.m in Sources */ = {isa = PBXBuildFile; fileRef = B32DEE081793A17A00866FD2 /* JWClickThroughView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B32DEDE417939E6800866FD2 /* AdaptiveSpacerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdaptiveSpacerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32DEDE717939E6800866FD2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B32DEDEA17939E6800866FD2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B32DEDEB17939E6800866FD2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B32DEDEC17939E6800866FD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B32DEDEF17939E6800866FD2 /* AdaptiveSpacerExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdaptiveSpacerExample-Info.plist"; sourceTree = "<group>"; };
+		B32DEDF117939E6800866FD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B32DEDF317939E6800866FD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B32DEDF517939E6800866FD2 /* AdaptiveSpacerExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdaptiveSpacerExample-Prefix.pch"; sourceTree = "<group>"; };
+		B32DEDF717939E6800866FD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B32DEDF917939E6800866FD2 /* JWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWAppDelegate.h; sourceTree = "<group>"; };
+		B32DEDFA17939E6800866FD2 /* JWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAppDelegate.m; sourceTree = "<group>"; };
+		B32DEDFD17939E6800866FD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B32DEE0417939E9F00866FD2 /* JWToolbarAdaptiveSpaceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWToolbarAdaptiveSpaceItem.h; path = ../../JWToolbarAdaptiveSpaceItem.h; sourceTree = "<group>"; };
+		B32DEE0517939E9F00866FD2 /* JWToolbarAdaptiveSpaceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JWToolbarAdaptiveSpaceItem.m; path = ../../JWToolbarAdaptiveSpaceItem.m; sourceTree = "<group>"; };
+		B32DEE071793A17A00866FD2 /* JWClickThroughView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JWClickThroughView.h; path = ../../JWClickThroughView.h; sourceTree = "<group>"; };
+		B32DEE081793A17A00866FD2 /* JWClickThroughView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JWClickThroughView.m; path = ../../JWClickThroughView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B32DEDE117939E6800866FD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32DEDE817939E6800866FD2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B32DEDDB17939E6800866FD2 = {
+			isa = PBXGroup;
+			children = (
+				B32DEDED17939E6800866FD2 /* AdaptiveSpacerExample */,
+				B32DEDE617939E6800866FD2 /* Frameworks */,
+				B32DEDE517939E6800866FD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B32DEDE517939E6800866FD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B32DEDE417939E6800866FD2 /* AdaptiveSpacerExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B32DEDE617939E6800866FD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B32DEDE717939E6800866FD2 /* Cocoa.framework */,
+				B32DEDE917939E6800866FD2 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B32DEDE917939E6800866FD2 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B32DEDEA17939E6800866FD2 /* AppKit.framework */,
+				B32DEDEB17939E6800866FD2 /* CoreData.framework */,
+				B32DEDEC17939E6800866FD2 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B32DEDED17939E6800866FD2 /* AdaptiveSpacerExample */ = {
+			isa = PBXGroup;
+			children = (
+				B32DEDF917939E6800866FD2 /* JWAppDelegate.h */,
+				B32DEDFA17939E6800866FD2 /* JWAppDelegate.m */,
+				B32DEDFC17939E6800866FD2 /* MainMenu.xib */,
+				B32DEE0417939E9F00866FD2 /* JWToolbarAdaptiveSpaceItem.h */,
+				B32DEE0517939E9F00866FD2 /* JWToolbarAdaptiveSpaceItem.m */,
+				B32DEE071793A17A00866FD2 /* JWClickThroughView.h */,
+				B32DEE081793A17A00866FD2 /* JWClickThroughView.m */,
+				B32DEDEE17939E6800866FD2 /* Supporting Files */,
+			);
+			path = AdaptiveSpacerExample;
+			sourceTree = "<group>";
+		};
+		B32DEDEE17939E6800866FD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B32DEDEF17939E6800866FD2 /* AdaptiveSpacerExample-Info.plist */,
+				B32DEDF017939E6800866FD2 /* InfoPlist.strings */,
+				B32DEDF317939E6800866FD2 /* main.m */,
+				B32DEDF517939E6800866FD2 /* AdaptiveSpacerExample-Prefix.pch */,
+				B32DEDF617939E6800866FD2 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B32DEDE317939E6800866FD2 /* AdaptiveSpacerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32DEE0117939E6800866FD2 /* Build configuration list for PBXNativeTarget "AdaptiveSpacerExample" */;
+			buildPhases = (
+				B32DEDE017939E6800866FD2 /* Sources */,
+				B32DEDE117939E6800866FD2 /* Frameworks */,
+				B32DEDE217939E6800866FD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AdaptiveSpacerExample;
+			productName = AdaptiveSpacerExample;
+			productReference = B32DEDE417939E6800866FD2 /* AdaptiveSpacerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B32DEDDC17939E6800866FD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JW;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "John Wells";
+			};
+			buildConfigurationList = B32DEDDF17939E6800866FD2 /* Build configuration list for PBXProject "AdaptiveSpacerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B32DEDDB17939E6800866FD2;
+			productRefGroup = B32DEDE517939E6800866FD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B32DEDE317939E6800866FD2 /* AdaptiveSpacerExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B32DEDE217939E6800866FD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32DEDF217939E6800866FD2 /* InfoPlist.strings in Resources */,
+				B32DEDF817939E6800866FD2 /* Credits.rtf in Resources */,
+				B32DEDFE17939E6800866FD2 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B32DEDE017939E6800866FD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32DEDF417939E6800866FD2 /* main.m in Sources */,
+				B32DEDFB17939E6800866FD2 /* JWAppDelegate.m in Sources */,
+				B32DEE0617939E9F00866FD2 /* JWToolbarAdaptiveSpaceItem.m in Sources */,
+				B32DEE091793A1D000866FD2 /* JWClickThroughView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B32DEDF017939E6800866FD2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B32DEDF117939E6800866FD2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B32DEDF617939E6800866FD2 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B32DEDF717939E6800866FD2 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B32DEDFC17939E6800866FD2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B32DEDFD17939E6800866FD2 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B32DEDFF17939E6800866FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B32DEE0017939E6800866FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B32DEE0217939E6800866FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AdaptiveSpacerExample/AdaptiveSpacerExample-Prefix.pch";
+				INFOPLIST_FILE = "AdaptiveSpacerExample/AdaptiveSpacerExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B32DEE0317939E6800866FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AdaptiveSpacerExample/AdaptiveSpacerExample-Prefix.pch";
+				INFOPLIST_FILE = "AdaptiveSpacerExample/AdaptiveSpacerExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B32DEDDF17939E6800866FD2 /* Build configuration list for PBXProject "AdaptiveSpacerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32DEDFF17939E6800866FD2 /* Debug */,
+				B32DEE0017939E6800866FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B32DEE0117939E6800866FD2 /* Build configuration list for PBXNativeTarget "AdaptiveSpacerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32DEE0217939E6800866FD2 /* Debug */,
+				B32DEE0317939E6800866FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B32DEDDC17939E6800866FD2 /* Project object */;
+}

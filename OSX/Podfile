@@ -1,0 +1,29 @@
+workspace 'AppWage'
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+target :AppWage do
+  platform :osx, '10.10'
+  pod 'AFNetworking'
+  pod 'CocoaLumberjack'
+  pod 'CorePlot'
+  pod 'FXKeychain'
+  pod 'FMDB'
+  pod 'GDataXML-HTML'
+  pod 'GZIP'
+  pod 'CHCSVParser'
+  pod 'CocoaHTTPServer'
+  pod 'LVDebounce'
+
+  pod 'Fabric'
+  pod 'Crashlytics'
+end
+
+target :iTunesCollectionService do
+  platform :osx, '10.10'
+  pod 'AFNetworking'
+  pod 'FXKeychain'
+  pod 'CHCSVParser'
+  pod 'GZIP'
+end

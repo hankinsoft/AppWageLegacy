@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4BD92F07-107B-4DC4-A626-BB4C5D916AE2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AppWage</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1BF0907AC8FC8AAEEB73720170A035439C4F376F</key>
+		<string>https://hankinsoft.visualstudio.com/DefaultCollection/_git/App%2520Store%2520Sales%2520-%2520OSX</string>
+		<key>B89D09FAEF52037FEA04C7B079DA625BA93C66D1</key>
+		<string>https://hankinsoft.visualstudio.com/DefaultCollection/_git/HSSharedOSX</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OSX/AppWage.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1BF0907AC8FC8AAEEB73720170A035439C4F376F</key>
+		<string>../..</string>
+		<key>B89D09FAEF52037FEA04C7B079DA625BA93C66D1</key>
+		<string>../..OSX/My%20App%20Sales/3rd%20Party%20Components/HSSharedOSX</string>
+	</dict>
+	<key>IDESourceControlProjectRequiredConfigurationsDictionary</key>
+	<dict>
+		<key>B89D09FAEF52037FEA04C7B079DA625BA93C66D1</key>
+		<true/>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://hankinsoft.visualstudio.com/DefaultCollection/_git/App%2520Store%2520Sales%2520-%2520OSX</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1BF0907AC8FC8AAEEB73720170A035439C4F376F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1BF0907AC8FC8AAEEB73720170A035439C4F376F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AppWage</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B89D09FAEF52037FEA04C7B079DA625BA93C66D1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HSSharedOSX</string>
+		</dict>
+	</array>
+</dict>
+</plist>
