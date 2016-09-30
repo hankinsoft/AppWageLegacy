@@ -88,13 +88,14 @@
              NSDictionary * exchangeRates = JSON[@"exchangeRanges"];
              if(nil == exchangeRates)
              {
+                 NSLog(@"Failed to find exchangeRates.");
                  return;
              } // End of no exchangeRates
 
              // Update our user defaults
              [[NSUserDefaults standardUserDefaults] setObject: exchangeRates
                                                        forKey: kExchangeRateUserDefault];
-             
+
              // Update our exchange rates
              NSLog(@"CurrencyHelper - Exchange rates have been updated.");
     }
