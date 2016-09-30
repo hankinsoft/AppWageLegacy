@@ -57,17 +57,58 @@
         return;
     } // End of image already exists
 
-    NSString * urlPath = [NSString stringWithFormat: @"https://appwage.com/appIcons/icon.php?applicationId=%@",
-                          applicationId.stringValue];
+    NSString * iconURLPath = nil;
 
-    NSLog(@"UrlPath: %@", urlPath);
-    NSURL * imageUrl = [NSURL URLWithString: urlPath];
+    NSString * urlPath =
+        [NSString stringWithFormat: @"https://itunes.apple.com/lookup?id=%@",applicationId.stringValue];
+
+    NSData * resultsData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: urlPath]
+                                                         options: NSDataReadingUncached
+                                                           error: &error];
+
+    // If we had an error, then raise it.
+    if(nil != error)
+    {
+        NSLog(@"Failed to receive results from %@.", urlPath);
+    } // End of we had an error
+    else
+    {
+        NSDictionary * dictionary =
+            [NSJSONSerialization JSONObjectWithData: resultsData
+                                            options: kNilOptions
+                                              error: &error];
+
+        if(nil != error)
+        {
+            NSLog(@"Failed to create json object from %@.", urlPath);
+        }
+        else
+        {
+            NSArray *results = [dictionary objectForKey: @"results"];
+
+            if ([results count] > 0)
+            {
+                iconURLPath = [results valueForKey:@"artworkUrl100"][0];
+            }
+        } // End of no error
+    } // End of we had results from iTunes
+
+    // Fallback on using icons from AppWage cache
+    if(nil == iconURLPath || 0 == iconURLPath.length)
+    {
+        // Fallback
+        iconURLPath =
+            [NSString stringWithFormat: @"https://appwage.com/appIcons/icon.php?applicationId=%@",applicationId.stringValue];
+    } // End of fallback
+
+    NSLog(@"IconCollectorOperation iconURLPath: %@", iconURLPath);
+    NSURL * imageUrl = [NSURL URLWithString: iconURLPath];
     NSImage * tempImage    = [[NSImage alloc] initWithContentsOfURL: imageUrl];
 
     if(nil == error && nil != tempImage)
     {
         [AWApplicationImageHelper saveImage: tempImage
-                         forApplicationId: self.applicationId];
+                           forApplicationId: self.applicationId];
 
         if(nil != self.delegate)
         {
@@ -76,6 +117,8 @@
     } // End of we had an error
     else
     {
+        NSLog(@"Failed to download icon from %@. Error was: %@.", imageUrl, error.localizedDescription);
+
         if([self.delegate respondsToSelector: @selector(receivedErrorForApplicationId:error:)])
         {
             [self.delegate receivedErrorForApplicationId: self.applicationId
