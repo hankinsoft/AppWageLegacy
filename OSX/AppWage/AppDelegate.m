@@ -657,6 +657,51 @@
     [reviewImportHelper startImportViaDialog];
 } // End of onImportSalesReports
 
+- (IBAction) onExportCompressedSalesReports: (id) sender
+{
+    // Start our export
+    NSSavePanel * savePanel = [NSSavePanel savePanel];
+    savePanel.canCreateDirectories    = NO;
+    savePanel.title = @"Choose file for export export";
+    savePanel.allowedFileTypes = @[@"tar.gz"];
+    [savePanel setNameFieldStringValue: @"archive-AppWage_Sales_Report.tar.gz"];
+
+    [savePanel beginSheetModalForWindow: self.window
+                      completionHandler: ^(NSInteger result)
+     {
+         if (result != NSFileHandlingPanelOKButton)
+         {
+             return;
+         }
+
+         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
+
+         NSString *path = [paths objectAtIndex:0];
+         NSString *localReportPath = [path stringByAppendingString: [NSString stringWithFormat: @"/%@", [[[NSBundle mainBundle] infoDictionary]   objectForKey:@"CFBundleName"]]];
+
+         localReportPath = [[localReportPath stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"com.hankinsoft.osx.appwage.iTunesCollectionService"];
+
+         NSString *cmd =
+            [NSString stringWithFormat:@"tar -zcvf '%@' '%@'",
+                [savePanel URL].path,
+                localReportPath];
+
+         NSString* actualScript = [NSString stringWithFormat:@"do shell script \"%@\"", cmd ];
+
+         NSAppleScript *as   = [[NSAppleScript alloc] initWithSource: actualScript];
+         NSDictionary *error = [[NSDictionary alloc] init];
+
+         if ([as executeAndReturnError: &error])
+         {
+             [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs: @[[savePanel URL]]];
+         }
+         else
+         {
+             NSLog(@"Failed to export reports. %@.", error);
+         }
+     }];
+} // End of onExportCompressedSalesReports
+
 - (IBAction) onToggleShowHiddenApplications: (id) sender
 {
     // Toogle our state

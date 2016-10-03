@@ -28,6 +28,7 @@
 - (IBAction) onQueueReports: (id) sender;
 - (IBAction) onCancelAllCollections: (id) sender;
 - (IBAction) onImportSalesReports: (id) sender;
+- (IBAction) onExportCompressedSalesReports: (id) sender;
 - (IBAction) onToggleShowHiddenApplications: (id) sender;
 - (IBAction) onSupportForum: (id) sender;
 - (IBAction) onLinkedin: (id) sender;
