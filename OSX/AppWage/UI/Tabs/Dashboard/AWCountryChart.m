@@ -140,7 +140,13 @@
                 NSArray * products = [AWProduct allProducts];
                 [products enumerateObjectsUsingBlock:
                  ^(AWProduct * product, NSUInteger index, BOOL * stop) {
-                    lookup[product.appleIdentifier] = product.title;
+                    BOOL productHasDuplicateTitle = [lookup.allValues containsObject:product.title];
+                    if (productHasDuplicateTitle) {
+                        lookup[product.appleIdentifier] = [NSString stringWithFormat:@"%@ (%@)", product.title, product.appleIdentifier];
+                    }
+                    else {
+                        lookup[product.appleIdentifier] = product.title;
+                    }
                 }];
                 break;
             }
