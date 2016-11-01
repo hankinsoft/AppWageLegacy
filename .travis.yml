@@ -1,4 +1,3 @@
 language: objective-c
 osx_image: xcode8
-xcode_workspace: OSX/AppWage.xcworkspace # path to your xcodeproj folder
-xcode_scheme: AppWage
+script: — xcodebuild clean build -workspace OSX/AppWage.xcworkspace -scheme AppWage
