@@ -1159,22 +1159,22 @@
 
     [[AWSQLiteHelper salesDatabaseQueue] inTransaction: ^(FMDatabase * salesDatabase, BOOL * rollback)
     {
-        [reports enumerateObjectsUsingBlock: ^(NSDictionary * reportEntry, NSUInteger reportEntryIndex, BOOL * stop)
-         {
+        for(NSDictionary * reportEntry in reports)
+        {
              [salesDatabase executeUpdate:@"INSERT OR IGNORE INTO salesReport (internalAccountId, salesReportType, appleIdentifier, currency, productTypeIdentifier, profitPerUnit, promoCode, units, countryCode, beginDate, endDate, cached) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)",
-              reportEntry[@"internalAccountId"],
-              reportEntry[@"salesReportType"],
-              reportEntry[@"appleIdentifier"],
-              reportEntry[@"currency"],
-              reportEntry[@"productTypeIdentifier"],
-              reportEntry[@"profitPerUnit"],
-              reportEntry[@"promoCode"],
-              reportEntry[@"units"],
-              reportEntry[@"countryCode"],
-              reportEntry[@"beginDate"],
-              reportEntry[@"endDate"]
+                  reportEntry[@"internalAccountId"],
+                  reportEntry[@"salesReportType"],
+                  reportEntry[@"appleIdentifier"],
+                  reportEntry[@"currency"],
+                  reportEntry[@"productTypeIdentifier"],
+                  reportEntry[@"profitPerUnit"],
+                  reportEntry[@"promoCode"],
+                  reportEntry[@"units"],
+                  reportEntry[@"countryCode"],
+                  reportEntry[@"beginDate"],
+                  reportEntry[@"endDate"]
               ];
-         }];
+         } // End of reports enumeration
     }];
 } // End of receivedReports
 
