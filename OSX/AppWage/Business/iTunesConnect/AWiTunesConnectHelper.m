@@ -8,8 +8,99 @@
 
 #import "AWiTunesConnectHelper.h"
 #import "AWApplicationFinder.h"
+#import <GDataXML-HTML/GDataXMLNode.h>
 
 @implementation AWiTunesConnectHelper
+
++ (NSData*) postRequest: (NSString*) requestType
+                 userId: (NSString*) userId
+               password: (NSString*) password
+                command: (NSString*) command
+              arguments: (NSString*) arguments
+                headers: (NSDictionary**) headers
+                  error: (NSError**) error
+{
+    NSString * urlString =
+        [NSString stringWithFormat: @"https://reportingitc-reporter.apple.com/reportservice/%@/v1",
+            requestType.lowercaseString];
+
+    NSURL * requestURL = [NSURL URLWithString: urlString];
+
+    NSData * reportData = nil;
+
+    NSString * queryInput = command.mutableCopy;
+    if(nil != arguments && 0 != arguments.length)
+    {
+        queryInput = [NSString stringWithFormat: @"%@, %@", queryInput, arguments];
+    } // End of we have arguments
+    
+    queryInput = [NSString stringWithFormat: @"[p=Reporter.properties, %@]", queryInput];
+    
+    NSMutableDictionary * postDictionary = @{
+                                             @"userid": userId,
+                                             @"password": password,
+                                             @"version": @"1.0",
+                                             @"mode": @"Robot.xml",
+                                             @"queryInput": queryInput
+                                             }.mutableCopy;
+    
+    NSData *jsonData =
+        [NSJSONSerialization dataWithJSONObject: postDictionary
+                                        options: 0
+                                          error: error];
+
+    NSMutableData * postData = [[NSMutableData alloc] init];
+    [postData appendData: [@"jsonRequest=" dataUsingEncoding: NSUTF8StringEncoding]];
+    [postData appendData: jsonData];
+
+    for(NSUInteger retryCount = 0; retryCount < 5; ++retryCount)
+    {
+        NSMutableURLRequest *reportDownloadRequest =
+        [NSMutableURLRequest requestWithURL: requestURL
+                                cachePolicy: NSURLRequestReloadIgnoringCacheData
+                            timeoutInterval: 30.0];
+        
+        [reportDownloadRequest setHTTPMethod: @"POST"];
+        [reportDownloadRequest setValue: @"application/x-www-form-urlencoded"
+                     forHTTPHeaderField: @"Content-Type"];
+        
+        [reportDownloadRequest setValue: @"java/1.7.0"
+                     forHTTPHeaderField: @"User-Agent"];
+
+        NSString * testString = [[NSString alloc] initWithData: postData
+                                                      encoding: NSUTF8StringEncoding];
+        
+        // Used for debugging
+        (void) testString;
+
+        [reportDownloadRequest setHTTPBody: postData];
+        [reportDownloadRequest setValue: @"gzip"
+                     forHTTPHeaderField: @"Accept-Encoding"];
+        
+        NSHTTPURLResponse *response = nil;
+        
+        reportData =
+            [NSURLConnection sendSynchronousRequest: reportDownloadRequest
+                                  returningResponse: &response
+                                              error: &(*error)];
+
+        if(NULL != headers)
+        {
+            * headers = [response allHeaderFields];
+        } // End of we have headers specified
+        
+        if(nil == *error)
+        {
+            break;
+        } // End of no error
+        
+        // Clear our error and try again after a bit.
+        *error = nil;
+        [NSThread sleepForTimeInterval: 0.500];
+    } // End of download failed
+    
+    return reportData;
+} // End of postRequest
 
 - (NSNumber*) vendorIdWithUser: (NSString*) user
                       password: (NSString*) password
@@ -17,13 +108,110 @@
                   loginSuccess: (BOOL*) loginSuccess
                          error: (NSError*__autoreleasing*) error
 {
-    *error =
-        [NSError errorWithDomain: AWErrorDomain
-                            code: AWErrorVendorLookupFailure
-                        userInfo: @{NSLocalizedDescriptionKey:@"Vendor name and ID must currently be manually entered."}];
+    NSData * vendorIdData =
+        [AWiTunesConnectHelper postRequest: @"Sales"
+                                    userId: user
+                                  password: password
+                                   command: @"Sales.getVendors"
+                                 arguments: @""
+                                   headers: nil
+                                     error: error];
 
-    return nil;
+    if(nil != *error)
+    {
+        return nil;
+    } // End of we have an error
+
+    NSString * vendorString =
+        [[NSString alloc] initWithData: vendorIdData
+                              encoding: NSUTF8StringEncoding];
+
+    (void) vendorString;
+
+    GDataXMLDocument * doc =
+        [[GDataXMLDocument alloc] initWithData: vendorIdData
+                                         error: error];
+
+    if(nil != *error)
+    {
+        return nil;
+    } // End of we have an error
+
+    // NOTE: Its possible to have more than one vendor id. I'm not sure what others will be
+    // looking for, so for now
+    NSArray * vendorNodes =
+        [doc.rootElement nodesForXPath: @"//Vendor"
+                                 error: error];
+
+    if(nil != *error)
+    {
+        return nil;
+    } // End of we have an error
+
+    GDataXMLElement * lastVendorIdElement = vendorNodes.lastObject;
+    NSString * vendorStringValue = [lastVendorIdElement stringValue];
+    NSNumber * vendorId = [NSNumber numberWithInteger: vendorStringValue.integerValue];
+
+    // Get the vendor name (were only doing this if we received the vendorId).
+    // We ignore the error. If this fails, we still have the vendorId. Thats the
+    // main thing.
+    NSError * vendorError = nil;
+    *vendorName = [self accountNameForUser: user
+                              withPassword: password
+                                     error: &vendorError];
+
+    return vendorId;
 } // End of vendorIdWithUser:password:vendorName:error
+
+- (NSString*) accountNameForUser: (NSString*) user
+                    withPassword: (NSString*) password
+                           error: (NSError*__autoreleasing*) error
+{
+    NSData * vendorIdData =
+        [AWiTunesConnectHelper postRequest: @"Sales"
+                                    userId: user
+                                  password: password
+                                   command: @"Sales.getAccounts"
+                                 arguments: @""
+                                   headers: nil
+                                     error: error];
+    
+    if(nil != *error)
+    {
+        return nil;
+    } // End of we have an error
+
+    NSString * vendorString =
+        [[NSString alloc] initWithData: vendorIdData
+                              encoding: NSUTF8StringEncoding];
+    
+    (void) vendorString;
+    
+    GDataXMLDocument * doc =
+        [[GDataXMLDocument alloc] initWithData: vendorIdData
+                                         error: error];
+    
+    if(nil != *error)
+    {
+        return nil;
+    } // End of we have an error
+    
+    // NOTE: Its possible to have more than one vendor id. I'm not sure what others will be
+    // looking for, so for now
+    NSArray * vendorNodes =
+        [doc.rootElement nodesForXPath: @"//Account/Name"
+                                 error: error];
+
+    if(nil != *error)
+    {
+        return nil;
+    } // End of we have an error
+    
+    GDataXMLElement * lastAccountElement = vendorNodes.lastObject;
+    NSString * accountStringValue = [lastAccountElement stringValue];
+
+    return accountStringValue;
+} // End of accountNameForUser:withPassword:error:
 
 - (NSArray*) applicationsForVendorName: (NSString*) vendorName
                                  error: (NSError*__autoreleasing*) outError

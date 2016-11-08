@@ -215,9 +215,9 @@ static NSCharacterSet * trimCharacterSet;
 
         // get a new date by adding components
         NSDate * importDate =
-        [[NSCalendar currentCalendar] dateByAddingComponents: subtractComponents
-                                                      toDate: targetDate
-                                                     options: 0];
+            [[NSCalendar currentCalendar] dateByAddingComponents: subtractComponents
+                                                          toDate: targetDate
+                                                         options: 0];
 
         NSString * dateString   = [dateFormatter stringFromDate: importDate];
 
@@ -374,11 +374,11 @@ static NSCharacterSet * trimCharacterSet;
                        progress: &currentProgress];
 } // End of downloadReports
 
-- (BOOL)iTunesConnectDownloadReport: (NSString *) dateString
-                         reportType: (NSString*) reportType
-                              error: (NSError *__autoreleasing*) error
-                   reportFilename_p: (NSString **) reportFilename_p
-                        reportCSV_p: (NSString **) reportCSV_p
+- (BOOL) iTunesConnectDownloadReport: (NSString *) dateString
+                          reportType: (NSString*) reportType
+                               error: (NSError *__autoreleasing*) error
+                    reportFilename_p: (NSString **) reportFilename_p
+                         reportCSV_p: (NSString **) reportCSV_p
 {
     NSLog(@"Want to download sales reports for %@ (account %@)",
           dateString,
@@ -386,10 +386,11 @@ static NSCharacterSet * trimCharacterSet;
 
     NSNumber * vendorId = accountDetails.vendorId;
 
-    NSString * internalReportName = [NSString stringWithFormat: @"S_%c_%@_%@.txt",
-                                     [[reportType uppercaseString] characterAtIndex: 0],
-                                     vendorId,
-                                     dateString];
+    NSString * internalReportName =
+        [NSString stringWithFormat: @"S_%c_%@_%@.txt",
+            [[reportType uppercaseString] characterAtIndex: 0],
+            vendorId,
+            dateString];
 
     NSString * rootDirectory = [NSString stringWithFormat: @"%@/%@",
                                 localReportPath, vendorId];
@@ -412,82 +413,50 @@ static NSCharacterSet * trimCharacterSet;
         }
     } // End of file exists
 
-    NSString * username = accountDetails.accountUserName;
-    NSString * password = accountDetails.accountPassword;
+    NSString * commandString =
+        [NSString stringWithFormat: @"%ld,Sales,Summary,%@,%@",vendorId.integerValue,reportType,dateString];
 
-    NSString * escapedPassword = [password urlEncodedUTF8String];
-    NSString * escapedUsername = [username urlEncodedUTF8String];
-
-    NSString *reportDownloadBodyString = [NSString stringWithFormat:@"USERNAME=%@&PASSWORD=%@&VNDNUMBER=%@&TYPEOFREPORT=%@&DATETYPE=%@&REPORTTYPE=%@&REPORTDATE=%@",
-                                          escapedUsername,
-                                          escapedPassword,
-                                          vendorId,
-                                          @"Sales",
-                                          reportType,
-                                          @"Summary",
-                                          dateString];
-    
-    NSData *reportDownloadBodyData = [reportDownloadBodyString dataUsingEncoding:NSUTF8StringEncoding];
-    NSMutableURLRequest *reportDownloadRequest = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:@"https://reportingitc.apple.com/autoingestion.tft"]
-                                                                         cachePolicy: NSURLRequestReloadIgnoringCacheData
-                                                                     timeoutInterval: 30.0];
-    [reportDownloadRequest setHTTPMethod:@"POST"];
-    [reportDownloadRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    [reportDownloadRequest setValue:@"java/1.7.0" forHTTPHeaderField:@"User-Agent"];
-    [reportDownloadRequest setHTTPBody:reportDownloadBodyData];
-    [reportDownloadRequest setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
-    
-    NSHTTPURLResponse *response = nil;
-    
-    if(NULL != error)
-    {
-        *error = nil;
-    } // End of error
-
-    NSData * reportData = [NSURLConnection sendSynchronousRequest: reportDownloadRequest
-                                                returningResponse: &response
-                                                            error: &(*error)];
+    NSDictionary * headers = nil;
+    NSData * reportData =
+        [AWiTunesConnectHelper postRequest: @"Sales"
+                                    userId: accountDetails.accountUserName
+                                  password: accountDetails.accountPassword
+                                   command: @"Sales.getReport"
+                                 arguments: commandString
+                                   headers: &headers
+                                     error: error];
 
     if(nil != *error)
     {
-        NSString * logMessage = [NSString stringWithFormat: @"%s: Error downloading (%@/%@) report: %@.",
-                                 __FUNCTION__,
-                                 dateString,
-                                 accountDetails.accountInternalId,
-                                 (*error).localizedDescription];
-        
+        NSString * logMessage =
+            [NSString stringWithFormat: @"%s: Error downloading (%@/%@) report: %@.",
+                __FUNCTION__,
+                dateString,
+                accountDetails.accountInternalId,
+                (*error).localizedDescription];
+
         NSLog(@"%@", logMessage);
         [self.delegate logError: logMessage];
         
         return NO;
     }
-    
-    NSDictionary * headers = [response allHeaderFields];
-    NSLog(@"Headers: %@", headers);
-    if(nil != headers[@"Errormsg"])
-    {
-        NSString * logMessage = [NSString stringWithFormat: @"%s: Error with report (%@/%@): Errormsg: %@.",
-                                 __FUNCTION__,
-                                 dateString,
-                                 accountDetails.accountInternalId,
-                                 headers[@"Errormsg"]];
-
-        NSLog(@"%@", logMessage);
-        [self.delegate logError: logMessage];
-
-        return NO;
-    } // End of error
 
     // Get our filename header
     *reportFilename_p = headers[@"filename"];
     if(nil == *reportFilename_p || 0 == (*reportFilename_p).length)
     {
-        NSString * logMessage = @"Error downloading report: No filename specified.";
+        NSString * resultString =
+            [[NSString alloc] initWithData: reportData
+                                  encoding: NSUTF8StringEncoding];
+
+        NSString * logMessage =
+            [NSString stringWithFormat: @"Error downloading report. Error:\r\n%@", resultString];
+
         NSLog(@"%@", logMessage);
         [self.delegate logError: logMessage];
 
         return NO;
-    }
+    } // End of we have headers
 
     // Get our details
     *reportCSV_p = [[NSString alloc] initWithData: reportData
@@ -572,7 +541,7 @@ static NSCharacterSet * trimCharacterSet;
     NSString *reportCSV;
 
     if(![self iTunesConnectDownloadReport: dateString
-                               reportType: @"daily"
+                               reportType: @"Daily"
                                     error: &error
                          reportFilename_p: &reportFilename
                               reportCSV_p: &reportCSV])
@@ -612,7 +581,7 @@ static NSCharacterSet * trimCharacterSet;
     NSString *reportCSV;
 
     if(![self iTunesConnectDownloadReport: dateString
-                               reportType: @"weekly"
+                               reportType: @"Weekly"
                                     error: &error
                          reportFilename_p: &reportFilename
                               reportCSV_p: &reportCSV])
@@ -637,7 +606,7 @@ static NSCharacterSet * trimCharacterSet;
     NSString *reportCSV;
 
     if(![self iTunesConnectDownloadReport: dateString
-                               reportType: @"monthly"
+                               reportType: @"Monthly"
                                     error: &error
                          reportFilename_p: &reportFilename
                               reportCSV_p: &reportCSV])
@@ -659,9 +628,9 @@ static NSCharacterSet * trimCharacterSet;
     NSError  *error;
     NSString *reportFilename;
     NSString *reportCSV;
-    
+
     if(![self iTunesConnectDownloadReport: dateString
-                               reportType: @"yearly"
+                               reportType: @"Yearly"
                                     error: &error
                          reportFilename_p: &reportFilename
                               reportCSV_p: &reportCSV])
