@@ -28,9 +28,9 @@ PODS:
   - CocoaLumberjack/Extensions (3.0.0):
     - CocoaLumberjack/Default
   - CorePlot (2.2)
-  - Crashlytics (3.8.2):
+  - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
-  - Fabric (1.6.9)
+  - Fabric (1.6.11)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -60,14 +60,14 @@ SPEC CHECKSUMS:
   CocoaHTTPServer: 5624681fc3473d43b18202f635f9b3abb013b530
   CocoaLumberjack: c823149bccc5519a9447aeb433be7b1212a7d6a5
   CorePlot: cbe0c6e14220705e32e06a89c7d6a5a908b7d7d8
-  Crashlytics: 27acca95a01b042a8294291dd6dff27f8f6af6d7
-  Fabric: bc5bec42cef4bcf1ee3ce0e218fc518e4b44dfbb
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FXKeychain: 2fe54573946ffef634f4e2a2851e6c8f4ea15e76
   GDataXML-HTML: 7adc03668cab35c288f1dbb8929a179f0fece898
   GZIP: f8beb59597f651e6970a45b816508a9c6d700b77
   LVDebounce: 166cf3e2215e74a1aae42902df15701f9c31d34f
 
-PODFILE CHECKSUM: 13152798116e11c74f22960ae2ea88a8f4969218
+PODFILE CHECKSUM: 5b2d15cae9184bb5e1fb8b2307b206f4bb39edd8
 
-COCOAPODS: 1.1.0.beta.2
+COCOAPODS: 1.2.0.beta.1

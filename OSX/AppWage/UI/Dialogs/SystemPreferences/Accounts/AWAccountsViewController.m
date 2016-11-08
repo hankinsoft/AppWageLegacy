@@ -242,7 +242,7 @@
             [self.delegate accountsViewControllerHasError: error];
         } // End of we had an error
 
-        if(nil == vendorId || nil == vendorName || [@(-1) isEqualToNumber: vendorId])
+        if(nil == vendorId || [@(-1) isEqualToNumber: vendorId])
         {
             NSLog(@"Failed to get vendor id: %@.", error.localizedDescription);
             vendorId = nil;
@@ -261,7 +261,12 @@
             [accountPasswordTextField setEnabled: YES];
 
             [accountVendorIdTextField setStringValue: nil == vendorId ? @"" : [vendorId stringValue]];
-            [accountVendorNameTextField setStringValue: nil == vendorName ? @"" : vendorName];
+
+            if(nil != vendorName && 0 != vendorName.length)
+            {
+                [accountVendorNameTextField setStringValue: vendorName];
+            } // End of we have a vendorName
+
             [loadVendorIdProgressIndicator stopAnimation: self];
 
             [self onVendorIdChanged: self];

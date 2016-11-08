@@ -20,6 +20,14 @@ typedef enum {
 
 @interface AWiTunesConnectHelper : NSObject
 
++ (NSData*) postRequest: (NSString*) requestType
+                 userId: (NSString*) userId
+               password: (NSString*) password
+                command: (NSString*) command
+              arguments: (NSString*) arguments
+                headers: (NSDictionary**) headers
+                  error: (NSError**) error;
+
 - (NSNumber*) vendorIdWithUser: (NSString*) user
                       password: (NSString*) password
                     vendorName: (NSString**) vendorName

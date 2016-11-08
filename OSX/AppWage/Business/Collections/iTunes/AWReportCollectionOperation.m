@@ -418,13 +418,13 @@ static NSCharacterSet * trimCharacterSet;
 
     NSDictionary * headers = nil;
     NSData * reportData =
-        [self postRequest: [NSURL URLWithString: @"https://reportingitc-reporter.apple.com/reportservice/sales/v1"]
-                   userId: accountDetails.accountUserName
-                 password: accountDetails.accountPassword
-                  command: @"Sales.getReport"
-                arguments: commandString
-                  headers: &headers
-                    error: error];
+        [AWiTunesConnectHelper postRequest: @"Sales"
+                                    userId: accountDetails.accountUserName
+                                  password: accountDetails.accountPassword
+                                   command: @"Sales.getReport"
+                                 arguments: commandString
+                                   headers: &headers
+                                     error: error];
 
     if(nil != *error)
     {
@@ -518,86 +518,6 @@ static NSCharacterSet * trimCharacterSet;
 
     return YES;
 }
-
-- (NSData*) postRequest: (NSURL*) requestURL
-                 userId: (NSString*) userId
-               password: (NSString*) password
-                command: (NSString*) command
-              arguments: (NSString*) arguments
-                headers: (NSDictionary**) headers
-                  error: (NSError**) error
-{
-    NSData * reportData = nil;
-
-    for(NSUInteger retryCount = 0; retryCount < 5; ++retryCount)
-    {
-        NSMutableURLRequest *reportDownloadRequest =
-            [NSMutableURLRequest requestWithURL: requestURL
-                                    cachePolicy: NSURLRequestReloadIgnoringCacheData
-                                                                         timeoutInterval: 30.0];
-
-        [reportDownloadRequest setHTTPMethod: @"POST"];
-        [reportDownloadRequest setValue: @"application/x-www-form-urlencoded"
-                     forHTTPHeaderField: @"Content-Type"];
-
-        [reportDownloadRequest setValue: @"java/1.7.0"
-                     forHTTPHeaderField: @"User-Agent"];
-
-        NSString * queryInput = command.mutableCopy;
-        if(nil != arguments && 0 != arguments.length)
-        {
-            queryInput = [NSString stringWithFormat: @"%@, %@", queryInput, arguments];
-        } // End of we have arguments
-
-        queryInput = [NSString stringWithFormat: @"[p=Reporter.properties, %@]", queryInput];
-
-        NSMutableDictionary * postDictionary = @{
-                                       @"userid": userId,
-                                       @"password": password,
-                                       @"version": @"1.0",
-                                       @"mode": @"Robot.xml",
-                                       @"queryInput": queryInput
-                                       }.mutableCopy;
-
-        NSData *jsonData =
-            [NSJSONSerialization dataWithJSONObject: postDictionary
-                                            options: 0
-                                              error: error];
-        
-        NSMutableData * postData = [[NSMutableData alloc] init];
-        [postData appendData: [@"jsonRequest=" dataUsingEncoding: NSUTF8StringEncoding]];
-        [postData appendData: jsonData];
-        
-        NSString * testString = [[NSString alloc] initWithData: postData
-                                                      encoding: NSUTF8StringEncoding];
-
-        (void)testString;
-
-        [reportDownloadRequest setHTTPBody: postData];
-        [reportDownloadRequest setValue:@"gzip"
-                     forHTTPHeaderField:@"Accept-Encoding"];
-
-        NSHTTPURLResponse *response = nil;
-
-        reportData =
-            [NSURLConnection sendSynchronousRequest: reportDownloadRequest
-                                  returningResponse: &response
-                                              error: &(*error)];
-
-        * headers = [response allHeaderFields];
-
-        if(nil == *error)
-        {
-            break;
-        } // End of no error
-
-        // Clear our error and try again after a bit.
-        *error = nil;
-        [NSThread sleepForTimeInterval: 0.500];
-    } // End of download failed
-
-    return reportData;
-} // End of postRequest
 
 - (void) downloadDailyReportForDate: (NSDate*) importDate
                          dateString: (NSString *) dateString
