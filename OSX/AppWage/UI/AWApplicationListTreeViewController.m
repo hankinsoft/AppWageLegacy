@@ -644,10 +644,14 @@ static NSMutableSet                            * outlineViewExpandedEntries;
     NSArray * applications =
         [[AWApplication allApplications] filteredArrayUsingPredicate: searchPredicate];
 
-    [applications enumerateObjectsUsingBlock: ^(AWApplication* application, NSUInteger applicationIndex, BOOL * stop)
-     {
-         application.hiddenByUser = [NSNumber numberWithBool: !application.hiddenByUser.boolValue];
-     }];
+    for(AWApplication * application in applications)
+    {
+        application.hiddenByUser = [NSNumber numberWithBool: !application.hiddenByUser.boolValue];
+        [[AWSQLiteHelper appWageDatabaseQueue] inTransaction: ^(FMDatabase * appwageDatabase, BOOL * rollback) {
+            [appwageDatabase executeUpdate: @"UPDATE application SET hiddenByUser = ? WHERE applicationId = ?"
+                      withArgumentsInArray: @[application.hiddenByUser, application.applicationId]];
+        }];
+    } // End of application enumeration
 
     [self reloadApplications];
 } // End of onHideApplications
