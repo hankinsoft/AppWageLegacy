@@ -170,21 +170,6 @@ static NSDateFormatter * reviewTableDateFormatter;
     NSString * reviewSearchString = reviewSearchField.stringValue;
 
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSArray * allCountries = [AWCountry allCountries];
-
-        NSMutableDictionary<NSNumber*,CountryLookup*> * countryLookup = [NSMutableDictionary dictionary];
-
-        for(AWCountry * country in allCountries)
-        {
-            CountryLookup * entry = [[CountryLookup alloc] init];
-            entry.countryId = country.countryId;
-            entry.countryName = country.name;
-            entry.countryCode = country.countryCode;
-
-            [countryLookup setObject: entry
-                              forKey: country.countryId];
-        }
-
         __block NSMutableDictionary * applicationLookup = [NSMutableDictionary dictionary];
 
         NSArray * allApplications = [AWApplication allApplications];
@@ -198,14 +183,34 @@ static NSDateFormatter * reviewTableDateFormatter;
 
         NSArray * countryCodes = [[NSUserDefaults standardUserDefaults] objectForKey: kReviewFilterCountryUserDefault];
 
-        if(0 != countryCodes.count)
-        {
-            NSPredicate * countryCodePredicate = [NSPredicate predicateWithFormat: @"code IN (%@)",
-                                                   countryCodes];
+        NSArray * allCountries = [AWCountry allCountries];
+        
+        NSMutableDictionary<NSNumber*,CountryLookup*> * countryLookup = [NSMutableDictionary dictionary];
 
-            NSArray * countryIdFilters = [[countryLookup.allValues filteredArrayUsingPredicate: countryCodePredicate]  valueForKeyPath: @"@distinctUnionOfObjects.id"];
-            [reviewClause appendFormat: @" AND countryId IN (%@)", [countryIdFilters componentsJoinedByString: @","]];
+        NSMutableArray<NSNumber*> * countryIdFilters = [NSMutableArray array];
+        for(AWCountry * country in allCountries)
+        {
+            CountryLookup * entry = [[CountryLookup alloc] init];
+            entry.countryId = country.countryId;
+            entry.countryName = country.name;
+            entry.countryCode = country.countryCode;
+            
+            [countryLookup setObject: entry
+                              forKey: country.countryId];
+
+            for(NSString * countryCode in countryCodes)
+            {
+                if(NSOrderedSame == [countryCode caseInsensitiveCompare: country.countryCode])
+                {
+                    [countryIdFilters addObject: country.countryId];
+                }
+            } // End of countryCodes lookup
         }
+
+        if(0 != countryIdFilters.count)
+        {
+            [reviewClause appendFormat: @" AND countryId IN (%@)", [countryIdFilters componentsJoinedByString: @","]];
+        } // End of countryIdFilters is not empty
 
         // If no applications are selected, then we want them all!
         NSSet * applicationsWeCareAbout = currentlySelectedApplications;
