@@ -420,7 +420,7 @@ static NSCharacterSet * trimCharacterSet;
     NSData * reportData =
         [AWiTunesConnectHelper postRequest: @"Sales"
                                     userId: accountDetails.accountUserName
-                                  password: accountDetails.accountPassword
+                               accessToken: accountDetails.accountAccessToken
                                    command: @"Sales.getReport"
                                  arguments: commandString
                                    headers: &headers

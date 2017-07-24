@@ -23,7 +23,7 @@
 
 - (IBAction) onLoadVendorId: (id) sender;
 - (IBAction) onAppleIdChanged: (id) sender;
-- (IBAction) onPasswordChanged: (id) sender;
+- (IBAction) onAccessTokenChanged: (id) sender;
 - (IBAction) onVendorIdChanged: (id) sender;
 - (IBAction) onVendorNameChanged: (id) sender;
 

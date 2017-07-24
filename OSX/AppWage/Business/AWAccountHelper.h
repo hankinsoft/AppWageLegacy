@@ -23,7 +23,7 @@
 @property(nonatomic,copy)   NSString    * vendorName;
 
 @property(nonatomic,copy)   NSString    * accountUserName;
-@property(nonatomic,copy)   NSString    * accountPassword;
+@property(nonatomic,copy)   NSString    * accountAccessToken;
 
 @property(nonatomic,assign) BOOL        modified;
 @property(nonatomic,assign) BOOL        removed;
