@@ -670,13 +670,13 @@
              {
                  AccountDetails * accountDetails = [[AWAccountHelper sharedInstance] accountDetailsForInternalAccountId: account.internalAccountId];
 
-                 // If we have an account with a username and password specified, then we can collect it.
+                 // If we have an account with a username and access token specified, then we can collect it.
                  if(nil != accountDetails &&
                     0 != [accountDetails.accountUserName length] &&
-                    0 != [accountDetails.accountPassword length])
+                    0 != [accountDetails.accountAccessToken length])
                  {
                      [collectingAccountDetails addObject: accountDetails];
-                 } // End of we had a username and password specified.
+                 } // End of we had a username and access token specified.
              }];
 
             if(collectingAccountDetails.count > 0)
@@ -917,7 +917,7 @@
         NSString * internalAccountId = [[NSProcessInfo processInfo] globallyUniqueString];
         accountDetails = [[AccountDetails alloc] init];
         accountDetails.accountUserName      = nil;
-        accountDetails.accountPassword      = nil;
+        accountDetails.accountAccessToken   = nil;
         accountDetails.vendorId             = vendorId;
         accountDetails.vendorName           = vendorName;
         accountDetails.accountInternalId    = internalAccountId;

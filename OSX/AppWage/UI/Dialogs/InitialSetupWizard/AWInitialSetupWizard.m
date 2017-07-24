@@ -30,7 +30,7 @@
 
     IBOutlet NSView                 * iTunesAccountView;
     IBOutlet NSTextField            * iTunesAccountTextField;
-    IBOutlet NSSecureTextField      * iTunesPasswordTextField;
+    IBOutlet NSSecureTextField      * iTunesAccessTokenTextField;
     IBOutlet NSTextField            * iTunesAccountValidatingField;
     IBOutlet NSProgressIndicator    * iTunesAccountValidatingProgressIndicator;
 
@@ -244,7 +244,7 @@
 {
     NSString * lookup = [NSString stringWithFormat: @"%@-%@",
                          iTunesAccountTextField.stringValue,
-                         iTunesPasswordTextField.stringValue];
+                         iTunesAccessTokenTextField.stringValue];
     
     __block NSNumber * vendorId     = nil;
     __block NSError  * error        = nil;
@@ -264,7 +264,7 @@
         [previousButton setEnabled: NO];
         
         [iTunesAccountTextField setEnabled: NO];
-        [iTunesPasswordTextField setEnabled: NO];
+        [iTunesAccessTokenTextField setEnabled: NO];
     } // End of we did not have an entry
 
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -273,7 +273,7 @@
             AWiTunesConnectHelper * helper = [[AWiTunesConnectHelper alloc] init];
 
             vendorId = [helper vendorIdWithUser: iTunesAccountTextField.stringValue
-                                       password: iTunesPasswordTextField.stringValue
+                                    accessToken: iTunesAccessTokenTextField.stringValue
                                      vendorName: &vendorName
                                    loginSuccess: &loginSuccess
                                           error: &error];
@@ -337,7 +337,7 @@
             [previousButton setEnabled: YES];
 
             [iTunesAccountTextField setEnabled: YES];
-            [iTunesPasswordTextField setEnabled: YES];
+            [iTunesAccessTokenTextField setEnabled: YES];
 
             if(nil != nextView)
             {
@@ -355,12 +355,12 @@
 - (BOOL) validateITunesAccount
 {
     if(0 == iTunesAccountTextField.stringValue.length ||
-       0 == iTunesPasswordTextField.stringValue.length)
+       0 == iTunesAccessTokenTextField.stringValue.length)
     {
         NSError * error = [NSError errorWithDomain: AWErrorDomain
                                               code: 0
                                           userInfo: @{
-                                                      NSLocalizedDescriptionKey: @"Invalid account or password."
+                                                      NSLocalizedDescriptionKey: @"Invalid account or access token."
                                                       }];
 
         NSAlert * alert = [NSAlert alertWithError: error];
@@ -403,13 +403,13 @@ doCommandBySelector: (SEL)commandSelector
     {
         if(control == iTunesAccountTextField)
         {
-            [iTunesPasswordTextField becomeFirstResponder];
+            [iTunesAccessTokenTextField becomeFirstResponder];
             return YES;
         }
     } // End of insertTab
     else if(commandSelector == @selector(insertNewline:))
     {
-        if(control == iTunesPasswordTextField)
+        if(control == iTunesAccessTokenTextField)
         {
             [self onNext: self];
             return YES;

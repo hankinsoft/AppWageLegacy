@@ -13,7 +13,7 @@
 
 #define kAccountInternalId           @"AccountInternalId"
 #define kAccountUserName             @"AccountUserName"
-#define kAccountPassword             @"AccountPassword"
+#define kAccountAccessToken          @"AccountAccessToken"
 #define kAccountVendorId             @"VendorId"
 #define kAccountVendorName           @"VendorName"
 
@@ -22,7 +22,7 @@
 @synthesize accountInternalId;
 @synthesize vendorId, vendorName;
 
-@synthesize accountUserName, accountPassword;
+@synthesize accountUserName, accountAccessToken;
 
 @synthesize modified, removed;
 
@@ -43,7 +43,7 @@
         self.vendorName = dictionary[kAccountVendorName];
         self.vendorId = dictionary[kAccountVendorId];
         self.accountUserName = dictionary[kAccountUserName];
-        self.accountPassword = dictionary[kAccountPassword];
+        self.accountAccessToken = dictionary[kAccountAccessToken];
 
         self.modified = NO;
         self.removed  = NO;
@@ -68,8 +68,8 @@
         self.accountUserName = [coder decodeObjectOfClass: [NSString class]
                                                      forKey: kAccountUserName];
 
-        self.accountPassword = [coder decodeObjectOfClass: [NSString class]
-                                            forKey: kAccountPassword];
+        self.accountAccessToken = [coder decodeObjectOfClass: [NSString class]
+                                            forKey: kAccountAccessToken];
 
         self.modified = NO;
         self.removed  = NO;
@@ -100,9 +100,9 @@
         [coder encodeObject: self.accountUserName   forKey: kAccountUserName];
     }
 
-    if(self.accountPassword)
+    if(self.accountAccessToken)
     {
-        [coder encodeObject: self.accountPassword   forKey: kAccountPassword];
+        [coder encodeObject: self.accountAccessToken   forKey: kAccountAccessToken];
     }
 }
 
@@ -134,10 +134,10 @@
                  forKey: kAccountUserName];
     }
 
-    if(self.accountPassword)
+    if(self.accountAccessToken)
     {
-        [copy setObject: self.accountPassword
-                 forKey: kAccountPassword];
+        [copy setObject: self.accountAccessToken
+                 forKey: kAccountAccessToken];
     }
 
     return copy;
@@ -151,7 +151,7 @@
     result.vendorId = [self.vendorId copyWithZone: zone];
     result.accountInternalId = [self.accountInternalId copyWithZone: zone];
     result.accountUserName = [self.accountUserName copyWithZone: zone];
-    result.accountPassword = [self.accountPassword copyWithZone: zone];
+    result.accountAccessToken = [self.accountAccessToken copyWithZone: zone];
     result.modified = self.modified;
     result.removed = self.removed;
 

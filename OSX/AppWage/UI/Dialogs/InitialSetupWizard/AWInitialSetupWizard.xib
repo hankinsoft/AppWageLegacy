@@ -11,12 +11,12 @@
                 <outlet property="currentView" destination="S4j-yj-OU2" id="NwL-Rx-gOy"/>
                 <outlet property="emailConfigurationBox" destination="CvR-Zm-qDE" id="Wt6-dX-RSn"/>
                 <outlet property="emailConfigurationView" destination="4PW-Pe-EJC" id="vtk-T8-z2B"/>
+                <outlet property="iTunesAccessTokenTextField" destination="gWM-qK-Vp5" id="JlC-WT-J8y"/>
                 <outlet property="iTunesAccountDetailsView" destination="LHC-6u-N2b" id="vx2-Sr-2nf"/>
                 <outlet property="iTunesAccountTextField" destination="uKU-vW-xn2" id="hvB-pz-2OL"/>
                 <outlet property="iTunesAccountValidatingField" destination="Mrv-T9-fAR" id="Wir-gg-wM6"/>
                 <outlet property="iTunesAccountValidatingProgressIndicator" destination="S2d-nx-SIq" id="7qV-MJ-nX8"/>
                 <outlet property="iTunesAccountView" destination="Jys-ef-dvt" id="C5p-y6-UFj"/>
-                <outlet property="iTunesPasswordTextField" destination="gWM-qK-Vp5" id="fMQ-D4-VLX"/>
                 <outlet property="nextButton" destination="6x7-b1-K6c" id="pG1-fD-Rdy"/>
                 <outlet property="previousButton" destination="iTI-4T-rfk" id="diW-jV-Vdq"/>
                 <outlet property="welcomeTextView" destination="Hrh-Gx-dfN" id="Arx-yB-mWx"/>
@@ -103,7 +103,7 @@ Gw
                                 <rect key="frame" x="0.0" y="0.0" width="574" height="180"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="223" height="180"/>
+                                <size key="minSize" width="574" height="180"/>
                                 <size key="maxSize" width="614" height="10000000"/>
                                 <attributedString key="textStorage">
                                     <fragment content="Welcome to AppWage">
@@ -123,7 +123,7 @@ Gw
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="MXK-YS-427">
-                        <rect key="frame" x="224" y="1" width="15" height="133"/>
+                        <rect key="frame" x="558" y="0.0" width="16" height="180"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
@@ -191,7 +191,7 @@ Gw
                 <secureTextField verticalHuggingPriority="750" id="gWM-qK-Vp5">
                     <rect key="frame" x="179" y="150" width="257" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="I72-pk-Wb9">
+                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="iTunes Connect Access Token" drawsBackground="YES" usesSingleLineMode="YES" id="I72-pk-Wb9">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -212,15 +212,25 @@ Gw
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <progressIndicator hidden="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="S2d-nx-SIq">
-                    <rect key="frame" x="400" y="126" width="16" height="16"/>
+                <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="S2d-nx-SIq">
+                    <rect key="frame" x="400" y="91" width="16" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </progressIndicator>
-                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Mrv-T9-fAR">
-                    <rect key="frame" x="18" y="126" width="578" height="17"/>
+                <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="Mrv-T9-fAR">
+                    <rect key="frame" x="18" y="91" width="578" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Validating accounts details" id="HQ9-pw-ZIZ">
                         <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" setsMaxLayoutWidthAtFirstLayout="YES" id="P1H-tn-pTu">
+                    <rect key="frame" x="104" y="91" width="406" height="51"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="nzf-6Q-cK5">
+                        <font key="font" metaFont="smallSystem"/>
+                        <string key="title">An access token can be obtained in iTunes Connect under Sales &amp; Trends &gt; Reports &gt; About Reports. It has to be renewed every 180 days.</string>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>

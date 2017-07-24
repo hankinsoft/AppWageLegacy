@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="tYL-AL-uSU">
                             <font key="font" metaFont="system"/>
-                            <string key="title">The reports you are adding belong to an account which does not yet exist. Please add the account details below. If you would like your reports to import automatically, fill out the account username and password in the application preferences.</string>
+                            <string key="title">The reports you are adding belong to an account which does not yet exist. Please add the account details below. If you would like your reports to import automatically, fill out the account username and access token in the application preferences.</string>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>

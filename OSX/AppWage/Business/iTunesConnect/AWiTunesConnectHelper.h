@@ -22,14 +22,14 @@ typedef enum {
 
 + (NSData*) postRequest: (NSString*) requestType
                  userId: (NSString*) userId
-               password: (NSString*) password
+            accessToken: (NSString*) accessToken
                 command: (NSString*) command
               arguments: (NSString*) arguments
                 headers: (NSDictionary**) headers
                   error: (NSError**) error;
 
 - (NSNumber*) vendorIdWithUser: (NSString*) user
-                      password: (NSString*) password
+                   accessToken: (NSString*) accessToken
                     vendorName: (NSString**) vendorName
                   loginSuccess: (BOOL*) loginSuccess
                          error: (NSError**) outError;

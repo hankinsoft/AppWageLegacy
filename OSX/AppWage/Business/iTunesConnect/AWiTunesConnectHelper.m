@@ -14,7 +14,7 @@
 
 + (NSData*) postRequest: (NSString*) requestType
                  userId: (NSString*) userId
-               password: (NSString*) password
+            accessToken: (NSString*) accessToken
                 command: (NSString*) command
               arguments: (NSString*) arguments
                 headers: (NSDictionary**) headers
@@ -38,8 +38,8 @@
     
     NSMutableDictionary * postDictionary = @{
                                              @"userid": userId,
-                                             @"password": password,
-                                             @"version": @"1.0",
+                                             @"accesstoken": accessToken,
+                                             @"version": @"2.1",
                                              @"mode": @"Robot.xml",
                                              @"queryInput": queryInput
                                              }.mutableCopy;
@@ -103,7 +103,7 @@
 } // End of postRequest
 
 - (NSNumber*) vendorIdWithUser: (NSString*) user
-                      password: (NSString*) password
+                   accessToken: (NSString*) accessToken
                     vendorName: (NSString*__autoreleasing*) vendorName
                   loginSuccess: (BOOL*) loginSuccess
                          error: (NSError*__autoreleasing*) error
@@ -111,7 +111,7 @@
     NSData * vendorIdData =
         [AWiTunesConnectHelper postRequest: @"Sales"
                                     userId: user
-                                  password: password
+                               accessToken: accessToken
                                    command: @"Sales.getVendors"
                                  arguments: @""
                                    headers: nil
@@ -157,20 +157,20 @@
     // main thing.
     NSError * vendorError = nil;
     *vendorName = [self accountNameForUser: user
-                              withPassword: password
+                           withAccessToken: accessToken
                                      error: &vendorError];
 
     return vendorId;
-} // End of vendorIdWithUser:password:vendorName:error
+} // End of vendorIdWithUser:accessToken:vendorName:loginSuccess:error
 
 - (NSString*) accountNameForUser: (NSString*) user
-                    withPassword: (NSString*) password
+                 withAccessToken: (NSString*) accessToken
                            error: (NSError*__autoreleasing*) error
 {
     NSData * vendorIdData =
         [AWiTunesConnectHelper postRequest: @"Sales"
                                     userId: user
-                                  password: password
+                               accessToken: accessToken
                                    command: @"Sales.getAccounts"
                                  arguments: @""
                                    headers: nil
@@ -211,7 +211,7 @@
     NSString * accountStringValue = [lastAccountElement stringValue];
 
     return accountStringValue;
-} // End of accountNameForUser:withPassword:error:
+} // End of accountNameForUser:withAccessToken:error:
 
 - (NSArray*) applicationsForVendorName: (NSString*) vendorName
                                  error: (NSError*__autoreleasing*) outError

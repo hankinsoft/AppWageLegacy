@@ -24,7 +24,7 @@
     IBOutlet NSTextField            * accountIDTextField;
     IBOutlet NSTextField            * accountVendorIdTextField;
     IBOutlet NSTextField            * accountVendorNameTextField;
-    IBOutlet NSSecureTextField      * accountPasswordTextField;
+    IBOutlet NSSecureTextField      * accountAccessTokenTextField;
 }
 @end
 
@@ -72,7 +72,7 @@
              accountDetails.vendorId = nil;
              accountDetails.vendorName = @"Unknown account";
              accountDetails.accountUserName = nil;
-             accountDetails.accountPassword = nil;
+             accountDetails.accountAccessToken = nil;
 
              [accounts addObject: accountDetails];
          }
@@ -184,7 +184,7 @@
     newAccount.vendorId             = nil;
     newAccount.accountInternalId    = nil;
     newAccount.accountUserName      = nil;
-    newAccount.accountPassword      = nil;
+    newAccount.accountAccessToken   = nil;
 
     [newAccounts addObject: newAccount];
     
@@ -210,14 +210,14 @@
 - (IBAction) onLoadVendorId: (id) sender
 {
     NSString * accountIdText = accountIDTextField.stringValue;
-    NSString * passwordText  = accountPasswordTextField.stringValue;
+    NSString * accessTokenText  = accountAccessTokenTextField.stringValue;
 
     [accountsTableView setEnabled: NO];
     [loadVendorIdButton setEnabled: NO];
     [addRemoveAccountSegmenetedControl setEnabled: NO];
     
     [accountIDTextField setEnabled: NO];
-    [accountPasswordTextField setEnabled: NO];
+    [accountAccessTokenTextField setEnabled: NO];
     
     [loadVendorIdProgressIndicator startAnimation: self];
 
@@ -232,7 +232,7 @@
 
         NSNumber * vendorId =
             [connectHelper vendorIdWithUser: accountIdText
-                                   password: passwordText
+                                accessToken: accessTokenText
                                  vendorName: &vendorName
                                loginSuccess: &loginSuccess
                                       error: &error];
@@ -258,7 +258,7 @@
             [accountsTableView setEnabled: YES];
 
             [accountIDTextField setEnabled: YES];
-            [accountPasswordTextField setEnabled: YES];
+            [accountAccessTokenTextField setEnabled: YES];
 
             [accountVendorIdTextField setStringValue: nil == vendorId ? @"" : [vendorId stringValue]];
 
@@ -284,9 +284,9 @@
     {
         [self onAppleIdChanged: notification.object];
     }
-    else if(notification.object == accountPasswordTextField)
+    else if(notification.object == accountAccessTokenTextField)
     {
-        [self onPasswordChanged: notification.object];
+        [self onAccessTokenChanged: notification.object];
     }
     else if(notification.object == accountVendorIdTextField)
     {
@@ -312,7 +312,7 @@
     });
 }
 
-- (IBAction) onPasswordChanged: (id) sender
+- (IBAction) onAccessTokenChanged: (id) sender
 {
     if(-1 == accountsTableView.selectedRow)
     {
@@ -321,7 +321,7 @@
 
     AccountDetails * entry = accountsArray[accountsTableView.selectedRow];
 
-    entry.accountPassword = accountPasswordTextField.stringValue;
+    entry.accountAccessToken = accountAccessTokenTextField.stringValue;
     entry.modified        = YES;
 
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -379,12 +379,12 @@
                                        forSegment: 1];
 
     [accountIDTextField setEnabled: canModify];
-    [accountPasswordTextField setEnabled: canModify];
+    [accountAccessTokenTextField setEnabled: canModify];
     [loadVendorIdButton setEnabled: canModify];
 
     if(
        [@"" isEqualToString: accountIDTextField.stringValue] ||
-       [@"" isEqualToString: accountPasswordTextField.stringValue])
+       [@"" isEqualToString: accountAccessTokenTextField.stringValue])
     {
         [loadVendorIdButton setEnabled: NO];
     } // End of any of the account info is invalid.
@@ -392,7 +392,7 @@
     if(-1 == accountsTableView.selectedRow)
     {
         [accountIDTextField setStringValue: @""];
-        [accountPasswordTextField setStringValue: @""];
+        [accountAccessTokenTextField setStringValue: @""];
         [accountVendorIdTextField setStringValue: @""];
         [accountVendorNameTextField setStringValue: @""];
     }
@@ -401,7 +401,7 @@
         AccountDetails * entry = accountsArray[accountsTableView.selectedRow];
 
         [accountIDTextField setStringValue: 0 == entry.accountUserName.length ? @"" : entry.accountUserName];
-        [accountPasswordTextField setStringValue: 0 == entry.accountPassword.length ? @"" : entry.accountPassword];
+        [accountAccessTokenTextField setStringValue: 0 == entry.accountAccessToken.length ? @"" : entry.accountAccessToken];
         [accountVendorIdTextField setStringValue: nil == entry.vendorId ? @"" : entry.vendorId.stringValue];
         [accountVendorNameTextField setStringValue: 0 == entry.vendorName.length ? @"" : entry.vendorName];
     } // End of else
@@ -465,10 +465,10 @@
        textView:(NSTextView *)fieldEditor
 doCommandBySelector:(SEL)commandSelector
 {
-    if(control != accountPasswordTextField)
+    if(control != accountAccessTokenTextField)
     {
         return NO;
-    } // End of we are not the password textfield
+    } // End of we are not the access token textfield
 
     if (commandSelector == @selector(insertNewline:))
     {
