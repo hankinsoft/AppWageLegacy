@@ -8,8 +8,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AWAccountsViewController">
             <connections>
+                <outlet property="accountAccessTokenTextField" destination="TYx-jc-0Zs" id="slw-IY-L3P"/>
                 <outlet property="accountIDTextField" destination="ewM-pr-VHe" id="V72-Zb-6lX"/>
-                <outlet property="accountPasswordTextField" destination="TYx-jc-0Zs" id="L1s-Dm-0Mf"/>
                 <outlet property="accountVendorIdTextField" destination="qIK-5i-A45" id="waD-RB-893"/>
                 <outlet property="accountVendorNameTextField" destination="CHW-l2-vrS" id="5Y3-sr-me5"/>
                 <outlet property="accountsTableView" destination="FHx-l0-xCH" id="NPu-IN-Ysf"/>
@@ -117,7 +117,7 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <action selector="onAppleIdChanged:" target="-2" id="ae2-6u-4Df"/>
+                        <action selector="onVendorIdChanged:" target="-2" id="jcK-8Q-prH"/>
                         <outlet property="delegate" destination="-2" id="GHO-s2-lJF"/>
                     </connections>
                 </textField>
@@ -137,7 +137,7 @@
                 <secureTextField verticalHuggingPriority="750" id="TYx-jc-0Zs">
                     <rect key="frame" x="203" y="198" width="257" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="ASl-fE-Gim">
+                    <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="iTunes Connect Token" drawsBackground="YES" usesSingleLineMode="YES" id="ASl-fE-Gim">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -146,14 +146,14 @@
                         </allowedInputSourceLocales>
                     </secureTextFieldCell>
                     <connections>
-                        <action selector="onPasswordChanged:" target="-2" id="g7I-hC-L4u"/>
+                        <action selector="onAccessTokenChanged:" target="-2" id="W9W-bm-Gmr"/>
                         <outlet property="delegate" destination="-2" id="AVv-dZ-up7"/>
                     </connections>
                 </secureTextField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="r3C-QD-Tmt">
                     <rect key="frame" x="201" y="152" width="261" height="38"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" placeholderString="Passwords are stored securely in the applications keychain." id="AJU-kr-nLg">
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" placeholderString="Tokens are stored securely in the applications keychain." id="AJU-kr-nLg">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
