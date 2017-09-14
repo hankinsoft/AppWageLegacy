@@ -35,7 +35,7 @@ typedef NS_ENUM(NSInteger, GCDAsyncUdpSocketError) {
 
 @class GCDAsyncUdpSocket;
 
-@protocol GCDAsyncUdpSocketDelegate
+@protocol GCDAsyncUdpSocketDelegate <NSObject>
 @optional
 
 /**
@@ -55,7 +55,7 @@ typedef NS_ENUM(NSInteger, GCDAsyncUdpSocketError) {
  * This method is called if one of the connect methods are invoked, and the connection fails.
  * This may happen, for example, if a domain name is given for the host and the domain name is unable to be resolved.
 **/
-- (void)udpSocket:(GCDAsyncUdpSocket *)sock didNotConnect:(NSError *)error;
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock didNotConnect:(NSError * _Nullable)error;
 
 /**
  * Called when the datagram with the given tag has been sent.
@@ -66,7 +66,7 @@ typedef NS_ENUM(NSInteger, GCDAsyncUdpSocketError) {
  * Called if an error occurs while trying to send a datagram.
  * This could be due to a timeout, or something more serious such as the data being too large to fit in a sigle packet.
 **/
-- (void)udpSocket:(GCDAsyncUdpSocket *)sock didNotSendDataWithTag:(long)tag dueToError:(NSError *)error;
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock didNotSendDataWithTag:(long)tag dueToError:(NSError * _Nullable)error;
 
 /**
  * Called when the socket has received the requested datagram.
@@ -78,7 +78,7 @@ typedef NS_ENUM(NSInteger, GCDAsyncUdpSocketError) {
 /**
  * Called when the socket is closed.
 **/
-- (void)udpSocketDidClose:(GCDAsyncUdpSocket *)sock withError:(NSError *)error;
+- (void)udpSocketDidClose:(GCDAsyncUdpSocket *)sock withError:(NSError  * _Nullable)error;
 
 @end
 
@@ -231,7 +231,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
 
 /**
  * Gets/Sets the maximum size of the buffer that will be allocated for receive operations.
- * The default maximum size is 9216 bytes.
+ * The default maximum size is 65535 bytes.
  * 
  * The theoretical maximum size of any IPv4 UDP packet is UINT16_MAX = 65535.
  * The theoretical maximum size of any IPv6 UDP packet is UINT32_MAX = 4294967295.
@@ -250,6 +250,21 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
 
 - (uint32_t)maxReceiveIPv6BufferSize;
 - (void)setMaxReceiveIPv6BufferSize:(uint32_t)max;
+
+/**
+ * Gets/Sets the maximum size of the buffer that will be allocated for send operations.
+ * The default maximum size is 65535 bytes.
+ * 
+ * Given that a typical link MTU is 1500 bytes, a large UDP datagram will have to be 
+ * fragmented, and that’s both expensive and risky (if one fragment goes missing, the
+ * entire datagram is lost).  You are much better off sending a large number of smaller
+ * UDP datagrams, preferably using a path MTU algorithm to avoid fragmentation.
+ *
+ * You must set it before the sockt is created otherwise it won't work.
+ *
+ **/
+- (uint16_t)maxSendBufferSize;
+- (void)setMaxSendBufferSize:(uint16_t)max;
 
 /**
  * User data allows you to associate arbitrary information with the socket.
@@ -960,8 +975,8 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  * However, if you need one for any reason,
  * these methods are a convenient way to get access to a safe instance of one.
 **/
-- (CFReadStreamRef)readStream;
-- (CFWriteStreamRef)writeStream;
+- (nullable CFReadStreamRef)readStream;
+- (nullable CFWriteStreamRef)writeStream;
 
 /**
  * This method is only available from within the context of a performBlock: invocation.

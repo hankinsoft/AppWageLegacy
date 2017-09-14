@@ -129,8 +129,6 @@
 
     NSLog(@"Sending daily email.");
 
-    NSError * error = nil;
-
     // Send email with our values
     [self sendDailyEmail: emailSettings[@"username"]
                 password: emailSettings[@"password"]
@@ -290,26 +288,18 @@
         smtpSession.connectionType = MCOConnectionTypeClear;
     }
 
-    __block NSError * sendError = nil;
-
-    HSSemaphore * emailSemaphore =
-        [[HSSemaphore alloc] initWithIdentifier: @"com.hankinsoft.macos.appwage.emailSemaphore"
-                                   initialValue: 0];
-
     [smtpSession setTimeout: 30];
     
     MCOSMTPSendOperation *sendOperation = [smtpSession sendOperationWithData: rfc822Data];
     [sendOperation start: ^(NSError *error) {
-        sendError = error;
-
         if(error) {
             NSLog(@"Error sending email:%@", error);
         } else {
             NSLog(@"Successfully sent email!");
         }
-        
+
         dispatch_async(dispatch_get_main_queue(), ^{
-            onFinished(sendError);
+            onFinished(error);
         });
     }];
 } // End of sendDailyEmail
