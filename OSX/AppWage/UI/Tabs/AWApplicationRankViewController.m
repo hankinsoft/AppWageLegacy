@@ -991,7 +991,7 @@ static NSDateFormatter * rankTableDateFormatter;
 
         LatestRankEntry * latestRankEntry = [[LatestRankEntry alloc] init];
 
-        latestRankEntry.rank = [firstEntry objectForKey: yCord],
+        latestRankEntry.rank = [firstEntry objectForKey: yCord];
         latestRankEntry.change = change;
         latestRankEntry.countryCode = obj.countryCode;
         latestRankEntry.country = obj.country;

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef void (^CacheUpdateBlock)(double progress);
-typedef void (^CacheFinishedBlock)();
+typedef void (^CacheFinishedBlock)(void);
 
 @interface AWCacheHelper : NSObject
 
