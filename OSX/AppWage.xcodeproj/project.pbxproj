@@ -32,7 +32,6 @@
 		721DE4E7189A81C800C62F79 /* AWCurrencyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 721DE4E6189A81C800C62F79 /* AWCurrencyHelper.m */; };
 		721DE4E8189A826800C62F79 /* Currency.js in Resources */ = {isa = PBXBuildFile; fileRef = 721DE4E3189A803200C62F79 /* Currency.js */; };
 		721DE4ED189AC18D00C62F79 /* AWSalesChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 721DE4EC189AC18C00C62F79 /* AWSalesChart.m */; };
-		7221A6441858CB9D00010E9C /* ChilkatRequired.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7221A6421858CB9D00010E9C /* ChilkatRequired.cpp */; };
 		7222A2ED18C664CF00B7AC83 /* AWReportCollectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 721C6A861897F4590070438D /* AWReportCollectionOperation.m */; };
 		7222A2EF18C75A0F00B7AC83 /* AWApplicationFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 720D7DB51842551300A94EDF /* AWApplicationFinder.m */; };
 		7222A2F018C75A3C00B7AC83 /* AWiTunesConnectHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 721C6A0B1896B9200070438D /* AWiTunesConnectHelper.m */; };
@@ -400,7 +399,6 @@
 		72BDFECC18100181006E264C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72BDFECB18100181006E264C /* Images.xcassets */; };
 		72BFF50818EC633500C39B83 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A7EDF11886D7AB00B2D970 /* ExceptionHandling.framework */; };
 		72BFF51418EC8A4000C39B83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BFF51318EC8A4000C39B83 /* Foundation.framework */; };
-		72C7FBB319FA81F30064F656 /* libchilkatCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C7FBB119FA81E90064F656 /* libchilkatCocoa.a */; };
 		72C7FBB519FA83550064F656 /* ReviewDatabase.sql in Resources */ = {isa = PBXBuildFile; fileRef = 72C7FBB419FA83550064F656 /* ReviewDatabase.sql */; };
 		72C7FC1C19FAC3E40064F656 /* SalesDatabase.sql in Resources */ = {isa = PBXBuildFile; fileRef = 72C7FC1B19FAC3E40064F656 /* SalesDatabase.sql */; };
 		72C873FF187C2AD1003C6D65 /* ApplicationPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C873FD187C2AD1003C6D65 /* ApplicationPreferencesWindowController.m */; };
@@ -414,6 +412,8 @@
 		72DA15EA18A2E5F100A041DD /* NSImage+CGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DA15E918A2E5F100A041DD /* NSImage+CGImage.m */; };
 		72E3855318514572002A82F8 /* ApplicationSelectionWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E3855118514572002A82F8 /* ApplicationSelectionWindowController.m */; };
 		72E3855418514572002A82F8 /* ApplicationSelectionWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E3855218514572002A82F8 /* ApplicationSelectionWindowController.xib */; };
+		72ED90D11F69A356002E6D89 /* MailCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ED90D01F69A356002E6D89 /* MailCore.framework */; };
+		72ED90E21F69AA6C002E6D89 /* HSSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ED90DC1F69A9C8002E6D89 /* HSSemaphore.m */; };
 		72F015DE1D9A9BD80067109A /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 7253543F1D9A9B3700369E30 /* NSString+Extend.m */; };
 		72F0582819F941B800FBACDE /* AWSQLiteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F0582619F941B800FBACDE /* AWSQLiteHelper.m */; };
 		72F0582A19F9430400FBACDE /* RankingDatabase.sql in Resources */ = {isa = PBXBuildFile; fileRef = 72F0582919F9430400FBACDE /* RankingDatabase.sql */; };
@@ -505,75 +505,6 @@
 		721DE4E6189A81C800C62F79 /* AWCurrencyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWCurrencyHelper.m; sourceTree = "<group>"; };
 		721DE4EB189AC18C00C62F79 /* AWSalesChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSalesChart.h; sourceTree = "<group>"; };
 		721DE4EC189AC18C00C62F79 /* AWSalesChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSalesChart.m; sourceTree = "<group>"; };
-		7221A5FD1858CB2000010E9C /* CkoAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoAtom.h; sourceTree = "<group>"; };
-		7221A5FE1858CB2000010E9C /* CkoBounce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoBounce.h; sourceTree = "<group>"; };
-		7221A5FF1858CB2000010E9C /* CkoBz2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoBz2.h; sourceTree = "<group>"; };
-		7221A6001858CB2000010E9C /* CkoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoCache.h; sourceTree = "<group>"; };
-		7221A6011858CB2000010E9C /* CkoCert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoCert.h; sourceTree = "<group>"; };
-		7221A6021858CB2000010E9C /* CkoCertStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoCertStore.h; sourceTree = "<group>"; };
-		7221A6031858CB2000010E9C /* CkoCgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoCgi.h; sourceTree = "<group>"; };
-		7221A6041858CB2000010E9C /* CkoCharset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoCharset.h; sourceTree = "<group>"; };
-		7221A6051858CB2000010E9C /* CkoCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoCompression.h; sourceTree = "<group>"; };
-		7221A6061858CB2000010E9C /* CkoCrypt2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoCrypt2.h; sourceTree = "<group>"; };
-		7221A6071858CB2000010E9C /* CkoCsv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoCsv.h; sourceTree = "<group>"; };
-		7221A6081858CB2000010E9C /* CkoDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoDateTime.h; sourceTree = "<group>"; };
-		7221A6091858CB2000010E9C /* CkoDh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoDh.h; sourceTree = "<group>"; };
-		7221A60A1858CB2000010E9C /* CkoDirTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoDirTree.h; sourceTree = "<group>"; };
-		7221A60B1858CB2000010E9C /* CkoDkim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoDkim.h; sourceTree = "<group>"; };
-		7221A60C1858CB2000010E9C /* CkoDsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoDsa.h; sourceTree = "<group>"; };
-		7221A60D1858CB2000010E9C /* CkoDtObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoDtObj.h; sourceTree = "<group>"; };
-		7221A60E1858CB2000010E9C /* CkoEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoEmail.h; sourceTree = "<group>"; };
-		7221A60F1858CB2000010E9C /* CkoEmailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoEmailBundle.h; sourceTree = "<group>"; };
-		7221A6101858CB2000010E9C /* CkoFileAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoFileAccess.h; sourceTree = "<group>"; };
-		7221A6111858CB2000010E9C /* CkoFtp2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoFtp2.h; sourceTree = "<group>"; };
-		7221A6121858CB2000010E9C /* CkoFtp2Progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoFtp2Progress.h; sourceTree = "<group>"; };
-		7221A6131858CB2000010E9C /* CkoGzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoGzip.h; sourceTree = "<group>"; };
-		7221A6141858CB2000010E9C /* CkoHtmlToText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoHtmlToText.h; sourceTree = "<group>"; };
-		7221A6151858CB2000010E9C /* CkoHtmlToXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoHtmlToXml.h; sourceTree = "<group>"; };
-		7221A6161858CB2000010E9C /* CkoHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoHttp.h; sourceTree = "<group>"; };
-		7221A6171858CB2000010E9C /* CkoHttpProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoHttpProgress.h; sourceTree = "<group>"; };
-		7221A6181858CB2000010E9C /* CkoHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoHttpRequest.h; sourceTree = "<group>"; };
-		7221A6191858CB2000010E9C /* CkoHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoHttpResponse.h; sourceTree = "<group>"; };
-		7221A61A1858CB2000010E9C /* CkoImap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoImap.h; sourceTree = "<group>"; };
-		7221A61B1858CB2000010E9C /* CkoImapProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoImapProgress.h; sourceTree = "<group>"; };
-		7221A61C1858CB2000010E9C /* CkoMailboxes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoMailboxes.h; sourceTree = "<group>"; };
-		7221A61D1858CB2000010E9C /* CkoMailMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoMailMan.h; sourceTree = "<group>"; };
-		7221A61E1858CB2000010E9C /* CkoMailManProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoMailManProgress.h; sourceTree = "<group>"; };
-		7221A61F1858CB2000010E9C /* CkoMessageSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoMessageSet.h; sourceTree = "<group>"; };
-		7221A6201858CB2000010E9C /* CkoMht.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoMht.h; sourceTree = "<group>"; };
-		7221A6211858CB2000010E9C /* CkoMime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoMime.h; sourceTree = "<group>"; };
-		7221A6221858CB2000010E9C /* CkoNtlm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoNtlm.h; sourceTree = "<group>"; };
-		7221A6231858CB2000010E9C /* CkoOmaDrm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoOmaDrm.h; sourceTree = "<group>"; };
-		7221A6241858CB2000010E9C /* CkoPrivateKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoPrivateKey.h; sourceTree = "<group>"; };
-		7221A6251858CB2000010E9C /* CkoProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoProgress.h; sourceTree = "<group>"; };
-		7221A6261858CB2000010E9C /* CkoPublicKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoPublicKey.h; sourceTree = "<group>"; };
-		7221A6271858CB2000010E9C /* CkoRsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoRsa.h; sourceTree = "<group>"; };
-		7221A6281858CB2000010E9C /* CkoRss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoRss.h; sourceTree = "<group>"; };
-		7221A6291858CB2000010E9C /* CkoSFtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSFtp.h; sourceTree = "<group>"; };
-		7221A62A1858CB2000010E9C /* CkoSFtpDir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSFtpDir.h; sourceTree = "<group>"; };
-		7221A62B1858CB2000010E9C /* CkoSFtpFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSFtpFile.h; sourceTree = "<group>"; };
-		7221A62C1858CB2000010E9C /* CkoSFtpProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSFtpProgress.h; sourceTree = "<group>"; };
-		7221A62D1858CB2000010E9C /* CkoSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSocket.h; sourceTree = "<group>"; };
-		7221A62E1858CB2000010E9C /* CkoSocketProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSocketProgress.h; sourceTree = "<group>"; };
-		7221A62F1858CB2000010E9C /* CkoSocksProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSocksProxy.h; sourceTree = "<group>"; };
-		7221A6301858CB2000010E9C /* CkoSpider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSpider.h; sourceTree = "<group>"; };
-		7221A6311858CB2000010E9C /* CkoSsh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSsh.h; sourceTree = "<group>"; };
-		7221A6321858CB2000010E9C /* CkoSshKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSshKey.h; sourceTree = "<group>"; };
-		7221A6331858CB2000010E9C /* CkoSshProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSshProgress.h; sourceTree = "<group>"; };
-		7221A6341858CB2000010E9C /* CkoSshTunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoSshTunnel.h; sourceTree = "<group>"; };
-		7221A6351858CB2000010E9C /* CkoStringArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoStringArray.h; sourceTree = "<group>"; };
-		7221A6361858CB2000010E9C /* CkoTar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoTar.h; sourceTree = "<group>"; };
-		7221A6371858CB2000010E9C /* CkoTarProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoTarProgress.h; sourceTree = "<group>"; };
-		7221A6381858CB2000010E9C /* CkoUnixCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoUnixCompress.h; sourceTree = "<group>"; };
-		7221A6391858CB2000010E9C /* CkoUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoUpload.h; sourceTree = "<group>"; };
-		7221A63A1858CB2000010E9C /* CkoXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoXml.h; sourceTree = "<group>"; };
-		7221A63B1858CB2000010E9C /* CkoXmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoXmp.h; sourceTree = "<group>"; };
-		7221A63C1858CB2000010E9C /* CkoZip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoZip.h; sourceTree = "<group>"; };
-		7221A63D1858CB2000010E9C /* CkoZipCrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoZipCrc.h; sourceTree = "<group>"; };
-		7221A63E1858CB2000010E9C /* CkoZipEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoZipEntry.h; sourceTree = "<group>"; };
-		7221A63F1858CB2000010E9C /* CkoZipProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkoZipProgress.h; sourceTree = "<group>"; };
-		7221A6421858CB9D00010E9C /* ChilkatRequired.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChilkatRequired.cpp; sourceTree = "<group>"; };
-		7221A6431858CB9D00010E9C /* ChilkatRequired.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChilkatRequired.h; sourceTree = "<group>"; };
 		7222A2EE18C6657500B7AC83 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		722940D318D7634E00D97103 /* AWAddAccountWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWAddAccountWindowController.h; sourceTree = "<group>"; };
 		722940D418D7634E00D97103 /* AWAddAccountWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWAddAccountWindowController.m; sourceTree = "<group>"; };
@@ -1028,6 +959,9 @@
 		72E3855018514572002A82F8 /* ApplicationSelectionWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationSelectionWindowController.h; sourceTree = "<group>"; };
 		72E3855118514572002A82F8 /* ApplicationSelectionWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationSelectionWindowController.m; sourceTree = "<group>"; };
 		72E3855218514572002A82F8 /* ApplicationSelectionWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationSelectionWindowController.xib; sourceTree = "<group>"; };
+		72ED90D01F69A356002E6D89 /* MailCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MailCore.framework; path = Carthage/Build/Mac/MailCore.framework; sourceTree = "<group>"; };
+		72ED90DB1F69A9C8002E6D89 /* HSSemaphore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSSemaphore.h; sourceTree = "<group>"; };
+		72ED90DC1F69A9C8002E6D89 /* HSSemaphore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSSemaphore.m; sourceTree = "<group>"; };
 		72F0580E19F93C9300FBACDE /* ParseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseKit.framework; path = "My App Sales/3rd Party Components/HSSharedOSX/HSShared/3rd Party/ParseKit.framework"; sourceTree = "<group>"; };
 		72F0582619F941B800FBACDE /* AWSQLiteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSQLiteHelper.m; sourceTree = "<group>"; };
 		72F0582719F941B800FBACDE /* AWSQLiteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSQLiteHelper.h; sourceTree = "<group>"; };
@@ -1061,9 +995,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72ED90D11F69A356002E6D89 /* MailCore.framework in Frameworks */,
 				72554C021A7691BF00363832 /* ServiceManagement.framework in Frameworks */,
 				720EC4B81A74804500E9264B /* AddressBook.framework in Frameworks */,
-				72C7FBB319FA81F30064F656 /* libchilkatCocoa.a in Frameworks */,
 				726EABC319D063E700A0ED18 /* libicucore.dylib in Frameworks */,
 				72BFF51418EC8A4000C39B83 /* Foundation.framework in Frameworks */,
 				72BFF50818EC633500C39B83 /* ExceptionHandling.framework in Frameworks */,
@@ -1236,90 +1170,6 @@
 				721DE4EC189AC18C00C62F79 /* AWSalesChart.m */,
 			);
 			path = Dashboard;
-			sourceTree = "<group>";
-		};
-		7221A5F91858CAB300010E9C /* Chilkat */ = {
-			isa = PBXGroup;
-			children = (
-				7221A5FC1858CB2000010E9C /* include */,
-				7221A6421858CB9D00010E9C /* ChilkatRequired.cpp */,
-				7221A6431858CB9D00010E9C /* ChilkatRequired.h */,
-			);
-			path = Chilkat;
-			sourceTree = "<group>";
-		};
-		7221A5FC1858CB2000010E9C /* include */ = {
-			isa = PBXGroup;
-			children = (
-				7221A5FD1858CB2000010E9C /* CkoAtom.h */,
-				7221A5FE1858CB2000010E9C /* CkoBounce.h */,
-				7221A5FF1858CB2000010E9C /* CkoBz2.h */,
-				7221A6001858CB2000010E9C /* CkoCache.h */,
-				7221A6011858CB2000010E9C /* CkoCert.h */,
-				7221A6021858CB2000010E9C /* CkoCertStore.h */,
-				7221A6031858CB2000010E9C /* CkoCgi.h */,
-				7221A6041858CB2000010E9C /* CkoCharset.h */,
-				7221A6051858CB2000010E9C /* CkoCompression.h */,
-				7221A6061858CB2000010E9C /* CkoCrypt2.h */,
-				7221A6071858CB2000010E9C /* CkoCsv.h */,
-				7221A6081858CB2000010E9C /* CkoDateTime.h */,
-				7221A6091858CB2000010E9C /* CkoDh.h */,
-				7221A60A1858CB2000010E9C /* CkoDirTree.h */,
-				7221A60B1858CB2000010E9C /* CkoDkim.h */,
-				7221A60C1858CB2000010E9C /* CkoDsa.h */,
-				7221A60D1858CB2000010E9C /* CkoDtObj.h */,
-				7221A60E1858CB2000010E9C /* CkoEmail.h */,
-				7221A60F1858CB2000010E9C /* CkoEmailBundle.h */,
-				7221A6101858CB2000010E9C /* CkoFileAccess.h */,
-				7221A6111858CB2000010E9C /* CkoFtp2.h */,
-				7221A6121858CB2000010E9C /* CkoFtp2Progress.h */,
-				7221A6131858CB2000010E9C /* CkoGzip.h */,
-				7221A6141858CB2000010E9C /* CkoHtmlToText.h */,
-				7221A6151858CB2000010E9C /* CkoHtmlToXml.h */,
-				7221A6161858CB2000010E9C /* CkoHttp.h */,
-				7221A6171858CB2000010E9C /* CkoHttpProgress.h */,
-				7221A6181858CB2000010E9C /* CkoHttpRequest.h */,
-				7221A6191858CB2000010E9C /* CkoHttpResponse.h */,
-				7221A61A1858CB2000010E9C /* CkoImap.h */,
-				7221A61B1858CB2000010E9C /* CkoImapProgress.h */,
-				7221A61D1858CB2000010E9C /* CkoMailMan.h */,
-				7221A61E1858CB2000010E9C /* CkoMailManProgress.h */,
-				7221A61C1858CB2000010E9C /* CkoMailboxes.h */,
-				7221A61F1858CB2000010E9C /* CkoMessageSet.h */,
-				7221A6201858CB2000010E9C /* CkoMht.h */,
-				7221A6211858CB2000010E9C /* CkoMime.h */,
-				7221A6221858CB2000010E9C /* CkoNtlm.h */,
-				7221A6231858CB2000010E9C /* CkoOmaDrm.h */,
-				7221A6241858CB2000010E9C /* CkoPrivateKey.h */,
-				7221A6251858CB2000010E9C /* CkoProgress.h */,
-				7221A6261858CB2000010E9C /* CkoPublicKey.h */,
-				7221A6271858CB2000010E9C /* CkoRsa.h */,
-				7221A6281858CB2000010E9C /* CkoRss.h */,
-				7221A6291858CB2000010E9C /* CkoSFtp.h */,
-				7221A62A1858CB2000010E9C /* CkoSFtpDir.h */,
-				7221A62B1858CB2000010E9C /* CkoSFtpFile.h */,
-				7221A62C1858CB2000010E9C /* CkoSFtpProgress.h */,
-				7221A62D1858CB2000010E9C /* CkoSocket.h */,
-				7221A62E1858CB2000010E9C /* CkoSocketProgress.h */,
-				7221A62F1858CB2000010E9C /* CkoSocksProxy.h */,
-				7221A6301858CB2000010E9C /* CkoSpider.h */,
-				7221A6311858CB2000010E9C /* CkoSsh.h */,
-				7221A6321858CB2000010E9C /* CkoSshKey.h */,
-				7221A6331858CB2000010E9C /* CkoSshProgress.h */,
-				7221A6341858CB2000010E9C /* CkoSshTunnel.h */,
-				7221A6351858CB2000010E9C /* CkoStringArray.h */,
-				7221A6361858CB2000010E9C /* CkoTar.h */,
-				7221A6371858CB2000010E9C /* CkoTarProgress.h */,
-				7221A6381858CB2000010E9C /* CkoUnixCompress.h */,
-				7221A6391858CB2000010E9C /* CkoUpload.h */,
-				7221A63A1858CB2000010E9C /* CkoXml.h */,
-				7221A63B1858CB2000010E9C /* CkoXmp.h */,
-				7221A63C1858CB2000010E9C /* CkoZip.h */,
-				7221A63D1858CB2000010E9C /* CkoZipCrc.h */,
-				7221A63E1858CB2000010E9C /* CkoZipEntry.h */,
-				7221A63F1858CB2000010E9C /* CkoZipProgress.h */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		722940CC18D7614100D97103 /* AddAccountWindowController */ = {
@@ -1762,7 +1612,6 @@
 		726C0BFF183CFB210021E37E /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				7221A5F91858CAB300010E9C /* Chilkat */,
 				72AB88B21C8CB32900510773 /* HSShared */,
 				72AA91A8187EEB88005CBB3B /* JWToolbarAdaptiveSpaceItem */,
 				725354271D9A97A700369E30 /* MSTranslateVendor */,
@@ -1911,6 +1760,8 @@
 				721C1A621D9AB09C0002BD3D /* HSWindowController.m */,
 				72AB88B31C8CB36200510773 /* MachTimer.h */,
 				72AB88B41C8CB36200510773 /* MachTimer.m */,
+				72ED90DB1F69A9C8002E6D89 /* HSSemaphore.h */,
+				72ED90DC1F69A9C8002E6D89 /* HSSemaphore.m */,
 			);
 			path = HSShared;
 			sourceTree = "<group>";
@@ -1970,6 +1821,7 @@
 		72BDFEAF18100181006E264C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72ED90D01F69A356002E6D89 /* MailCore.framework */,
 				72554C011A7691BF00363832 /* ServiceManagement.framework */,
 				720EC4B71A74804500E9264B /* AddressBook.framework */,
 				72C7FBB119FA81E90064F656 /* libchilkatCocoa.a */,
@@ -2143,6 +1995,7 @@
 				72A98DBD18C4F65F00C27109 /* CopyFiles */,
 				B49440FC3D51135D133DE46F /* [CP] Embed Pods Frameworks */,
 				E4206A561FA6BB912BB40D72 /* [CP] Copy Pods Resources */,
+				72ED90D21F69A361002E6D89 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -2536,6 +2389,21 @@
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
 		};
+		72ED90D21F69A361002E6D89 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/MailCore.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		A0101C23CE1D044223A8F2EC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2628,6 +2496,7 @@
 				72AA91B1187EFD7A005CBB3B /* LVColorWellCell.m in Sources */,
 				72AA91AD187EEBA1005CBB3B /* JWClickThroughView.m in Sources */,
 				720D7DB21840DA6500A94EDF /* AWCollectionOperationQueue.m in Sources */,
+				72ED90E21F69AA6C002E6D89 /* HSSemaphore.m in Sources */,
 				72AB88CF1C8CB4DF00510773 /* HSOutlineView.m in Sources */,
 				725354361D9A97B400369E30 /* MSTranslateVendor.m in Sources */,
 				727812B11A03DA5F00AC4B06 /* AWGenre.m in Sources */,
@@ -2636,7 +2505,6 @@
 				72DA15EA18A2E5F100A041DD /* NSImage+CGImage.m in Sources */,
 				726C0C07183CFB5D0021E37E /* AWPreferencesWindowController.m in Sources */,
 				721A71E318E0B47C0027AAEE /* AWSplitViewWithoutDivider.m in Sources */,
-				7221A6441858CB9D00010E9C /* ChilkatRequired.cpp in Sources */,
 				728802341839615C004144E2 /* AWReviewCollectorOperation.m in Sources */,
 				7253543A1D9A97B400369E30 /* TranslateNotification.m in Sources */,
 				72E3855318514572002A82F8 /* ApplicationSelectionWindowController.m in Sources */,
@@ -2918,7 +2786,10 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppWage/Supporting Files/AppWage-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
@@ -2942,10 +2813,7 @@
 				);
 				INFOPLIST_FILE = "AppWage/Supporting Files/AppWage-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks $(inherited)";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(PROJECT_DIR)/AppWage/3rd Party Components/Chilkat-9.4.1-Cocoa-10.6/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				OTHER_LDFLAGS = (
@@ -2983,7 +2851,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppWage/Supporting Files/AppWage-Prefix.pch";
@@ -3008,10 +2879,7 @@
 				);
 				INFOPLIST_FILE = "AppWage/Supporting Files/AppWage-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks $(inherited)";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(PROJECT_DIR)/AppWage/3rd Party Components/Chilkat-9.4.1-Cocoa-10.6/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				OTHER_LDFLAGS = (

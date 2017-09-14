@@ -12,14 +12,14 @@
 
 + (AWEmailHelper*) sharedInstance;
 
-- (BOOL) sendDailyEmail: (NSString*) smtpFrom
+- (void) sendDailyEmail: (NSString*) smtpFrom
                password: (NSString*) password
                smtpHost: (NSString*) smtpHost
                smtpPort: (NSNumber*) smtpPort
                     tls: (BOOL) tlsEnabled
                 emailTo: (NSArray*) emailTo
              dailyEmail: (BOOL) dailyEmail
-                  error:(NSError *__autoreleasing *)outError;
+          finishedBlock: (void (^)(NSError * error)) onFinished;
 
 - (void) sendDailyEmailAuto;
 - (void) sendDailyEmailAuto: (BOOL) sendAlways;

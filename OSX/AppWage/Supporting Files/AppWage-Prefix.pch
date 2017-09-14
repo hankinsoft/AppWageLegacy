@@ -27,10 +27,6 @@
     // Debouncing
     #import <LVDebounce/LVDebounce.h>
 
-    // Chilkat Email
-    #include "CkoEmail.h"
-    #include "CkoMailMan.h"
-
     // Gzip compression & decompression
     #import <GZIP/GZIP.h>
 

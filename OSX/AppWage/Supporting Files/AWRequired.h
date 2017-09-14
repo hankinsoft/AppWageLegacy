@@ -9,9 +9,8 @@
 #ifndef Required_h
 #define Required_h
 
-#warning These values need to be filled out for email and translations to work properly
+#warning These values need to be filled out translations to work properly
 
-#define CHILKAT_EMAIL_KEY           @""
 #define CLIENT_ID                   @""
 #define CLIENT_SECRET               @""
 

@@ -70,6 +70,7 @@
     IBOutlet NSButton           * sendEmailButton;
     IBOutlet NSButton           * emailWaitsForReportsButton;
     IBOutlet NSButton           * emailMarkReviewsAsSentButton;
+    IBOutlet NSButton           * sendTestEmailButton;
     IBOutlet NSTextField        * emailSMTPAddressTextField;
     IBOutlet NSTextField        * emailSMTPPortTextField;
     IBOutlet NSButton           * emailSMTPuseTLSButton;
@@ -767,13 +768,13 @@ static NSDictionary * localizedEntries;
 {
     NSNumber * smtpPort = [NSNumber numberWithInteger: emailSMTPPortTextField.stringValue.integerValue];
 
-    NSError * error = nil;
-
     NSString * emailTo = emailSendToTextField.stringValue;
     if(0 == emailTo.length)
     {
         emailTo = emailUsernameTextField.stringValue;
     } // End of no target email specified.
+    
+    [sendTestEmailButton setEnabled: NO];
 
     [[AWEmailHelper sharedInstance] sendDailyEmail: emailUsernameTextField.stringValue
                                         password: emailPasswordTextField.stringValue
@@ -782,27 +783,30 @@ static NSDictionary * localizedEntries;
                                              tls: emailSMTPuseTLSButton.state = NSOnState ? YES : NO
                                          emailTo: [emailTo componentsSeparatedByString: @";"]
                                       dailyEmail: NO
-                                           error: &error];
-    
-    // If we have an error, display it.
-    if(nil != error)
-    {
-        [[NSAlert alertWithError: error] beginSheetModalForWindow: self.window
-                                                    modalDelegate: self
-                                                   didEndSelector: nil
-                                                      contextInfo: NULL];
-    }
-    else
-    {
-        [[NSAlert alertWithMessageText: @"Success"
-                         defaultButton: @"OK"
-                       alternateButton: nil
-                           otherButton: nil
-             informativeTextWithFormat: @"SMTP details verified."] beginSheetModalForWindow: self.window
-                         modalDelegate: self
-                         didEndSelector: nil
-                         contextInfo: NULL];
-    } // end of else
+                                           finishedBlock: ^(NSError * error)
+     {
+         [sendTestEmailButton setEnabled: YES];
+
+         // If we have an error, display it.
+         if(nil != error)
+         {
+             [[NSAlert alertWithError: error] beginSheetModalForWindow: self.window
+                                                         modalDelegate: self
+                                                        didEndSelector: nil
+                                                           contextInfo: NULL];
+         }
+         else
+         {
+             [[NSAlert alertWithMessageText: @"Success"
+                              defaultButton: @"OK"
+                            alternateButton: nil
+                                otherButton: nil
+                  informativeTextWithFormat: @"SMTP details verified."] beginSheetModalForWindow: self.window
+              modalDelegate: self
+              didEndSelector: nil
+              contextInfo: NULL];
+         } // end of else
+     }];
 }
 
 #pragma mark -

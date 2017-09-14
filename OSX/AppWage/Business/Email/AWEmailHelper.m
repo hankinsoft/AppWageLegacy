@@ -11,9 +11,11 @@
 #import "AWProduct.h"
 #import "AWCurrencyHelper.h"
 #import "AWCountry.h"
-
+#import "HSSemaphore.h"
 #import <FXKeychain.h>
 #import <GDataXML-HTML/GDataXMLNode.h>
+
+#import <MailCore/MailCore.h>
 
 @interface AWEmailHelper()
 {
@@ -137,41 +139,29 @@
                      tls: [emailSettings[@"smtpTLS"] boolValue]
                  emailTo: [emailTo componentsSeparatedByString: @";"]
               dailyEmail: !sendAlways
-                   error: &error];
-
-    // Check for errors. Log if we have one.
-    if(nil != error)
-    {
-        NSLog(@"Failed to send daily email. Error: %@.", error.localizedDescription);
-    }
-    else
-    {
-        NSLog(@"Daily email sent successfully.");
-    }
+           finishedBlock: ^(NSError * error)
+     {
+         // Check for errors. Log if we have one.
+         if(nil != error)
+         {
+             NSLog(@"Failed to send daily email. Error: %@.", error.localizedDescription);
+         }
+         else
+         {
+             NSLog(@"Daily email sent successfully.");
+         }
+     }];
 }
 
-- (BOOL) sendDailyEmail: (NSString*) smtpFrom
+- (void) sendDailyEmail: (NSString*) smtpFrom
                password: (NSString*) password
                smtpHost: (NSString*) smtpHost
                smtpPort: (NSNumber*) smtpPort
                     tls: (BOOL) tlsEnabled
                 emailTo: (NSArray*) emailTo
              dailyEmail: (BOOL) dailyEmail
-                  error:(NSError *__autoreleasing *)outError
+          finishedBlock: (void (^)(NSError * error)) onFinished;
 {
-    if(nil == CHILKAT_EMAIL_KEY || 0 == CHILKAT_EMAIL_KEY.length)
-    {
-        NSError * noLicenseError =
-            [NSError errorWithDomain: AWErrorDomain
-                                code: 0
-                            userInfo: @{NSLocalizedDescriptionKey: @"You must define CHILKAT_EMAIL_KEY to enable emails."}];
-
-        // Set our error
-        *outError = noLicenseError;
-
-        return false;
-    } // End of no license specified
-
     // Get yesterdayDate
     NSDateComponents * dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitDay
                                                                         fromDate: [NSDate date]];
@@ -189,19 +179,26 @@
                                                   toDate: yesterday
                                                  options: 0];
 
-    CkoEmail * ckoEmail  = [[CkoEmail alloc] init];
-    ckoEmail.FromAddress = smtpFrom;
-    ckoEmail.FromName    = @"AppWage";
+    MCOSMTPSession *smtpSession = [[MCOSMTPSession alloc] init];
+    smtpSession.hostname = smtpHost;
+
+    MCOMessageBuilder * builder = [[MCOMessageBuilder alloc] init];
+    
+    [[builder header] setFrom: [MCOAddress addressWithDisplayName: @"AppWage"
+                                                          mailbox: smtpFrom]];
+    
+    NSMutableArray *to = [[NSMutableArray alloc] init];
 
     NSLog(@"EmailTo: %@", emailTo);
     [emailTo enumerateObjectsUsingBlock: ^(NSString * targetEmail, NSUInteger index, BOOL * stop)
      {
          NSString * sendTo = [targetEmail stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
 
-         NSLog(@"Adding: %@", sendTo);
-         [ckoEmail AddTo: sendTo
-            emailAddress: sendTo];
+         MCOAddress *newAddress = [MCOAddress addressWithMailbox: sendTo];
+         [to addObject: newAddress];
      }];
+    
+    [[builder header] setTo:to];
 
     NSString * emailTemplateHtmlPath = [[NSBundle mainBundle] pathForResource: @"EmailTemplate_Body"
                                                                        ofType: @"html"];
@@ -272,40 +269,49 @@
     [self updateSummary: &html
               appLookup: appLookup];
 
-    [ckoEmail SetHtmlBody: [NSString stringWithString: html]];
+    [[builder header] setSubject: [NSString stringWithFormat: @"%@ - Daily Stats for %@",
+                                   kAppDisplayName,
+                                   [dateFormatter stringFromDate: yesterday]]];
 
-    // Setup our subject
-    ckoEmail.Subject = [NSString stringWithFormat: @"%@ - Daily Stats for %@",
-                        kAppDisplayName,
-                        [dateFormatter stringFromDate: yesterday]];
-    
-    //    NSLog(@"HTML is: %@", html);
-    
-    CkoMailMan * ckoMailMan = [[CkoMailMan alloc] init];
-    [ckoMailMan UnlockComponent: CHILKAT_EMAIL_KEY];
+    [builder setHTMLBody: [NSString stringWithString: html]];
+    NSData * rfc822Data = [builder data];
 
     // Send email.
-    ckoMailMan.SmtpHost     = smtpHost;
-    ckoMailMan.SmtpUsername = smtpFrom;
-    ckoMailMan.SmtpPassword = password;
-    ckoMailMan.SmtpPort     = smtpPort;
-    ckoMailMan.StartTLS     = tlsEnabled;
+    smtpSession.username = smtpFrom;
+    smtpSession.password = password;
 
-    bool success = [ckoMailMan SendEmail: ckoEmail];
-    if(!success)
+    smtpSession.port = smtpPort.unsignedIntValue;
+    if(tlsEnabled)
     {
-        *outError = [NSError errorWithDomain: AWErrorDomain
-                                        code: 0
-                                    userInfo: @{NSLocalizedDescriptionKey: @"Failed to send testing email. Please verify that the details are entered correctly."}];
+        smtpSession.connectionType = MCOConnectionTypeTLS;
+    }
+    else
+    {
+        smtpSession.connectionType = MCOConnectionTypeClear;
+    }
 
-        NSLog(@"Error! %@.", ckoMailMan.LastErrorXml);
-        NSLog(@"Error2: %@", ckoMailMan.LastErrorText);
-        NSLog(@"Error3: %@", ckoMailMan.LastErrorHtml);
-    } // End of no success
+    __block NSError * sendError = nil;
 
-    [ckoMailMan CloseSmtpConnection];
+    HSSemaphore * emailSemaphore =
+        [[HSSemaphore alloc] initWithIdentifier: @"com.hankinsoft.macos.appwage.emailSemaphore"
+                                   initialValue: 0];
+
+    [smtpSession setTimeout: 30];
     
-    return success;
+    MCOSMTPSendOperation *sendOperation = [smtpSession sendOperationWithData: rfc822Data];
+    [sendOperation start: ^(NSError *error) {
+        sendError = error;
+
+        if(error) {
+            NSLog(@"Error sending email:%@", error);
+        } else {
+            NSLog(@"Successfully sent email!");
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            onFinished(sendError);
+        });
+    }];
 } // End of sendDailyEmail
 
 - (void) updateSummary: (NSMutableString*__autoreleasing*) outHtml
