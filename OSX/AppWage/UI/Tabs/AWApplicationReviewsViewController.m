@@ -169,6 +169,9 @@ static NSDateFormatter * reviewTableDateFormatter;
     // Set while in main thread
     NSString * reviewSearchString = reviewSearchField.stringValue;
 
+    // Grab our sort descriptors while still in the main thread
+    NSArray<NSSortDescriptor*>* sortDescriptors = reviewTableView.sortDescriptors.copy;
+
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         __block NSMutableDictionary * applicationLookup = [NSMutableDictionary dictionary];
 
@@ -298,8 +301,12 @@ static NSDateFormatter * reviewTableDateFormatter;
             } // End of while loop
         }];
 
-        // Set our internal reviews
-        internalReviews = [_reviewsTemp copy];
+        // Fix for data race.. only access reviews on main thread. This could be handled better
+        // but AppWage is mainly in maintenance at the moment.
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            // Set our internal reviews
+            internalReviews = [_reviewsTemp copy];
+        });
 
         // If we did not have specific versions, then we will set our all versions entry.
         // If we set this on selected versions, then everytime the user changed the filter, our
@@ -312,7 +319,7 @@ static NSDateFormatter * reviewTableDateFormatter;
                                                             }];
         } // End of we did not have selected versions
 
-        [self updateSorting];
+        [self updateSorting: sortDescriptors];
 
         NSLog(@"We have %ld reviews. UpdateSelection: %@.",
               internalReviews.count,
@@ -535,24 +542,25 @@ static NSDateFormatter * reviewTableDateFormatter;
 #pragma mark -
 #pragma mark NSTableView
 
-- (void)tableView:(NSTableView *)tableView sortDescriptorsDidChange:(NSArray *)oldDescriptors
+- (void)tableView: (NSTableView *)tableView
+sortDescriptorsDidChange:(NSArray *)oldDescriptors
 {
     // Update our sorting
-    [self updateSorting];
+    [self updateSorting: reviewTableView.sortDescriptors.copy];
 
     // Reload our table
     [tableView reloadData];
 }
 
-- (void) updateSorting
+- (void) updateSorting: (NSArray<NSSortDescriptor*>*) sortDescriptors
 {
-    if(nil == reviewTableView.sortDescriptors || 0 == reviewTableView.sortDescriptors.count)
+    if(nil == sortDescriptors || 0 == sortDescriptors.count)
     {
         return;
     } // End of unsorted
     
     // Get our first sort descriptor
-    NSSortDescriptor * sortDescriptor = reviewTableView.sortDescriptors[0];
+    NSSortDescriptor * sortDescriptor = sortDescriptors[0];
     //    NSInteger index = sortDescriptor.key.integerValue;
 
     // Sort our array

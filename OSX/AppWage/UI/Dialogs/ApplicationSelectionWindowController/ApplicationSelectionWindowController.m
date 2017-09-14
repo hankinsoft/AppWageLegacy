@@ -100,14 +100,16 @@
     lastSearch = appSearchField.stringValue;
 
     NSLog(@"Want to search for: %@", appSearchField.stringValue);
+
+    toggleAllAppsButtonCell.state = NSOffState;
+    toggleAllAppsButtonCell.allowsMixedState = NO;
+
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         // Setup our icon collection (cancel any existing)
         [iconCollectionOperationQueue cancelAllOperations];
         iconCollectionOperationQueue = [[NSOperationQueue alloc] init];
         iconCollectionOperationQueue.maxConcurrentOperationCount = 1;
 
-        toggleAllAppsButtonCell.state = NSOffState;
-        toggleAllAppsButtonCell.allowsMixedState = NO;
         [selectedApplicationIds removeAllObjects];
 
         currentApplications = [NSArray array];

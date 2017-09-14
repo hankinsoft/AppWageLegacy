@@ -744,6 +744,7 @@ static NSDateFormatter * rankTableDateFormatter;
 
     NSLog(@"reloadRanks entered singleton.");
 
+    NSArray<NSSortDescriptor*>* sortDescriptors = rankTableView.sortDescriptors.copy;
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         @autoreleasepool {
             NSDate * endDate     = nil;
@@ -758,7 +759,8 @@ static NSDateFormatter * rankTableDateFormatter;
 
             // Graph has been updated. Load our data.
             [self reloadDataInContext: startDate
-                              endDate: endDate];
+                              endDate: endDate
+                      sortDescriptors: sortDescriptors];
 
             dispatch_sync(dispatch_get_main_queue(), ^{
                 // Initialize our graph
@@ -780,6 +782,7 @@ static NSDateFormatter * rankTableDateFormatter;
 
 - (void) reloadDataInContext: (NSDate*) startDate
                      endDate: (NSDate*) endDate
+             sortDescriptors: (NSArray<NSSortDescriptor*>*) sortDescriptors
 {
     NSLog(@"Want to reload ranks with applications: %@", currentApplications);
 
@@ -1012,7 +1015,7 @@ static NSDateFormatter * rankTableDateFormatter;
 
     NSLog(@"ApplicationRankViewController - UI reload chart and table started.");
     rankArray = [latestRanks copy];
-    [self updateSorting];
+    [self updateSorting: sortDescriptors];
 } // End of reloadDataInContext: endDate;
 
 - (void) redrawChart
@@ -1227,7 +1230,8 @@ static NSDateFormatter * rankTableDateFormatter;
     } // End of unhandled
 }
 
-- (void)tableView:(NSTableView *)tableView sortDescriptorsDidChange:(NSArray *)oldDescriptors
+- (void)tableView:(NSTableView *)tableView
+sortDescriptorsDidChange:(NSArray *)oldDescriptors
 {
     [rankLoadingProgressIndicator startAnimation: self];
 
@@ -1235,7 +1239,7 @@ static NSDateFormatter * rankTableDateFormatter;
     [tableView deselectAll: self];
 
     // Update our sorting
-    [self updateSorting];
+    [self updateSorting: tableView.sortDescriptors.copy];
 
     // Redraw our chart
     [self redrawChart];
@@ -1246,15 +1250,15 @@ static NSDateFormatter * rankTableDateFormatter;
     [rankLoadingProgressIndicator stopAnimation: self];
 }
 
-- (void) updateSorting
+- (void) updateSorting: (NSArray<NSSortDescriptor*>*) sortDescriptors
 {
-    if(nil == rankTableView.sortDescriptors || 0 == rankTableView.sortDescriptors.count)
+    if(nil == sortDescriptors || 0 == sortDescriptors.count)
     {
         return;
     } // End of unsorted
     
     // Get our first sort descriptor
-    NSSortDescriptor * sortDescriptor = rankTableView.sortDescriptors[0];
+    NSSortDescriptor * sortDescriptor = sortDescriptors[0];
     //    NSInteger index = sortDescriptor.key.integerValue;
 
     // Sort our array
