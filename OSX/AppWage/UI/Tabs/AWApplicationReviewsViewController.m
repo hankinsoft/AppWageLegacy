@@ -427,8 +427,10 @@ static NSDateFormatter * reviewTableDateFormatter;
     if(_isFocusedTab)
     {
         NSLog(@"Has new reviews and is focused. Want to reload.");
-        [self reloadReviewsAndUpdateSelection: NO];
-        requiresReload = NO;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self reloadReviewsAndUpdateSelection: NO];
+            requiresReload = NO;
+        });
     }
     else
     {
@@ -897,7 +899,9 @@ sortDescriptorsDidChange:(NSArray *)oldDescriptors
                 [database executeUpdate: updateQuery];
             }];
 
-            [self handleTableSelectionChanged];
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [self handleTableSelectionChanged];
+            });
         }];
     });
 }

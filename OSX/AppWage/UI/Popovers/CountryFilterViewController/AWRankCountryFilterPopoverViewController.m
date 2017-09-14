@@ -82,12 +82,17 @@
 
 - (void) actualSearch:(id)sender
 {
-    if([lastSearch isEqualToString: countrySearchField.stringValue]) return;
+    if([lastSearch isEqualToString: countrySearchField.stringValue])
+    {
+        return;
+    }
+
     lastSearch = countrySearchField.stringValue;
 
     NSLog(@"Want to search for: %@", countrySearchField.stringValue);
+
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        if(0 == countrySearchField.stringValue.length)
+        if(0 == lastSearch.length)
         {
             countries = allCountries;
         }

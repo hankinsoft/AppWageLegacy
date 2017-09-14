@@ -137,14 +137,18 @@ static NSMutableSet                            * outlineViewExpandedEntries;
 
 - (void) shouldReloadApplications: (NSNotification*) aNotification
 {
-    // Reload the applications
-    [self reloadApplications];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // Reload the applications
+        [self reloadApplications];
+    });
 }
 
 - (void) newReviews: (NSNotification*) aNotification
 {
-    // Reload the applications
-    [self reloadApplications];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // Reload the applications
+        [self reloadApplications];
+    });
 }
 
 - (void)addApplications: (NSMutableArray *)childEntries
