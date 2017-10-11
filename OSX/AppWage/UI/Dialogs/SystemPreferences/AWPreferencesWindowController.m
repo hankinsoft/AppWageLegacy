@@ -201,13 +201,13 @@ static NSDictionary * localizedEntries;
             emailSMTPPortTextField.stringValue = @"465";
         }
 
-        if(nil == emailSettings[@"smtpTSL"])
+        if(nil == emailSettings[@"smtpTLS"])
         {
             emailSMTPuseTLSButton.state = YES;
         }
         else
         {
-            emailSMTPuseTLSButton.state = YES == [emailSettings[@"smtpTSL"] boolValue] ? NSOnState : NSOffState;
+            emailSMTPuseTLSButton.state = YES == [emailSettings[@"smtpTLS"] boolValue] ? NSOnState : NSOffState;
         }
 
         sendEmailButton.state = [AWSystemSettings sharedInstance].emailsEnabled ? NSOnState : NSOffState;
@@ -666,7 +666,7 @@ static NSDictionary * localizedEntries;
                                          @"password":emailPasswordTextField.stringValue,
                                          @"smtp":emailSMTPAddressTextField.stringValue,
                                          @"smtpPort":[NSNumber numberWithInteger: emailSMTPPortTextField.stringValue.integerValue],
-                                         @"smtpTSL":[NSNumber numberWithBool: emailSMTPuseTLSButton.state == NSOnState ? YES : NO],
+                                         @"smtpTLS":[NSNumber numberWithBool: emailSMTPuseTLSButton.state == NSOnState ? YES : NO],
                                          @"sendTo":emailSendToTextField.stringValue,
                                          };
 
