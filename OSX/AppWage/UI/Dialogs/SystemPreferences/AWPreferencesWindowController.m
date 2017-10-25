@@ -449,31 +449,27 @@ static NSDictionary * localizedEntries;
 
 - (IBAction) onAccept: (id) sender
 {
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        if([self updateDetails])
-        {
-            // Update the network settings
-            [self updateNetworkSettings];
+    if([self updateDetails])
+    {
+        // Update the network settings
+        [self updateNetworkSettings];
 
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [[NSNotificationCenter defaultCenter] postNotificationName: [AWApplicationListTreeViewController applicationListRequiresUpdateNotificationName]
-                                                                    object: nil];
-                
-                // Post a review and rank update
-                [[NSNotificationCenter defaultCenter] postNotificationName: [AWCollectionOperationQueue newReviewsNotificationName]
-                                                                    object: nil];
-                
-                [[NSNotificationCenter defaultCenter] postNotificationName: [AWCollectionOperationQueue newReportsNotificationName]
-                                                                    object: nil];
-                
-                [[NSNotificationCenter defaultCenter] postNotificationName: [AWCollectionOperationQueue newRanksNotificationName]
-                                                                    object: nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName: [AWApplicationListTreeViewController applicationListRequiresUpdateNotificationName]
+                                                            object: nil];
+        
+        // Post a review and rank update
+        [[NSNotificationCenter defaultCenter] postNotificationName: [AWCollectionOperationQueue newReviewsNotificationName]
+                                                            object: nil];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName: [AWCollectionOperationQueue newReportsNotificationName]
+                                                            object: nil];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName: [AWCollectionOperationQueue newRanksNotificationName]
+                                                            object: nil];
 
-                // Close our sheet.
-                [self endSheetWithReturnCode: NSModalResponseOK];
-            });
-        } // End of updateDetails
-    });
+        // Close our sheet.
+        [self endSheetWithReturnCode: NSModalResponseOK];
+    } // End of updateDetails
 }
 
 - (void) updateNetworkSettings
