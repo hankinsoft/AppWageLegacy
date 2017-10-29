@@ -11,12 +11,6 @@
 
 #define kExchangeRateUserDefault            @"ExchangeRates"
 
-@interface AWCurrencyHelper()
-{
-    NSDictionary * currencyDictionary;
-}
-@end
-
 @implementation AWCurrencyHelper
 
 @synthesize allCurrencies;
@@ -42,10 +36,9 @@
 
         NSData * currencyData = [NSData dataWithContentsOfFile: currencyPath];
 
-        NSError __autoreleasing * error = nil;
         NSDictionary * currencyArray = [NSJSONSerialization JSONObjectWithData: currencyData
                                                                   options: kNilOptions
-                                                                    error: &error];
+                                                                    error: NULL];
         
         NSMutableArray * _allCurrencies = [NSMutableArray array];
         [currencyArray enumerateKeysAndObjectsUsingBlock: ^(NSString * key, NSString * value, BOOL * stop)
@@ -61,7 +54,7 @@
                                                                    ascending: YES];
 
         // Set our currencies
-        allCurrencies = [NSArray arrayWithArray: [_allCurrencies sortedArrayUsingDescriptors: @[descriptor]]];
+        allCurrencies = [_allCurrencies sortedArrayUsingDescriptors: @[descriptor]];
     }
 
     return self;
@@ -149,6 +142,25 @@
     [currencyCase appendString: @"ELSE 0\r\n"];
 
     return currencyCase.copy;
+}
+
+- (NSString *)currentCurrencySymbol
+{
+    NSString *currencyCode = [AWSystemSettings sharedInstance].currencyCode;
+    
+    NSNumberFormatter *numberFormatter = [NSNumberFormatter new];
+    numberFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
+    
+    for (NSString *identifier in [NSLocale availableLocaleIdentifiers]) {
+        NSLocale *locale = [NSLocale localeWithLocaleIdentifier:identifier];
+        if ([locale.currencyCode isEqual:currencyCode]) {
+            numberFormatter.locale = locale;
+            return numberFormatter.currencySymbol;
+        }
+    }
+    
+    // Return a fallback in case we can't find anything - shouldn't happen.
+    return @"$";
 }
 
 @end
