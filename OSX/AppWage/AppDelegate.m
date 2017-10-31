@@ -311,6 +311,11 @@
     if ([firstItem respondsToSelector:@selector(setTrackedSplitView:)]) {
         [firstItem setValue:splitView forKey:@"trackedSplitView"];
     }
+    
+    // Also center the progress item horizontally.
+    if ([progressToolbarItem respondsToSelector:@selector(setWantsToBeCentered:)]) {
+        [progressToolbarItem setValue:@YES forKey:@"wantsToBeCentered"];
+    }
 #pragma clang diagnostic pop
 }
 

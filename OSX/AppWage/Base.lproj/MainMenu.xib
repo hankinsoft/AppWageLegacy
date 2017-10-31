@@ -549,7 +549,7 @@
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="947" height="648"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
-            <value key="minSize" type="size" width="697" height="648"/>
+            <value key="minSize" type="size" width="720" height="648"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="947" height="648"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -581,8 +581,8 @@
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="40DDFF36-E639-49DA-965B-9E6CCE8A05F5" label="" paletteLabel="" id="KQt-OV-8fk">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="71" height="20"/>
-                        <size key="maxSize" width="136" height="25"/>
+                        <size key="minSize" width="104" height="20"/>
+                        <size key="maxSize" width="110" height="25"/>
                         <segmentedControl key="view" verticalHuggingPriority="750" id="aFL-g2-Uqk">
                             <rect key="frame" x="0.0" y="14" width="104" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -616,6 +616,7 @@
                     <toolbarItem reference="KQt-OV-8fk"/>
                     <toolbarItem reference="GH9-6S-ObK"/>
                     <toolbarItem reference="hZf-yY-lJK"/>
+                    <toolbarItem reference="GH9-6S-ObK"/>
                     <toolbarItem reference="GH9-6S-ObK"/>
                     <toolbarItem reference="GH9-6S-ObK"/>
                 </defaultToolbarItems>
