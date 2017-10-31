@@ -171,6 +171,9 @@
         NSLog(@"Rating database initialized.");
     }];
 
+    // Setup the main window styling.
+    [self.window setTitleVisibility: NSWindowTitleHidden];
+
     // Setup the progressWindowController
     progressWindowController = [[HSProgressWindowController alloc] init];
     progressWindowController.labelString = @"Preparing database";
@@ -240,9 +243,6 @@
 
             [splitViewRight addSubview: mainTabViewController.view];
 
-            // Set our title + icon
-            [self.window setTitle: kAppDisplayName];
-            
             NSLog(@"initializeApp - dashboard");
             [self onDashboard: nil];
 
