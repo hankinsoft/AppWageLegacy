@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/hankinsoft/AppWage.svg?branch=master)](https://travis-ci.org/hankinsoft/AppWage)
 
 # AppWage
-iTunes connect reporting tool
+iTunes connect reporting tool. The latest build can be [downloaded here](https://appwage.com/download.php).
 
 ## Features
 1. iTunes connect sales reporting tool.
