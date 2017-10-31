@@ -1,3 +1,4 @@
 language: objective-c
 osx_image: xcode8
+before_script: cd OSX && carthage build && cd -
 script: xcodebuild clean build -workspace OSX/AppWage.xcworkspace -scheme AppWage
