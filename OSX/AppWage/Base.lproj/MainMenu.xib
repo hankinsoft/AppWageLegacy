@@ -579,22 +579,7 @@
             </view>
             <toolbar key="toolbar" implicitIdentifier="758FEF0E-025A-4AAE-85E3-DD03A41FC769" autosavesConfiguration="NO" allowsUserCustomization="NO" showsBaselineSeparator="NO" displayMode="iconOnly" sizeMode="regular" id="etB-7s-5vp">
                 <allowedToolbarItems>
-                    <toolbarItem implicitItemIdentifier="6AA5E6AC-9F61-4D74-AEA0-D21F64EAFFE2" label="Stretch View" paletteLabel="Stretch View" tag="-1" id="grA-d4-oz9">
-                        <nil key="toolTip"/>
-                        <size key="minSize" width="0.0" height="25"/>
-                        <size key="maxSize" width="163" height="96"/>
-                        <customView key="view" id="zZm-gO-qo6">
-                            <rect key="frame" x="27" y="14" width="20" height="32"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </customView>
-                    </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="bww-2Z-hYO"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="GH9-6S-ObK"/>
-                    <toolbarItem implicitItemIdentifier="7C92671A-681C-45C9-B6E6-02BA0F733625" label="" paletteLabel="Progress" tag="-1" id="hZf-yY-lJK">
-                        <size key="minSize" width="100" height="32"/>
-                        <size key="maxSize" width="100" height="32"/>
-                    </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="45A68248-D85D-4533-9048-FCF053C491B7" label="" paletteLabel="" id="KQt-OV-8fk">
+                    <toolbarItem implicitItemIdentifier="40DDFF36-E639-49DA-965B-9E6CCE8A05F5" label="" paletteLabel="" id="KQt-OV-8fk">
                         <nil key="toolTip"/>
                         <size key="minSize" width="71" height="20"/>
                         <size key="maxSize" width="136" height="25"/>
@@ -620,17 +605,18 @@
                             </connections>
                         </segmentedControl>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="7AF898C3-DCB1-4755-B4B7-5B28BEBE3459" label="Toolbar Item" paletteLabel="Toolbar Item" tag="-1" id="HOI-XT-Mxb" customClass="JWToolbarAdaptiveSpaceItem">
-                        <connections>
-                            <outlet property="linkedView" destination="ipN-6c-kX9" id="1lJ-Is-zvn"/>
-                        </connections>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="GH9-6S-ObK"/>
+                    <toolbarItem implicitItemIdentifier="7C92671A-681C-45C9-B6E6-02BA0F733625" label="" paletteLabel="Progress" tag="-1" id="hZf-yY-lJK">
+                        <size key="minSize" width="100" height="32"/>
+                        <size key="maxSize" width="100" height="32"/>
                     </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
-                    <toolbarItem reference="HOI-XT-Mxb"/>
+                    <toolbarItem reference="GH9-6S-ObK"/>
                     <toolbarItem reference="KQt-OV-8fk"/>
-                    <toolbarItem reference="grA-d4-oz9"/>
+                    <toolbarItem reference="GH9-6S-ObK"/>
                     <toolbarItem reference="hZf-yY-lJK"/>
+                    <toolbarItem reference="GH9-6S-ObK"/>
                     <toolbarItem reference="GH9-6S-ObK"/>
                 </defaultToolbarItems>
             </toolbar>
@@ -642,7 +628,6 @@
         </window>
         <customObject id="494" customClass="AppDelegate">
             <connections>
-                <outlet property="customSpaceToolbarItem" destination="grA-d4-oz9" id="iih-dF-1po"/>
                 <outlet property="dashboardMenuItem" destination="0Oh-kG-1Ha" id="vN1-VJ-yWm"/>
                 <outlet property="progressToolbarIndicator" destination="heF-sg-uMX" id="urF-8w-u4r"/>
                 <outlet property="progressToolbarItem" destination="hZf-yY-lJK" id="zsE-qT-CfL"/>
@@ -652,7 +637,6 @@
                 <outlet property="selectedViewToolbarItem" destination="KQt-OV-8fk" id="BGR-hQ-qlp"/>
                 <outlet property="showHiddenApplicationsMenuItem" destination="RZ3-ag-ht0" id="EOw-Hf-cnV"/>
                 <outlet property="splitView" destination="bfg-Fp-azf" id="vce-nu-EXw"/>
-                <outlet property="splitViewAdaptiveSpaceToolbarItem" destination="HOI-XT-Mxb" id="DDr-Ne-Dnx"/>
                 <outlet property="splitViewLeft" destination="ipN-6c-kX9" id="ABK-vU-Wfb"/>
                 <outlet property="splitViewRight" destination="gLY-rt-KeM" id="Us8-qk-Zc0"/>
                 <outlet property="toolbar" destination="etB-7s-5vp" id="JJL-io-LgD"/>

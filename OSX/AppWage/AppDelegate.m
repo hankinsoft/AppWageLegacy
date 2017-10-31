@@ -30,7 +30,6 @@
 #import "AWCollectionOperationQueue.h"
 #import "AWPreferencesWindowController.h"
 #import "BackgroundView.h"
-#import "JWToolbarAdaptiveSpaceItem.h"
 
 #import "DDASLLogger.h"
 #import "DDTTYLogger.h"
@@ -61,7 +60,6 @@
     AWPreferencesWindowController               * preferencesWindowController;
 
     IBOutlet NSSplitView                        * splitView;
-    IBOutlet JWToolbarAdaptiveSpaceItem         * splitViewAdaptiveSpaceToolbarItem;
     IBOutlet NSToolbarItem                      * customSpaceToolbarItem;
     IBOutlet NSView                             * splitViewLeft;
     IBOutlet NSView                             * splitViewRight;
@@ -171,9 +169,8 @@
         NSLog(@"Rating database initialized.");
     }];
 
-    // Setup the main window styling.
-    [self.window setTitleVisibility: NSWindowTitleHidden];
-
+    [self setupTitleAndToolbar];
+    
     // Setup the progressWindowController
     progressWindowController = [[HSProgressWindowController alloc] init];
     progressWindowController.labelString = @"Preparing database";
@@ -196,8 +193,6 @@
                                        withObject: @YES];
     }
 
-    splitViewAdaptiveSpaceToolbarItem.maxWidth = [self calculateSplitViewAdaptiveSpaceMaxWidth];
-
     // Initialize our logging
     [self initLogging];
 
@@ -209,8 +204,6 @@
     [progressToolbarItem setView: progressToolbarItemView];
     [progressToolbarItem setMinSize: targetSize];
     [progressToolbarItem setMaxSize: targetSize];
-
-    [self handleSplitViewResized];
 
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         // Load our app data in the background. We have a progress bar open,
@@ -274,8 +267,6 @@
                 } // End of we have applications
             });
 
-            [self handleSplitViewResized];
-            
             // Update our exchange rates
             [[AWCurrencyHelper sharedInstance] updateExchangeRates];
 
@@ -305,6 +296,22 @@
     });
 
     finishedLaunching = YES;
+}
+
+- (void)setupTitleAndToolbar
+{
+    [self.window setTitleVisibility: NSWindowTitleHidden];
+    
+    // Now that the title is hidden, we want to adjust our toolbar so that the items are properly aligned
+    // This requires private API: https://stackoverflow.com/q/41372245
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    // Ensure that our segmented control is always aligned with the split view's left half.
+    NSToolbarItem *firstItem = toolbar.items.firstObject;
+    if ([firstItem respondsToSelector:@selector(setTrackedSplitView:)]) {
+        [firstItem setValue:splitView forKey:@"trackedSplitView"];
+    }
+#pragma clang diagnostic pop
 }
 
 - (void) initializeAppData
@@ -360,32 +367,6 @@
 
     NSLog(@"Finished initData");
 }
-
-- (CGFloat) calculateSplitViewAdaptiveSpaceMaxWidth
-{
-    // Figure out our adaptive width
-    CGFloat adaptiveWidth = self.window.frame.size.width / 2;
-    adaptiveWidth -= progressToolbarItem.maxSize.width / 2;
-    adaptiveWidth -= selectedViewToolbarItem.maxSize.width;
-    // Item spacing
-    adaptiveWidth -= 40;
-
-    return adaptiveWidth;
-}
-
-- (CGFloat) calculateAdaptiveWidth
-{
-    CGFloat adaptiveWidth = self.window.frame.size.width / 2;
-    adaptiveWidth -= progressToolbarItem.maxSize.width / 2;
-    adaptiveWidth -= splitViewAdaptiveSpaceToolbarItem.maxSize.width;
-    adaptiveWidth -= selectedViewToolbarItem.maxSize.width;
-
-    // Item spacing
-    adaptiveWidth -= 40;
-    adaptiveWidth = MAX(adaptiveWidth, 0.0f);
-    
-    return adaptiveWidth;
-} // End of calculateAdaptiveWidth
 
 - (void) initTimers
 {
@@ -1042,28 +1023,6 @@
 #pragma mark -
 #pragma mark NSSplitViewDelegate
 
-- (void)splitViewDidResizeSubviews:(NSNotification *)notification
-{
-    [self handleSplitViewResized];
-}
-
-- (void) handleSplitViewResized
-{
-    splitViewAdaptiveSpaceToolbarItem.maxWidth = [self calculateSplitViewAdaptiveSpaceMaxWidth];
-    [splitViewAdaptiveSpaceToolbarItem updateWidth];
-    
-    CGFloat adaptiveWidth = [self calculateAdaptiveWidth];
-    
-    //    NSLog(@"Width is: %f (%f, %f)", adaptiveWidth, self.window.frame.size.width, splitViewAdaptiveSpaceToolbarItem.maxSize.width);
-    
-    NSSize newSize = NSMakeSize(
-                                adaptiveWidth + 5,
-                                32);
-    
-    [customSpaceToolbarItem setMinSize: newSize];
-    [customSpaceToolbarItem setMaxSize: newSize];
-}
-
 - (CGFloat)splitView:(NSSplitView *)splitView constrainMinCoordinate:(CGFloat)proposedMinimumPosition ofSubviewAt:(NSInteger)dividerIndex
 {
     if(0 == dividerIndex)
@@ -1127,9 +1086,6 @@
     }
 
     NSLog(@"Window resized");
-
-    // Call the splitview resize
-    [self splitViewDidResizeSubviews: notification];
 }
 
 -(NSDragOperation)draggingEntered:(id < NSDraggingInfo >)sender

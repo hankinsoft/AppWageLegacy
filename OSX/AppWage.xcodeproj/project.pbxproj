@@ -364,8 +364,6 @@
 		72A98DB218C4EBE300C27109 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A98DB118C4EBE300C27109 /* main.m */; };
 		72A98DBA18C4F30300C27109 /* CollectionListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A98DB918C4F30300C27109 /* CollectionListener.m */; };
 		72A98DBE18C4F68400C27109 /* com.hankinsoft.osx.appwage.iTunesCollectionService.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 72A98DA718C4EBE200C27109 /* com.hankinsoft.osx.appwage.iTunesCollectionService.xpc */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		72AA91AD187EEBA1005CBB3B /* JWClickThroughView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AA91AA187EEBA1005CBB3B /* JWClickThroughView.m */; };
-		72AA91AE187EEBA1005CBB3B /* JWToolbarAdaptiveSpaceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AA91AC187EEBA1005CBB3B /* JWToolbarAdaptiveSpaceItem.m */; };
 		72AA91B1187EFD7A005CBB3B /* LVColorWellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AA91B0187EFD7A005CBB3B /* LVColorWellCell.m */; };
 		72AA91B5187F0FA5005CBB3B /* AWRankBulkImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AA91B4187F0FA5005CBB3B /* AWRankBulkImporter.m */; };
 		72AADD4118B6967C003D1DA7 /* AWGenreFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AADD3F18B6967C003D1DA7 /* AWGenreFilterViewController.m */; };
@@ -884,10 +882,6 @@
 		72A98DB818C4F30300C27109 /* CollectionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionListener.h; sourceTree = "<group>"; };
 		72A98DB918C4F30300C27109 /* CollectionListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionListener.m; sourceTree = "<group>"; };
 		72A98DBF18C5017C00C27109 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = Pods/build/Debug/libPods.a; sourceTree = "<group>"; };
-		72AA91A9187EEBA1005CBB3B /* JWClickThroughView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWClickThroughView.h; sourceTree = "<group>"; };
-		72AA91AA187EEBA1005CBB3B /* JWClickThroughView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWClickThroughView.m; sourceTree = "<group>"; };
-		72AA91AB187EEBA1005CBB3B /* JWToolbarAdaptiveSpaceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWToolbarAdaptiveSpaceItem.h; sourceTree = "<group>"; };
-		72AA91AC187EEBA1005CBB3B /* JWToolbarAdaptiveSpaceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWToolbarAdaptiveSpaceItem.m; sourceTree = "<group>"; };
 		72AA91AF187EFD7A005CBB3B /* LVColorWellCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVColorWellCell.h; sourceTree = "<group>"; };
 		72AA91B0187EFD7A005CBB3B /* LVColorWellCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVColorWellCell.m; sourceTree = "<group>"; };
 		72AA91B3187F0FA5005CBB3B /* AWRankBulkImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AWRankBulkImporter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -1613,7 +1607,6 @@
 			isa = PBXGroup;
 			children = (
 				72AB88B21C8CB32900510773 /* HSShared */,
-				72AA91A8187EEB88005CBB3B /* JWToolbarAdaptiveSpaceItem */,
 				725354271D9A97A700369E30 /* MSTranslateVendor */,
 			);
 			path = Library;
@@ -1711,17 +1704,6 @@
 				72A98DB918C4F30300C27109 /* CollectionListener.m */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		72AA91A8187EEB88005CBB3B /* JWToolbarAdaptiveSpaceItem */ = {
-			isa = PBXGroup;
-			children = (
-				72AA91A9187EEBA1005CBB3B /* JWClickThroughView.h */,
-				72AA91AA187EEBA1005CBB3B /* JWClickThroughView.m */,
-				72AA91AB187EEBA1005CBB3B /* JWToolbarAdaptiveSpaceItem.h */,
-				72AA91AC187EEBA1005CBB3B /* JWToolbarAdaptiveSpaceItem.m */,
-			);
-			path = JWToolbarAdaptiveSpaceItem;
 			sourceTree = "<group>";
 		};
 		72AA91B2187F0F8E005CBB3B /* Importers */ = {
@@ -2500,7 +2482,6 @@
 				721C6A0C1896B9200070438D /* AWiTunesConnectHelper.m in Sources */,
 				7288021818380C18004144E2 /* AWMainTabViewController.m in Sources */,
 				72AA91B1187EFD7A005CBB3B /* LVColorWellCell.m in Sources */,
-				72AA91AD187EEBA1005CBB3B /* JWClickThroughView.m in Sources */,
 				720D7DB21840DA6500A94EDF /* AWCollectionOperationQueue.m in Sources */,
 				72ED90E21F69AA6C002E6D89 /* HSSemaphore.m in Sources */,
 				72AB88CF1C8CB4DF00510773 /* HSOutlineView.m in Sources */,
@@ -2525,7 +2506,6 @@
 				7288022118394AB1004144E2 /* AWApplicationDashboardViewController.m in Sources */,
 				72A47E9A18C8C2540032EB7B /* AWTextViewWithInset.m in Sources */,
 				72F7EE2E1D7890A10040E0B7 /* AWChartPopoverDetails.m in Sources */,
-				72AA91AE187EEBA1005CBB3B /* JWToolbarAdaptiveSpaceItem.m in Sources */,
 				726C09F3183AC4430021E37E /* AWApplicationImageHelper.m in Sources */,
 				72361A2F18D0921400E1825F /* AWFilterTableHeaderCell.m in Sources */,
 				7290C8CC1836E61B00C900D1 /* AWApplicationRankViewController.m in Sources */,
