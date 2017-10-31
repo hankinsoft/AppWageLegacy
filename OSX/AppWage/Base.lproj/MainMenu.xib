@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -575,7 +577,7 @@
                     </splitView>
                 </subviews>
             </view>
-            <toolbar key="toolbar" implicitIdentifier="758FEF0E-025A-4AAE-85E3-DD03A41FC769" autosavesConfiguration="NO" allowsUserCustomization="NO" showsBaselineSeparator="NO" displayMode="iconOnly" sizeMode="small" id="etB-7s-5vp">
+            <toolbar key="toolbar" implicitIdentifier="758FEF0E-025A-4AAE-85E3-DD03A41FC769" autosavesConfiguration="NO" allowsUserCustomization="NO" showsBaselineSeparator="NO" displayMode="iconOnly" sizeMode="regular" id="etB-7s-5vp">
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="6AA5E6AC-9F61-4D74-AEA0-D21F64EAFFE2" label="Stretch View" paletteLabel="Stretch View" tag="-1" id="grA-d4-oz9">
                         <nil key="toolTip"/>
@@ -594,12 +596,12 @@
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="45A68248-D85D-4533-9048-FCF053C491B7" label="" paletteLabel="" id="KQt-OV-8fk">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="71" height="25"/>
-                        <size key="maxSize" width="111" height="25"/>
+                        <size key="minSize" width="71" height="20"/>
+                        <size key="maxSize" width="136" height="25"/>
                         <segmentedControl key="view" verticalHuggingPriority="750" id="aFL-g2-Uqk">
-                            <rect key="frame" x="0.0" y="14" width="111" height="25"/>
+                            <rect key="frame" x="0.0" y="14" width="104" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="automatic" trackingMode="selectOne" id="pUk-6p-Aer">
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="selectOne" id="pUk-6p-Aer">
                                 <font key="font" metaFont="system"/>
                                 <segments>
                                     <segment toolTip="Dashboard" image="Toolbar-Dashboard" width="32" selected="YES">
@@ -608,7 +610,7 @@
                                     <segment toolTip="Reviews" image="Toolbar-Reviews" width="32" tag="1">
                                         <nil key="label"/>
                                     </segment>
-                                    <segment toolTip="Ranks" image="Toolbar-Ranks">
+                                    <segment toolTip="Ranks" image="Toolbar-Ranks" width="32">
                                         <nil key="label"/>
                                     </segment>
                                 </segments>
@@ -654,7 +656,7 @@
                 <outlet property="splitViewLeft" destination="ipN-6c-kX9" id="ABK-vU-Wfb"/>
                 <outlet property="splitViewRight" destination="gLY-rt-KeM" id="Us8-qk-Zc0"/>
                 <outlet property="toolbar" destination="etB-7s-5vp" id="JJL-io-LgD"/>
-                <outlet property="toolbarSelecteViewSegmentedControl" destination="aFL-g2-Uqk" id="vyN-PT-tZn"/>
+                <outlet property="toolbarSelectedViewSegmentedControl" destination="aFL-g2-Uqk" id="8So-CZ-A79"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
@@ -671,7 +673,7 @@
         </customView>
     </objects>
     <resources>
-        <image name="Toolbar-Dashboard" width="28" height="28"/>
+        <image name="Toolbar-Dashboard" width="64" height="64"/>
         <image name="Toolbar-Ranks" width="64" height="64"/>
         <image name="Toolbar-Reviews" width="64" height="64"/>
     </resources>
