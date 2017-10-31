@@ -70,7 +70,7 @@
     AWMainTabViewController                     * mainTabViewController;
     AWInitialSetupWizard                        * initialSetupWizard;
 
-    IBOutlet NSSegmentedControl                 * toolbarSelecteViewSegmentedControl;
+    IBOutlet NSSegmentedControl                 * toolbarSelectedViewSegmentedControl;
     IBOutlet NSToolbar                          * toolbar;
     IBOutlet NSToolbarItem                      * selectedViewToolbarItem;
     IBOutlet NSMenuItem                         * showHiddenApplicationsMenuItem;
@@ -580,7 +580,7 @@
     [rankingsMenuItem setState: NSOffState];
     [mainTabViewController selectDashboard];
 
-    [toolbarSelecteViewSegmentedControl setSelectedSegment: 0];
+    [toolbarSelectedViewSegmentedControl setSelectedSegment: 0];
 }
 
 - (IBAction) onReviews: (id) sender
@@ -590,7 +590,7 @@
     [rankingsMenuItem setState: NSOffState];
     [mainTabViewController selectReviews];
 
-    [toolbarSelecteViewSegmentedControl setSelectedSegment: 1];
+    [toolbarSelectedViewSegmentedControl setSelectedSegment: 1];
 }
 
 - (IBAction) onRanking: (id) sender
@@ -600,7 +600,7 @@
     [rankingsMenuItem setState: NSOnState];
     [mainTabViewController selectRankings];
     
-    [toolbarSelecteViewSegmentedControl setSelectedSegment: 2];
+    [toolbarSelectedViewSegmentedControl setSelectedSegment: 2];
 }
 
 - (IBAction) onLogs: (id) sender
