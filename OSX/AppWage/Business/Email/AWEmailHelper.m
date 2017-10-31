@@ -160,6 +160,9 @@
              dailyEmail: (BOOL) dailyEmail
           finishedBlock: (void (^)(NSError * error)) onFinished;
 {
+    // Update the currency symbol to what is currently configured before formatting any numbers.
+    currencyFormatter.currencySymbol = [AWCurrencyHelper sharedInstance].currentCurrencySymbol;
+    
     // Get yesterdayDate
     NSDateComponents * dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitDay
                                                                         fromDate: [NSDate date]];

@@ -140,6 +140,9 @@ static NSNumberFormatter * currencyFormatter;
         // Already locked. Exit.
         return;
     }
+    
+    // Update the currency symbol to what is currently configured before formatting any numbers.
+    currencyFormatter.currencySymbol = [AWCurrencyHelper sharedInstance].currentCurrencySymbol;
 
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self.delegate salesChartStartedLoading: self];

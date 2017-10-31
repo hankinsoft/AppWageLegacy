@@ -23,4 +23,6 @@
 
 @property(nonatomic,retain) NSArray * allCurrencies;
 
+@property(nonatomic,readonly) NSString * currentCurrencySymbol;
+
 @end
