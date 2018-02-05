@@ -123,7 +123,7 @@
     IBOutlet    NSButton                  * dateRangeButton;
 
     NSArray                               * rankArray;
-    NSArray                               * latestRanks;
+    NSArray<LatestRankEntry*>             * latestRanks;
 
     // Graph
     IBOutlet    AWTrackedGraphHostingView * graphHostView;
@@ -731,7 +731,11 @@ static NSDateFormatter * rankTableDateFormatter;
                                           dateRangeButton.frame.size.width,
                                           dateRangeButton.frame.size.height)];
 
-    if(nil == currentApplications) return;
+    if(nil == currentApplications)
+    {
+        return;
+    }
+
     NSLog(@"reloadRanks entered (before singleton)");
 
     if(0 != dispatch_semaphore_wait(rankLoadSemaphore, DISPATCH_TIME_NOW))
@@ -1134,7 +1138,7 @@ static NSDateFormatter * rankTableDateFormatter;
 #pragma mark -
 #pragma mark NSTableView
 
-- (void)tableViewSelectionDidChange: (NSNotification *) notification
+- (void) tableViewSelectionDidChange: (NSNotification *) notification
 {
     NSInteger selectedRow = rankTableView.selectedRow;
 

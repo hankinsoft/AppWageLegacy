@@ -10,6 +10,7 @@
 
 #define kDashboardDateRangeType         @"DashboardDateRangeType"
 #define kRankGraphDateRangeType         @"RankGraphDateRangeType"
+#define kKeywordRankGraphDateRangeType  @"KeywordRankGraphDateRangeType"
 
 typedef enum {
     DateRangeToday = 0,

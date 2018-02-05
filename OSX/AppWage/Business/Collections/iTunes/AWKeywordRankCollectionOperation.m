@@ -89,6 +89,7 @@
     // If we had an error, then raise it.
     if(nil != error)
     {
+        NSLog(@"Had an error searching. %@", error.localizedDescription);
         return NSNotFound;
     } // End of we had an error
 
@@ -98,11 +99,11 @@
 
     if(nil != error)
     {
+        NSLog(@"Had an error converting JSON to dictionary. %@", error.localizedDescription);
         return NSNotFound;
     }
 
     NSArray * resultsArray = dictionary[@"results"];
-    __block NSMutableArray * outputResults = [[NSMutableArray alloc] init];
 
     __block NSUInteger foundIndex = NSNotFound;
     [resultsArray enumerateObjectsUsingBlock: ^(id obj, NSUInteger index, BOOL * stop)
