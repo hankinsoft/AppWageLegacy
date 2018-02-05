@@ -8,6 +8,7 @@
 
 #import "ApplicationPreferencesWindowController.h"
 #import "AWApplication.h"
+#import "AWApplicationKeyword.h"
 
 #import "AWCollectionOperationQueue.h"
 #import "HSProgressWindowController.h"
@@ -18,6 +19,7 @@
     IBOutlet NSTextField             * applicationHeaderTextField;
     IBOutlet NSTextField             * applicationDetailsTextField;
 
+    IBOutlet NSTextView              * keywordsTextView;
     IBOutlet NSButtonCell            * downloadReviewsButtonCell;
     IBOutlet NSButtonCell            * downloadRanksButtonCell;
     
@@ -34,13 +36,13 @@
     return [super initWithWindowNibName: @"ApplicationPreferencesWindowController"];
 }
 
-- (void)windowDidLoad
+- (void) windowDidLoad
 {
     [super windowDidLoad];
 
     // Get our applications.
-    NSPredicate * applicationPredicate = [NSPredicate predicateWithFormat: @"%K IN %@",
-                                          @"applicationId", applicationIds];
+    NSPredicate * applicationPredicate =
+        [NSPredicate predicateWithFormat: @"%K IN %@", @"applicationId", applicationIds];
 
     NSArray * applications =
         [[AWApplication allApplications] filteredArrayUsingPredicate: applicationPredicate];
@@ -82,6 +84,9 @@
                  reviewState = NSMixedState;
              }
          }];
+
+        [keywordsTextView setString: @"Keywords may only be set for a single applicaiton."];
+        [keywordsTextView setEditable: NO];
     } // End of we have more than one application
     else
     {
@@ -97,6 +102,12 @@
         // Set our states
         reviewState = targetApp.shouldCollectReviews.boolValue ? NSOnState : NSOffState;
         rankState   = targetApp.shouldCollectRanks.boolValue   ? NSOnState : NSOffState;
+
+        // Get our keywords
+        NSArray<NSString*>* keywords = [AWApplicationKeyword keywordsForApplicationId: targetApp.applicationId];
+
+        [keywordsTextView setString: [keywords componentsJoinedByString: @","]];
+        [keywordsTextView setEditable: YES];
     } // End of single application
 
     // ReviewState
@@ -187,6 +198,23 @@
             }
         }];
 
+        [[AWSQLiteHelper keywordsDatabaseQueue] inTransaction: ^(FMDatabase * database, BOOL * rollback) {
+            NSString * deleteQuery =
+                [NSString stringWithFormat: @"DELETE FROM applicationKeywordRank WHERE applicationKeywordId IN (SELECT applicationKeywordId FROM applicationKeyword WHERE applicationId IN(%@));",
+                                      [applicationIds componentsJoinedByString: @","]];
+
+            BOOL success = [database executeUpdate: deleteQuery];
+            
+            if(!success)
+            {
+                NSLog(@"Failed to delete from ranks.");
+            }
+            else
+            {
+                NSLog(@"Was able to delete from ranks.");
+            }
+        }];
+
         // Fire some update notifications.
         [[NSNotificationCenter defaultCenter] postNotificationName: [AWCollectionOperationQueue newReportsNotificationName]
                                                             object: nil];
@@ -211,10 +239,10 @@
 - (IBAction) onAccept: (id) sender
 {
     // Update our apps.
-    NSPredicate * applicationPredicate = [NSPredicate predicateWithFormat: @"%K IN %@",
-                                          @"applicationId", applicationIds];
+    NSPredicate * applicationPredicate =
+        [NSPredicate predicateWithFormat: @"%K IN %@", @"applicationId", applicationIds];
 
-    NSArray * applications = [[AWApplication allApplications] filteredArrayUsingPredicate: applicationPredicate];
+    NSArray<AWApplication*> * applications = [[AWApplication allApplications] filteredArrayUsingPredicate: applicationPredicate];
 
     [applications enumerateObjectsUsingBlock: ^(AWApplication * application, NSUInteger applicationIndex, BOOL * stop)
      {
@@ -241,7 +269,34 @@
          }];
      }];
 
+    if(1 == applications.count)
+    {
+        [self updateKeywordsForApplication: applications.firstObject];
+    } // End of we only have one application selected
+
     [self endSheetWithReturnCode: NSModalResponseOK];
+}
+
+- (void) updateKeywordsForApplication: (AWApplication*) application
+{
+    NSMutableArray<NSString*>*keywords = @[].mutableCopy;
+
+    for(NSString * keyword in [keywordsTextView.string componentsSeparatedByString: @","])
+    {
+        NSString * tempKeyword =
+            [keyword stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
+        if(0 == tempKeyword.length)
+        {
+            continue;
+        } // End of no keyword
+
+        // Add our keyword
+        [keywords addObject: tempKeyword];
+    } // End of textField enumeration
+
+    [AWApplicationKeyword setKeywords: keywords
+                     forApplicationId: application.applicationId];
 }
 
 @end

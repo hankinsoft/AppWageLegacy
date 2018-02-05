@@ -15,6 +15,7 @@ static FMDatabaseQueue * _appWageDatabaseQueue;
 static FMDatabaseQueue * _salesDatabaseQueue;
 static FMDatabaseQueue * _rankingDatabaseQueue;
 static FMDatabaseQueue * _reviewDatabaseQueue;
+static FMDatabaseQueue * _keywordsDatabaseQueue;
 
 + (void) initializeSQLite
 {
@@ -30,10 +31,11 @@ static FMDatabaseQueue * _reviewDatabaseQueue;
                                                         error: NULL];
     } // End of create root database folder if it does not exist.
 
-    NSString * appWageDatabasePath = [rootPath stringByAppendingPathComponent: @"appwage.sqlite3"];
-    NSString * rankingDatabasePath = [rootPath stringByAppendingPathComponent: @"ranking.sqlite3"];
-    NSString * reviewsDatabasePath = [rootPath stringByAppendingPathComponent: @"reviews.sqlite3"];
-    NSString * salesDatabasePath   = [rootPath stringByAppendingPathComponent: @"sales.sqlite3"];
+    NSString * appWageDatabasePath  = [rootPath stringByAppendingPathComponent: @"appwage.sqlite3"];
+    NSString * rankingDatabasePath  = [rootPath stringByAppendingPathComponent: @"ranking.sqlite3"];
+    NSString * reviewsDatabasePath  = [rootPath stringByAppendingPathComponent: @"reviews.sqlite3"];
+    NSString * salesDatabasePath    = [rootPath stringByAppendingPathComponent: @"sales.sqlite3"];
+    NSString * keywordsDatabasePath = [rootPath stringByAppendingPathComponent: @"keywords.sqlite3"];
 
     _appWageDatabaseQueue = [self initializeDatabaseWithPath: appWageDatabasePath
                                                 resourceName: @"AppWageDatabase"];
@@ -46,6 +48,9 @@ static FMDatabaseQueue * _reviewDatabaseQueue;
 
     _salesDatabaseQueue  = [self initializeDatabaseWithPath: salesDatabasePath
                                                 resourceName: @"SalesDatabase"];
+
+    _keywordsDatabaseQueue  = [self initializeDatabaseWithPath: keywordsDatabasePath
+                                                  resourceName: @"KeywordsDatabase"];
 } // End of initialize
 
 + (FMDatabaseQueue*) initializeDatabaseWithPath: (NSString*) databasePath
@@ -136,5 +141,10 @@ static FMDatabaseQueue * _reviewDatabaseQueue;
 {
     return _reviewDatabaseQueue;
 } // End of reviewDatabaseQueue
+
++ (FMDatabaseQueue*) keywordsDatabaseQueue
+{
+    return _keywordsDatabaseQueue;
+} // End of keywordsDatabaseQueue
 
 @end

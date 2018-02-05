@@ -14,8 +14,8 @@
 @interface AWApplication : NSObject
 
 + (void) initializeAllApplications;
-+ (NSArray*) allApplications;
-+ (NSArray*) applicationsByInternalAccountId: (NSString*) internalAccountId;
++ (NSArray<AWApplication*>*) allApplications;
++ (NSArray<AWApplication*>*) applicationsByInternalAccountId: (NSString*) internalAccountId;
 + (AWApplication*) applicationByApplicationId: (NSNumber*) applicationId;
 + (void) addApplication: (AWApplication*) application;
 

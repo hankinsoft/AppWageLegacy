@@ -402,6 +402,8 @@
 		72C873FF187C2AD1003C6D65 /* ApplicationPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C873FD187C2AD1003C6D65 /* ApplicationPreferencesWindowController.m */; };
 		72C87400187C2AD1003C6D65 /* ApplicationPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C873FE187C2AD1003C6D65 /* ApplicationPreferencesWindowController.xib */; };
 		72C87411187C6C4B003C6D65 /* AWTrackedGraphHostingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C87410187C6C4B003C6D65 /* AWTrackedGraphHostingView.m */; };
+		72D01457202897EB00F96D2B /* KeywordsDatabase.sql in Resources */ = {isa = PBXBuildFile; fileRef = 72D01456202897EB00F96D2B /* KeywordsDatabase.sql */; };
+		72D0145A20289D0900F96D2B /* AWApplicationKeyword.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D0145920289D0900F96D2B /* AWApplicationKeyword.m */; };
 		72D4525A1875A9BC006521D1 /* AWGenreHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D452591875A9BC006521D1 /* AWGenreHelper.m */; };
 		72D4528C187607BB006521D1 /* Genre-iOS.js in Resources */ = {isa = PBXBuildFile; fileRef = 72D4525B1875B150006521D1 /* Genre-iOS.js */; };
 		72D4528D187607C1006521D1 /* Genre-OSX.js in Resources */ = {isa = PBXBuildFile; fileRef = 72D4525D1875B1E3006521D1 /* Genre-OSX.js */; };
@@ -940,6 +942,9 @@
 		72C873FE187C2AD1003C6D65 /* ApplicationPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationPreferencesWindowController.xib; sourceTree = "<group>"; };
 		72C8740F187C6C4B003C6D65 /* AWTrackedGraphHostingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWTrackedGraphHostingView.h; path = Graph/AWTrackedGraphHostingView.h; sourceTree = "<group>"; };
 		72C87410187C6C4B003C6D65 /* AWTrackedGraphHostingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWTrackedGraphHostingView.m; path = Graph/AWTrackedGraphHostingView.m; sourceTree = "<group>"; };
+		72D01456202897EB00F96D2B /* KeywordsDatabase.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KeywordsDatabase.sql; sourceTree = "<group>"; };
+		72D0145820289D0900F96D2B /* AWApplicationKeyword.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWApplicationKeyword.h; sourceTree = "<group>"; };
+		72D0145920289D0900F96D2B /* AWApplicationKeyword.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWApplicationKeyword.m; sourceTree = "<group>"; };
 		72D452581875A9BC006521D1 /* AWGenreHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWGenreHelper.h; sourceTree = "<group>"; };
 		72D452591875A9BC006521D1 /* AWGenreHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWGenreHelper.m; sourceTree = "<group>"; };
 		72D4525B1875B150006521D1 /* Genre-iOS.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "Genre-iOS.js"; sourceTree = "<group>"; };
@@ -1023,6 +1028,8 @@
 				727812B01A03DA5F00AC4B06 /* AWGenre.m */,
 				7278129A1A03DA5D00AC4B06 /* AWProduct.h */,
 				7278129B1A03DA5D00AC4B06 /* AWProduct.m */,
+				72D0145820289D0900F96D2B /* AWApplicationKeyword.h */,
+				72D0145920289D0900F96D2B /* AWApplicationKeyword.m */,
 			);
 			path = SQL;
 			sourceTree = "<group>";
@@ -1291,6 +1298,7 @@
 			isa = PBXGroup;
 			children = (
 				720814A91A680BD500B95966 /* AppWageDatabase.sql */,
+				72D01456202897EB00F96D2B /* KeywordsDatabase.sql */,
 				72F0582919F9430400FBACDE /* RankingDatabase.sql */,
 				72C7FBB419FA83550064F656 /* ReviewDatabase.sql */,
 				725EF0BE18FF19EA00D77B68 /* SQL Queries */,
@@ -2324,6 +2332,7 @@
 				726C0BD0183B89660021E37E /* tv.png in Resources */,
 				726C0B3F183B89660021E37E /* gb.png in Resources */,
 				726C0B64183B89660021E37E /* kh.png in Resources */,
+				72D01457202897EB00F96D2B /* KeywordsDatabase.sql in Resources */,
 				726C0BC2183B89660021E37E /* sz.png in Resources */,
 				726C0AF7183B89660021E37E /* am.png in Resources */,
 				726C0B3B183B89660021E37E /* fm.png in Resources */,
@@ -2545,6 +2554,7 @@
 				7290C8D318377D6800C900D1 /* AWApplicationListTreeViewController.m in Sources */,
 				728021DD18CF73AA005CB60F /* ImageAndTextCell.m in Sources */,
 				72AB88D61C8CB4DF00510773 /* HSTableRowView.m in Sources */,
+				72D0145A20289D0900F96D2B /* AWApplicationKeyword.m in Sources */,
 				72361A3E18D0C27E00E1825F /* AWVersionFilterViewController.m in Sources */,
 				721A71DF18E0882F0027AAEE /* AWDashboardSummaryTileViewController.m in Sources */,
 				72D4525A1875A9BC006521D1 /* AWGenreHelper.m in Sources */,

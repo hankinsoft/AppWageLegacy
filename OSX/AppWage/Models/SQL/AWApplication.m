@@ -67,7 +67,7 @@ NSMutableArray * _allApplications = nil;
     } // End of @synchronized
 } // End of initializeAllApplications
 
-+ (NSArray*) allApplications
++ (NSArray<AWApplication*>*) allApplications
 {
     @synchronized(self)
     {

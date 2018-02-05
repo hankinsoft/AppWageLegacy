@@ -19,5 +19,6 @@
 + (FMDatabaseQueue*) salesDatabaseQueue;
 + (FMDatabaseQueue*) rankingDatabaseQueue;
 + (FMDatabaseQueue*) reviewDatabaseQueue;
++ (FMDatabaseQueue*) keywordsDatabaseQueue;
 
 @end

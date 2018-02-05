@@ -40,4 +40,11 @@
     #import "NSArray+Reverse.h"
 
     #import "AWSalesReportHelper.h"
+
+#if DEBUG
+#define PSPDF_KEYPATH(object, property) ((void)(NO && ((void)object.property, NO)), @ #property)
+#else
+#define PSPDF_KEYPATH(object, property) @ #property
+#endif
+
 #endif
