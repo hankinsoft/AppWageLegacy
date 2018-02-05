@@ -17,6 +17,7 @@
 - (void) selectDashboard;
 - (void) selectReviews;
 - (void) selectRankings;
+- (void) selectKeywords;
 
 - (void) clearSelectedApplications;
 

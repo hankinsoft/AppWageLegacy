@@ -9,6 +9,7 @@
 #import "AWCollectionOperationQueue.h"
 #import "AWApplication.h"
 #import "AWProduct.h"
+#import "AWApplicationKeyword.h"
 #import "AWApplicationFinder.h"
 
 #import "AWReportCollectionOperation.h"
@@ -19,6 +20,7 @@
 
 #import "AWReviewBulkImporter.h"
 #import "AWRankBulkImporter.h"
+#import "AWKeywordRankBulkImporter.h"
 
 #import "AWAccount.h"
 #import "AWAccountHelper.h"
@@ -30,6 +32,9 @@
 
 #import "AWCacheHelper.h"
 #import "AWCountry.h"
+#import "AWKeywordRankCollector.h"
+
+#import "AWKeywordRankCollectionOperation.h"
 
 @interface AWCollectionOperationQueue()<CollectionProgressProtocol>
 {
@@ -44,11 +49,13 @@
     NSTimer                         * rankCollectionTimer;
     NSTimer                         * reviewCollectionTimer;
     NSTimer                         * reportCollectionTimer;
+    NSTimer                         * keywordRankCollectionTimer;
 
     NSString                        * previousState;
 
-    NSSet                           * reviewCollectionTargetAppIds;
-    NSSet                           * rankCollectionTargetAppIds;
+    NSSet<NSNumber*>                * reviewCollectionTargetAppIds;
+    NSSet<NSNumber*>                * rankCollectionTargetAppIds;
+    NSSet<NSNumber*>                * keywordRankCollectionTargetAppIds;
 
 	NSXPCConnection                 * xpcConnection;
 	id<CollectionProtocol>          iTunesCollector;
@@ -58,7 +65,8 @@
 
 @implementation AWCollectionOperationQueue
 {
-    NSSet         * previousReportDates;
+    NSSet                       * previousReportDates;
+    AWKeywordRankCollector      * keywordRankCollector;
 }
 
 @synthesize currentProgress, currentStateString;
@@ -78,9 +86,8 @@
         case CollectionTypeReports: return NSLocalizedString(@"Reports", nil);
         case CollectionTypeReviews: return NSLocalizedString(@"Reviews", nil);
         case CollectionTypeRankings: return NSLocalizedString(@"Rankings", nil);
-
-        case CollectionTypeAdmob: return @"AdMob";
-        case CollectionTypeGoogleAnalaytics: return @"Google Analytics";
+    
+        case CollectionTypeKeywordRankings: return NSLocalizedString(@"Keyword rankings", nil);
     } // End of collectionType
 }
 
@@ -102,6 +109,11 @@
 + (NSString*) newReportsNotificationName
 {
     return @"AWCollectionOperationQueue-NewReports";
+}
+
++ (NSString*) newKeywordRanksNotificationName
+{
+    return @"AWCollectionOperationQueue-NewKeywordRanks";
 }
 
 +(AWCollectionOperationQueue*)sharedInstance
@@ -273,6 +285,7 @@
             case CollectionTypeRankings: [self loadRanks]; break;
             case CollectionTypeReviews:  [self loadReviews]; break;
             case CollectionTypeReports:  [self loadReports: nil]; break;
+            case CollectionTypeKeywordRankings: [self collectKeywordRanks]; break;
             default:
                 NSLog(@"ERROR - Unknown task type. %ld.", task.integerValue);
                 break;
@@ -364,6 +377,22 @@
     } // End of synchronzied
 }
 
+- (void) doQueueKeywordRankCollection
+{
+    NSLog(@"doQueueKeywordRankCollection called");
+    
+    @synchronized(collectionTaskQueue)
+    {
+        [self addTask: CollectionTypeKeywordRankings];
+        
+        // If we are not in progress, then process the queue
+        if(![self inProgress])
+        {
+            [self processCollectionTaskQueue];
+        }
+    } // End of synchronzied
+}
+
 - (void) loadRanks
 {
     NSLog(@"loadRanks entered on %@ thread.", [NSThread isMainThread] ? @"MAIN" : @"BACKGROUND");
@@ -428,6 +457,80 @@
     } // End of @autoreleasepool
 } // End of loadRanks
 
+- (void) collectKeywordRanks
+{
+    NSLog(@"collectKeywordRanks entered on %@ thread.", [NSThread isMainThread] ? @"MAIN" : @"BACKGROUND");
+    NSAssert(![NSThread isMainThread], @"collectKeywordRanks should not be called on the main thread.");
+
+    currentCollectionType = CollectionTypeKeywordRankings;
+    self.currentStateString = NSLocalizedString(@"Preparing keyword ranks", nil);
+
+    // Clear the timers
+    [keywordRankCollectionTimer invalidate];
+    keywordRankCollectionTimer = nil;
+
+    // Get all of our apps.
+    NSPredicate * applicationPredicate = nil;
+    if(0 == keywordRankCollectionTargetAppIds.count)
+    {
+        applicationPredicate = [NSPredicate predicateWithValue: YES];
+    }
+    else
+    {
+        applicationPredicate =
+            [NSPredicate predicateWithFormat: @"applicationId IN %@", keywordRankCollectionTargetAppIds];
+    }
+
+    NSBlockOperation *finishedOperation = [NSBlockOperation blockOperationWithBlock: ^{
+        // Keywords are done
+        [self keywordRankCollectionCompleted];
+    }];
+
+    keywordRankCollector = [[AWKeywordRankCollector alloc] init];
+    keywordRankCollector.maxConcurrentOperationCount = 5;
+
+    NSArray * applications =
+        [[AWApplication allApplications] filteredArrayUsingPredicate: applicationPredicate];
+
+    for(AWApplication * application in applications)
+    {
+        AWCountry * country = [AWCountry lookupByCode: @"US"];
+
+        NSArray<AWApplicationKeyword*>* keywords =
+            [AWApplicationKeyword entriesForApplicationId: application.applicationId];
+
+        for(AWApplicationKeyword * keyword in keywords)
+        {
+            AWKeywordRankBulkImporterEntry * resultEntry =
+                [[AWKeywordRankBulkImporterEntry alloc] initWithApplicationKeywordId: keyword.applicationKeywordId
+                                                                           countryId: country.countryId];
+
+            AWKeywordRankCollectionOperation * operation =
+                [[AWKeywordRankCollectionOperation alloc] initWithApplicationId: application.applicationId
+                                                                        keyword: keyword.keyword
+                                                                    countryCode: @"US"
+                                                                applicationType: application.applicationType
+                                                                baseInsertEntry: resultEntry];
+
+            [finishedOperation addDependency: operation];
+            [keywordRankCollector addOperation: operation];
+        } // End of keywords enumeration
+    } // End of applications enumeration
+
+    // Add our finished operation
+    [keywordRankCollector addOperation: finishedOperation];
+
+    if(0 == keywordRankCollector.operationCount)
+    {
+        currentCollectionType = CollectionTypeIdle;
+        NSLog(@"No operations to process. Doing nothing.");
+    }
+    else
+    {
+        self.currentStateString = [self displayForCollectionType: CollectionTypeKeywordRankings];
+    }
+} // End of loadRanks
+
 - (void) rankCollectionCompleted
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -449,6 +552,33 @@
 
             // Queue it up.
             [self queueRankCollectionWithTimeInterval: timeInterval specifiedAppIds: nil];
+            [self collectionTaskFinished];
+        });
+    });
+}
+
+- (void) keywordRankCollectionCompleted
+{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"keywordRankCollectionCompleted - No operations left.");
+
+        // Forces an insert.
+        [[AWKeywordRankBulkImporter sharedInstance] addNull];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // We have new ranks. Fire the notification.
+            [[NSNotificationCenter defaultCenter] postNotificationName: [AWCollectionOperationQueue newKeywordRanksNotificationName]
+                                                                object: nil];
+
+            NSTimeInterval timeInterval = -1;
+            if(0 != [[AWSystemSettings sharedInstance] collectKeywordRankingsEveryXHours])
+            {
+                timeInterval = ([[AWSystemSettings sharedInstance] collectKeywordRankingsEveryXHours] * 60 * 60);
+            }
+
+            // Queue it up.
+            [self queueKeywordRankCollectionWithTimeInterval: timeInterval
+                                             specifiedAppIds: nil];
             [self collectionTaskFinished];
         });
     });
@@ -533,6 +663,36 @@
                                                                selector: @selector(doQueueReviewCollection)
                                                                userInfo: nil
                                                                 repeats: NO];
+    });
+}
+
+- (void) queueKeywordRankCollectionWithTimeInterval: (NSTimeInterval) timeInterval
+                                    specifiedAppIds: (NSSet*) specifiedAppIds
+{
+    [keywordRankCollectionTimer invalidate];
+    keywordRankCollectionTimer = nil;
+
+    if(-1 == timeInterval)
+    {
+        keywordRankCollectionTargetAppIds = nil;
+        return;
+    }
+
+    NSLog(@"Queuing keyword rank in %0.0f hours.", timeInterval / timeIntervalHour);
+    keywordRankCollectionTargetAppIds = specifiedAppIds;
+    if([[[NSProcessInfo processInfo] arguments] containsObject: @"-testKeywordRanks"] && timeInterval > 5)
+    {
+        NSLog(@"testKeywordRanks launch argument specified. Ranks will be queued in five seconds.");
+        timeInterval = 5;
+    }
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        keywordRankCollectionTimer =
+            [NSTimer scheduledTimerWithTimeInterval: timeInterval
+                                             target: self
+                                           selector: @selector(doQueueKeywordRankCollection)
+                                           userInfo: nil
+                                            repeats: NO];
     });
 }
 

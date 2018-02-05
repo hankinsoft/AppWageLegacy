@@ -16,8 +16,7 @@ typedef enum {
     CollectionTypeReviews,
     CollectionTypeRankings,
 
-    CollectionTypeAdmob,
-    CollectionTypeGoogleAnalaytics,
+    CollectionTypeKeywordRankings,
 } CollectionType;
 
 @interface AWCollectionOperationQueue : NSObject
@@ -29,6 +28,7 @@ typedef enum {
 + (NSString*) newReviewsNotificationName;
 + (NSString*) newRanksNotificationName;
 + (NSString*) newReportsNotificationName;
++ (NSString*) newKeywordRanksNotificationName;
 
 + (AWCollectionOperationQueue*) sharedInstance;
 
@@ -39,6 +39,10 @@ typedef enum {
 
 - (void) queueReviewCollectionWithTimeInterval: (NSTimeInterval) timeInterval
                                specifiedAppIds: (NSSet*) specifiedAppIds;
+
+- (void) queueKeywordRankCollectionWithTimeInterval: (NSTimeInterval) timeInterval
+                                    specifiedAppIds: (NSSet*) specifiedAppIds;
+
 
 - (void) cancelAllOperations: (BOOL) clearQueuedEntries;
 

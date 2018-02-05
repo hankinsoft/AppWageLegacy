@@ -10,7 +10,10 @@ CREATE TABLE IF NOT EXISTS applicationKeywordRank (
   countryId integer NOT NULL,
   position integer NOT NULL,
   positionDate timestamp NOT NULL,
-  UNIQUE(applicationKeywordId, countryId, position, positionDate)
+  UNIQUE(applicationKeywordId, countryId, position, positionDate),
+  FOREIGN KEY (applicationKeywordId)
+  REFERENCES applicationKeyword(applicationKeywordId)
+  ON DELETE CASCADE
 );
 
 CREATE INDEX IF NOT EXISTS applicationKeywordRankLookupIndex ON applicationKeywordRank (applicationKeywordId, countryId, position, positionDate);

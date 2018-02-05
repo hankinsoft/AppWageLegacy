@@ -404,6 +404,12 @@
 		72C87411187C6C4B003C6D65 /* AWTrackedGraphHostingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C87410187C6C4B003C6D65 /* AWTrackedGraphHostingView.m */; };
 		72D01457202897EB00F96D2B /* KeywordsDatabase.sql in Resources */ = {isa = PBXBuildFile; fileRef = 72D01456202897EB00F96D2B /* KeywordsDatabase.sql */; };
 		72D0145A20289D0900F96D2B /* AWApplicationKeyword.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D0145920289D0900F96D2B /* AWApplicationKeyword.m */; };
+		72D014612028A41200F96D2B /* AWKeywordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D0145F2028A41200F96D2B /* AWKeywordsViewController.m */; };
+		72D014622028A41200F96D2B /* AWKeywordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72D014602028A41200F96D2B /* AWKeywordsViewController.xib */; };
+		72D014652028B27100F96D2B /* AWKeywordRankBulkImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D014642028B27100F96D2B /* AWKeywordRankBulkImporter.m */; };
+		72D014682028B2CB00F96D2B /* AWKeywordRankBulkImporterEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D014672028B2CB00F96D2B /* AWKeywordRankBulkImporterEntry.m */; };
+		72D0146B2028B77C00F96D2B /* AWKeywordRankCollectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D0146A2028B77C00F96D2B /* AWKeywordRankCollectionOperation.m */; };
+		72D0146E2028B85000F96D2B /* AWKeywordRankCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D0146D2028B85000F96D2B /* AWKeywordRankCollector.m */; };
 		72D4525A1875A9BC006521D1 /* AWGenreHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D452591875A9BC006521D1 /* AWGenreHelper.m */; };
 		72D4528C187607BB006521D1 /* Genre-iOS.js in Resources */ = {isa = PBXBuildFile; fileRef = 72D4525B1875B150006521D1 /* Genre-iOS.js */; };
 		72D4528D187607C1006521D1 /* Genre-OSX.js in Resources */ = {isa = PBXBuildFile; fileRef = 72D4525D1875B1E3006521D1 /* Genre-OSX.js */; };
@@ -945,6 +951,17 @@
 		72D01456202897EB00F96D2B /* KeywordsDatabase.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KeywordsDatabase.sql; sourceTree = "<group>"; };
 		72D0145820289D0900F96D2B /* AWApplicationKeyword.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWApplicationKeyword.h; sourceTree = "<group>"; };
 		72D0145920289D0900F96D2B /* AWApplicationKeyword.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWApplicationKeyword.m; sourceTree = "<group>"; };
+		72D0145E2028A41200F96D2B /* AWKeywordsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWKeywordsViewController.h; sourceTree = "<group>"; };
+		72D0145F2028A41200F96D2B /* AWKeywordsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWKeywordsViewController.m; sourceTree = "<group>"; };
+		72D014602028A41200F96D2B /* AWKeywordsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AWKeywordsViewController.xib; sourceTree = "<group>"; };
+		72D014632028B27100F96D2B /* AWKeywordRankBulkImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWKeywordRankBulkImporter.h; sourceTree = "<group>"; };
+		72D014642028B27100F96D2B /* AWKeywordRankBulkImporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWKeywordRankBulkImporter.m; sourceTree = "<group>"; };
+		72D014662028B2CB00F96D2B /* AWKeywordRankBulkImporterEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWKeywordRankBulkImporterEntry.h; sourceTree = "<group>"; };
+		72D014672028B2CB00F96D2B /* AWKeywordRankBulkImporterEntry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWKeywordRankBulkImporterEntry.m; sourceTree = "<group>"; };
+		72D014692028B77C00F96D2B /* AWKeywordRankCollectionOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWKeywordRankCollectionOperation.h; sourceTree = "<group>"; };
+		72D0146A2028B77C00F96D2B /* AWKeywordRankCollectionOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWKeywordRankCollectionOperation.m; sourceTree = "<group>"; };
+		72D0146C2028B85000F96D2B /* AWKeywordRankCollector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWKeywordRankCollector.h; sourceTree = "<group>"; };
+		72D0146D2028B85000F96D2B /* AWKeywordRankCollector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWKeywordRankCollector.m; sourceTree = "<group>"; };
 		72D452581875A9BC006521D1 /* AWGenreHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWGenreHelper.h; sourceTree = "<group>"; };
 		72D452591875A9BC006521D1 /* AWGenreHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWGenreHelper.m; sourceTree = "<group>"; };
 		72D4525B1875B150006521D1 /* Genre-iOS.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "Genre-iOS.js"; sourceTree = "<group>"; };
@@ -1040,6 +1057,8 @@
 				721C6A831897F4170070438D /* iTunes */,
 				720D7DB01840DA6500A94EDF /* AWCollectionOperationQueue.h */,
 				720D7DB11840DA6500A94EDF /* AWCollectionOperationQueue.m */,
+				72D0146C2028B85000F96D2B /* AWKeywordRankCollector.h */,
+				72D0146D2028B85000F96D2B /* AWKeywordRankCollector.m */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -1150,6 +1169,8 @@
 				721C6A861897F4590070438D /* AWReportCollectionOperation.m */,
 				728802321839615C004144E2 /* AWReviewCollectorOperation.h */,
 				728802331839615C004144E2 /* AWReviewCollectorOperation.m */,
+				72D014692028B77C00F96D2B /* AWKeywordRankCollectionOperation.h */,
+				72D0146A2028B77C00F96D2B /* AWKeywordRankCollectionOperation.m */,
 			);
 			path = iTunes;
 			sourceTree = "<group>";
@@ -1228,6 +1249,8 @@
 				724CDE131906AA96002BE32E /* AWRankBulkImporterEntry.m */,
 				724CDE171906ADD1002BE32E /* AWReviewBulkImporterEntry.h */,
 				724CDE181906ADD1002BE32E /* AWReviewBulkImporterEntry.m */,
+				72D014662028B2CB00F96D2B /* AWKeywordRankBulkImporterEntry.h */,
+				72D014672028B2CB00F96D2B /* AWKeywordRankBulkImporterEntry.m */,
 			);
 			path = Importing;
 			sourceTree = "<group>";
@@ -1658,12 +1681,9 @@
 			isa = PBXGroup;
 			children = (
 				721DE4EA189AC17000C62F79 /* Dashboard */,
-				7290C8C91836E61B00C900D1 /* AWApplicationRankViewController.h */,
-				7290C8CA1836E61B00C900D1 /* AWApplicationRankViewController.m */,
-				7290C8CB1836E61B00C900D1 /* AWApplicationRankViewController.xib */,
-				7288022318394AC0004144E2 /* AWApplicationReviewsViewController.h */,
-				7288022418394AC0004144E2 /* AWApplicationReviewsViewController.m */,
-				7288022518394AC0004144E2 /* AWApplicationReviewsViewController.xib */,
+				72D0145C2028A3EA00F96D2B /* Reviews */,
+				72D0145B2028A3DF00F96D2B /* Ranks */,
+				72D0145D2028A3F800F96D2B /* Keywords */,
 				7288021518380C18004144E2 /* AWMainTabViewController.h */,
 				7288021618380C18004144E2 /* AWMainTabViewController.m */,
 				7288021718380C18004144E2 /* AWMainTabViewController.xib */,
@@ -1723,6 +1743,8 @@
 				722940DE18D77E9100D97103 /* AWReportImportHelper.m */,
 				72B4657318808A3D00DE20DD /* AWReviewBulkImporter.h */,
 				72B4657418808A3D00DE20DD /* AWReviewBulkImporter.m */,
+				72D014632028B27100F96D2B /* AWKeywordRankBulkImporter.h */,
+				72D014642028B27100F96D2B /* AWKeywordRankBulkImporter.m */,
 			);
 			path = Importers;
 			sourceTree = "<group>";
@@ -1893,6 +1915,36 @@
 			path = ApplicationPreferences;
 			sourceTree = "<group>";
 		};
+		72D0145B2028A3DF00F96D2B /* Ranks */ = {
+			isa = PBXGroup;
+			children = (
+				7290C8C91836E61B00C900D1 /* AWApplicationRankViewController.h */,
+				7290C8CA1836E61B00C900D1 /* AWApplicationRankViewController.m */,
+				7290C8CB1836E61B00C900D1 /* AWApplicationRankViewController.xib */,
+			);
+			path = Ranks;
+			sourceTree = "<group>";
+		};
+		72D0145C2028A3EA00F96D2B /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				7288022318394AC0004144E2 /* AWApplicationReviewsViewController.h */,
+				7288022418394AC0004144E2 /* AWApplicationReviewsViewController.m */,
+				7288022518394AC0004144E2 /* AWApplicationReviewsViewController.xib */,
+			);
+			path = Reviews;
+			sourceTree = "<group>";
+		};
+		72D0145D2028A3F800F96D2B /* Keywords */ = {
+			isa = PBXGroup;
+			children = (
+				72D0145E2028A41200F96D2B /* AWKeywordsViewController.h */,
+				72D0145F2028A41200F96D2B /* AWKeywordsViewController.m */,
+				72D014602028A41200F96D2B /* AWKeywordsViewController.xib */,
+			);
+			path = Keywords;
+			sourceTree = "<group>";
+		};
 		72D78FA71817E960004D258D /* Business */ = {
 			isa = PBXGroup;
 			children = (
@@ -2057,6 +2109,7 @@
 			files = (
 				72AB88D01C8CB4DF00510773 /* HSOutlineViewSelectionDark.png in Resources */,
 				72AB88D11C8CB4DF00510773 /* HSOutlineViewSelectionDark@2x.png in Resources */,
+				72D014622028A41200F96D2B /* AWKeywordsViewController.xib in Resources */,
 				72AB88D21C8CB4DF00510773 /* HSOutlineViewTriangleDown.png in Resources */,
 				72AB88D31C8CB4DF00510773 /* HSOutlineViewTriangleDown@2x.png in Resources */,
 				72AB88D41C8CB4DF00510773 /* HSOutlineViewTriangleRight.png in Resources */,
@@ -2494,6 +2547,7 @@
 				720D7DB21840DA6500A94EDF /* AWCollectionOperationQueue.m in Sources */,
 				72ED90E21F69AA6C002E6D89 /* HSSemaphore.m in Sources */,
 				72AB88CF1C8CB4DF00510773 /* HSOutlineView.m in Sources */,
+				72D014652028B27100F96D2B /* AWKeywordRankBulkImporter.m in Sources */,
 				725354361D9A97B400369E30 /* MSTranslateVendor.m in Sources */,
 				727812B11A03DA5F00AC4B06 /* AWGenre.m in Sources */,
 				72AA91B5187F0FA5005CBB3B /* AWRankBulkImporter.m in Sources */,
@@ -2511,6 +2565,7 @@
 				72AB88C31C8CB4AE00510773 /* HSOutlineViewWithMenu.m in Sources */,
 				7206CF1D189FFD0100ED2E28 /* AWProgressIndicatorWithLabel.m in Sources */,
 				725739CD18C7E37D00FE10FB /* AWNetworkHelper.m in Sources */,
+				72D014682028B2CB00F96D2B /* AWKeywordRankBulkImporterEntry.m in Sources */,
 				72361A3318D0A24900E1825F /* AWFilterTableHeaderView.m in Sources */,
 				7288022118394AB1004144E2 /* AWApplicationDashboardViewController.m in Sources */,
 				72A47E9A18C8C2540032EB7B /* AWTextViewWithInset.m in Sources */,
@@ -2551,6 +2606,7 @@
 				72A7EDF7188808DE00B2D970 /* AWSystemSettings.m in Sources */,
 				725354401D9A9B3700369E30 /* NSString+Extend.m in Sources */,
 				721C1A641D9AB09C0002BD3D /* HSWindowController.m in Sources */,
+				72D0146E2028B85000F96D2B /* AWKeywordRankCollector.m in Sources */,
 				7290C8D318377D6800C900D1 /* AWApplicationListTreeViewController.m in Sources */,
 				728021DD18CF73AA005CB60F /* ImageAndTextCell.m in Sources */,
 				72AB88D61C8CB4DF00510773 /* HSTableRowView.m in Sources */,
@@ -2559,6 +2615,7 @@
 				721A71DF18E0882F0027AAEE /* AWDashboardSummaryTileViewController.m in Sources */,
 				72D4525A1875A9BC006521D1 /* AWGenreHelper.m in Sources */,
 				721DE4C71899667B00C62F79 /* AWChartColorHelper.m in Sources */,
+				72D0146B2028B77C00F96D2B /* AWKeywordRankCollectionOperation.m in Sources */,
 				720814B41A680EDD00B95966 /* AWCountry.m in Sources */,
 				722940D618D7634E00D97103 /* AWAddAccountWindowController.m in Sources */,
 				721DE4E7189A81C800C62F79 /* AWCurrencyHelper.m in Sources */,
@@ -2568,6 +2625,7 @@
 				720D7DD01843F93500A94EDF /* BackgroundView.m in Sources */,
 				728C2A5F189308D800E04C85 /* AWEmailHelper.m in Sources */,
 				72D78FAB1817E987004D258D /* AWRankCollectionOperation.m in Sources */,
+				72D014612028A41200F96D2B /* AWKeywordsViewController.m in Sources */,
 				721C6A0018968C430070438D /* AWAccountsViewController.m in Sources */,
 				72AB88B51C8CB36200510773 /* MachTimer.m in Sources */,
 				72BDFEBD18100181006E264C /* main.m in Sources */,

@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "AWRankBulkImporterEntry.h"
 
-#define kDefaultRankAutoInsertCount         (1000)
-
 @interface AWRankBulkImporter : NSObject
 
 + (AWRankBulkImporter*) sharedInstance;
@@ -18,7 +16,7 @@
 @property(nonatomic,assign) NSUInteger autoInsertCount;
 
 - (void) addRank: (AWRankBulkImporterEntry*) rankToAdd;
-- (void) addRanks: (NSArray*) ranksToAdd;
+- (void) addRanks: (NSArray<AWRankBulkImporterEntry*>*) ranksToAdd;
 
 - (void) addNull;
 

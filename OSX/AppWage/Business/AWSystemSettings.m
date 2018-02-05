@@ -19,6 +19,7 @@
 #define kNotificationsEnabled           @"EnableNotifications"
 #define kCollectReviewsEveryXHours      @"CollectReviewsEveryXHours"
 #define kCollectRanksEveryXHours        @"CollectRanksEveryXHours"
+#define kCollectKeywordRanksEveryXHours        @"CollectKeywordRanksEveryXHours"
 #define kCollectReportsMode             @"CollectReportsMode"
 #define kCollectReportsRetry            @"CollectReportsRetry"
 #define kRunCollectionsAtStartup        @"CollectRunCollectionsAtStartup"
@@ -205,6 +206,11 @@ static bool AmIBeingDebugged(void)
     return [[[NSUserDefaults standardUserDefaults] objectForKey: kCollectRanksEveryXHours] integerValue];
 }
 
+- (NSInteger) collectKeywordRankingsEveryXHours
+{
+    return [[[NSUserDefaults standardUserDefaults] objectForKey: kCollectKeywordRanksEveryXHours] integerValue];
+}
+
 - (void) setCollectReviewsEveryXHours: (NSInteger) reviewCollectHours
 {
     [[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInteger: reviewCollectHours]
@@ -216,6 +222,13 @@ static bool AmIBeingDebugged(void)
 {
     [[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInteger: rankCollectHours]
                                               forKey: kCollectRanksEveryXHours];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void) setCollectKeywordRankingsEveryXHours: (NSInteger) rankCollectHours
+{
+    [[NSUserDefaults standardUserDefaults] setObject: [NSNumber numberWithInteger: rankCollectHours]
+                                              forKey: kCollectKeywordRanksEveryXHours];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

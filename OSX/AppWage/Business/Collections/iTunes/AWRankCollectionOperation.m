@@ -38,7 +38,7 @@
     return self;
 } // End of self
 
-- (void)main
+- (void) main
 {
     @autoreleasepool
     {

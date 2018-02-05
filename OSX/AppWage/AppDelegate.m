@@ -75,6 +75,7 @@
     IBOutlet NSMenuItem                         * dashboardMenuItem;
     IBOutlet NSMenuItem                         * reviewsMenuItem;
     IBOutlet NSMenuItem                         * rankingsMenuItem;
+    IBOutlet NSMenuItem                         * keywordsMenuItem;
 
     // Progress toolbarItem
     IBOutlet NSToolbarItem                      * progressToolbarItem;
@@ -557,6 +558,10 @@
     {
         [self onRanking: sender];
     }
+    else if(3 == segmentedControl.selectedSegment)
+    {
+        [self onKeywords: sender];
+    }
 }
 
 - (IBAction) onDashboard: (id) sender
@@ -564,6 +569,7 @@
     [dashboardMenuItem setState: NSOnState];
     [reviewsMenuItem setState: NSOffState];
     [rankingsMenuItem setState: NSOffState];
+    [keywordsMenuItem setState: NSOffState];
     [mainTabViewController selectDashboard];
 
     [toolbarSelectedViewSegmentedControl setSelectedSegment: 0];
@@ -574,6 +580,7 @@
     [dashboardMenuItem setState: NSOffState];
     [reviewsMenuItem setState: NSOnState];
     [rankingsMenuItem setState: NSOffState];
+    [keywordsMenuItem setState: NSOffState];
     [mainTabViewController selectReviews];
 
     [toolbarSelectedViewSegmentedControl setSelectedSegment: 1];
@@ -584,9 +591,21 @@
     [dashboardMenuItem setState: NSOffState];
     [reviewsMenuItem setState: NSOffState];
     [rankingsMenuItem setState: NSOnState];
+    [keywordsMenuItem setState: NSOffState];
     [mainTabViewController selectRankings];
     
     [toolbarSelectedViewSegmentedControl setSelectedSegment: 2];
+}
+
+- (IBAction) onKeywords: (id) sender
+{
+    [dashboardMenuItem setState: NSOffState];
+    [reviewsMenuItem setState: NSOffState];
+    [rankingsMenuItem setState: NSOffState];
+    [keywordsMenuItem setState: NSOnState];
+    [mainTabViewController selectKeywords];
+
+    [toolbarSelectedViewSegmentedControl setSelectedSegment: 3];
 }
 
 - (IBAction) onLogs: (id) sender

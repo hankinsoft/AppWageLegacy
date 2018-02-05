@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -582,9 +582,9 @@
                     <toolbarItem implicitItemIdentifier="40DDFF36-E639-49DA-965B-9E6CCE8A05F5" label="" paletteLabel="" id="KQt-OV-8fk">
                         <nil key="toolTip"/>
                         <size key="minSize" width="104" height="20"/>
-                        <size key="maxSize" width="110" height="25"/>
+                        <size key="maxSize" width="211" height="25"/>
                         <segmentedControl key="view" verticalHuggingPriority="750" id="aFL-g2-Uqk">
-                            <rect key="frame" x="0.0" y="14" width="104" height="25"/>
+                            <rect key="frame" x="0.0" y="14" width="135" height="23"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="selectOne" id="pUk-6p-Aer">
                                 <font key="font" metaFont="system"/>
@@ -596,6 +596,9 @@
                                         <nil key="label"/>
                                     </segment>
                                     <segment toolTip="Ranks" image="Toolbar-Ranks" width="32">
+                                        <nil key="label"/>
+                                    </segment>
+                                    <segment image="NSActionTemplate">
                                         <nil key="label"/>
                                     </segment>
                                 </segments>
@@ -658,6 +661,7 @@
         </customView>
     </objects>
     <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
         <image name="Toolbar-Dashboard" width="64" height="64"/>
         <image name="Toolbar-Ranks" width="64" height="64"/>
         <image name="Toolbar-Reviews" width="64" height="64"/>

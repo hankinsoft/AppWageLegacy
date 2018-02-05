@@ -10,10 +10,13 @@
 
 @interface AWApplicationKeyword : NSObject
 
-+ (NSArray< NSString*>*) keywordsForApplicationId: (NSNumber*) applicationId;
++ (NSArray<NSString*>*) keywordsForApplicationId: (NSNumber*) applicationId;
++ (NSArray<AWApplicationKeyword*>*) entriesForApplicationId: (NSNumber*) applicationId;
+
 + (void) setKeywords: (NSArray<NSString*>*) keywords
     forApplicationId: (NSNumber*) applicationId;
 
+@property (nonatomic, copy) NSNumber * applicationKeywordId;
 @property (nonatomic, copy) NSNumber * applicationId;
 @property (nonatomic, copy) NSString * keyword;
 

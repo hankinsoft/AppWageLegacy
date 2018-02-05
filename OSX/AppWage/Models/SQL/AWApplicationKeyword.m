@@ -29,6 +29,30 @@
     return outResults.allObjects;
 } // End of keywordsForApplicationId:
 
++ (NSArray<AWApplicationKeyword*>*) entriesForApplicationId: (NSNumber*) applicationId
+{
+    NSMutableSet<AWApplicationKeyword*>* outResults = [[NSMutableSet alloc] init];
+
+    [[AWSQLiteHelper keywordsDatabaseQueue] inDatabase: ^(FMDatabase * database)
+     {
+         FMResultSet * results =
+            [database executeQuery: @"SELECT applicationKeywordId, keyword FROM applicationKeyword WHERE applicationId IN (?)"
+              withArgumentsInArray: @[applicationId]];
+
+         while([results next])
+         {
+             AWApplicationKeyword * keyword = [[AWApplicationKeyword alloc] init];
+             keyword.applicationKeywordId = @([results intForColumn: @"applicationKeywordId"]);
+             keyword.applicationId = applicationId;
+             keyword.keyword = [results stringForColumn: @"keyword"];
+
+             [outResults addObject: keyword];
+         } // End of results loop
+     }];
+
+    return outResults.allObjects;
+}
+
 + (void) setKeywords: (NSArray<NSString*>*) keywords
     forApplicationId: (NSNumber*) applicationId
 {

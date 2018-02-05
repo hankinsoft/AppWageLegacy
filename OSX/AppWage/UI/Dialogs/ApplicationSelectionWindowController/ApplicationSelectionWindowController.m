@@ -96,7 +96,11 @@
 
 - (void) actualSearch
 {
-    if([lastSearch isEqualToString: appSearchField.stringValue]) return;
+    if([lastSearch isEqualToString: appSearchField.stringValue])
+    {
+        return;
+    }
+
     lastSearch = appSearchField.stringValue;
 
     NSLog(@"Want to search for: %@", appSearchField.stringValue);

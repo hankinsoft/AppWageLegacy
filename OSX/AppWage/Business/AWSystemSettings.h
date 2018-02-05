@@ -51,6 +51,9 @@
 - (void) setCollectRankingsEveryXHours: (NSInteger) rankCollectHours;
 - (NSInteger) collectRankingsEveryXHours;
 
+- (void) setCollectKeywordRankingsEveryXHours: (NSInteger) keywordRankCollectHours;
+- (NSInteger) collectKeywordRankingsEveryXHours;
+
 - (void) setCollectReportsMode: (NSInteger) collectReportsMode;
 - (NSInteger) collectReportsMode;
 
