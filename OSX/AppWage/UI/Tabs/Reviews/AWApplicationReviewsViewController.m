@@ -274,7 +274,7 @@ static NSDateFormatter * reviewTableDateFormatter;
             {
                 ReviewTableDTO * reviewTableDTO = [ReviewTableDTO new];
 
-                reviewTableDTO.reviewId          = [NSNumber numberWithInt: [results intForColumn: @"reviewId"]];
+                reviewTableDTO.reviewId          = [NSNumber numberWithLong: [results longForColumn: @"reviewId"]];
 
                 reviewTableDTO.stars            = [NSNumber numberWithInt: [results intForColumn: @"stars"]];
                 reviewTableDTO.title            = [results stringForColumn: @"title"];

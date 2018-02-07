@@ -48,12 +48,12 @@
         if([ApplicationTypeOSX isEqualToNumber: applicationType])
         {
             searchURL =
-                [NSString stringWithFormat: @"https://itunes.apple.com/search?media=software&entity=macSoftware&term=%@&country=%@", [keyword stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding], countryCode];
+                [NSString stringWithFormat: @"https://itunes.apple.com/search?media=software&entity=macSoftware&term=%@&country=%@&limit=200", [keyword stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding], countryCode.lowercaseString];
         }
         else
         {
             searchURL =
-                [NSString stringWithFormat: @"https://itunes.apple.com/search?media=software&term=%@&country=%@", [keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], countryCode];
+                [NSString stringWithFormat: @"https://itunes.apple.com/search?media=software&term=%@&limit=&country=%@&limit=200", [keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], countryCode.lowercaseString];
         }
 
         NSUInteger foundRank =
