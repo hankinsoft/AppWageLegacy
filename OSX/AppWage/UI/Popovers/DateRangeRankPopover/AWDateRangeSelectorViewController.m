@@ -336,6 +336,18 @@
         [previousYearMenuItem setHidden: YES];
     }
 
+    // Use AppStore launch day as minimum
+    NSDateComponents * components = [[NSDateComponents alloc] init];
+    [components setDay:10];
+    [components setMonth:7];
+    [components setYear:2010];
+    NSCalendar * gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    gregorian.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+    NSDate * minimum = [gregorian dateFromComponents:components];
+    [rangeDatePicker1 setMinDate:minimum];
+    [datePickerFrom setMinDate:minimum];
+    [datePickerTo setMinDate:minimum];
+    
     // Cannot pick past today
     [rangeDatePicker1 setMaxDate: [NSDate date]];
     [datePickerFrom setMaxDate: [NSDate date]];
