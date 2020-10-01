@@ -6,32 +6,51 @@
 
   // List of currencies we care about.
   $currencies = array(
-	"AED", // United Arab Empirates: Dirham
-	"AUD",
-	"CAD", // Canadian: Dollars
-	"CNY",
-	"DKK",
-	"EUR",
-	"HKD",
-	"INR", // India: Rupee
-	"IDR", // Indonesian: Rupiah
-	"ILS", // Isreal: New Shekel
-	"JPY",
-	"MXN",
-	"NZD",
-	"NOK",
-	"PHP",
-	"GBP",
-	"SGD",
-	"SEK",
-	"CHF",
-	"THB",
-	"USD", // United States: Dollars
-	"TRY", // Turkey: Lira
-	"TWD", // New Taiwan Dollar
-	"RUB", // Russia: Ruble
-	"SAR", // Saudia Arabia: Riyal
-	"ZAR", // South Africa: Rand
+  "AED", // United Arab Emirates Dirham
+  "AUD", // Australian Dollar
+  "BGN", // Bulgarian Lev
+  "BRL", // Brazilian Real
+  "CAD", // Canadian Dollar
+  "CHF", // Swiss Franc
+  "CLP", // Chilean Peso
+  "CNY", // Chinese Yuan
+  "COP", // Colombian Peso
+  "CZK", // Czech Koruna
+  "DKK", // Danish Krone
+  "EGP", // Egyptian Pound
+  "EUR", // Euro
+  "GBP", // Pound Sterling
+  "HKD", // Hong Kong Dollar
+  "HRK", // Croatian Kuna
+  "HUF", // Hungarian Forint
+  "IDR", // Indonesian Rupiah
+  "ILS", // Israeli New Shekel
+  "INR", // Indian Rupee
+  "JPY", // Japanese Yen
+  "KRW", // Korean Won
+  "KZT", // Kazakhstani Tenge
+  "MXN", // Mexican Peso
+  "MYR", // Malaysian Ringgit
+  "NGN", // Nigerian Naira
+  "NOK", // Norwegian Krone
+  "NZD", // New Zealand Dollar
+  "PEN", // Peruvian Sol
+  "PKR", // Pakistani Rupee
+  "PHP", // Philippine Peso
+  "PLN", // Polish Zloty
+  "QAR", // Qatari Riyal
+  "RON", // Romanian Leu
+  "RUB", // Russian Ruble
+  "SAR", // Saudi Riyal
+  "SEK", // Swedish Krona
+  "SGD", // Singapore Dollar
+  "THB", // Thai Baht
+  "TRY", // Turkish Lira
+  "TWD", // New Taiwan Dollar
+  "TZS", // Tanzanian Shilling
+  "USD", // United States Dollar
+  "VND", // Vietnamese Dong
+  "ZAR", // South African Rand
   );
 
   $results = array();
